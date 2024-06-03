@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>wordpress &#8211; nokto</title>
+	<atom:link href="/tag/wordpress/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Sat, 08 Feb 2014 18:16:24 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+<site xmlns="com-wordpress:feed-additions:1">165226571</site>	<item>
+		<title>Citriq : une extension pour WordPress</title>
+		<link>/2014/02/08/citriq-wordpress-plugin/</link>
+					<comments>/2014/02/08/citriq-wordpress-plugin/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Sat, 08 Feb 2014 18:16:24 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[citriq]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=371</guid>
+
+					<description><![CDATA[Vous utilisez WordPress pour votre blog littéraire ? L&#8217;extension Citriq pour WordPress peut vous aider à mieux référencer vos articles en créant automatiquement des liens entre vos critiques et d&#8217;autres critiques du même livre sur d&#8217;autres sites littéraires ! Citriq.net est aussi un moteur de recherche qui recensent des dizaines milliers de critiques littéraires issues &#8230; <p class="link-more"><a href="/2014/02/08/citriq-wordpress-plugin/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Citriq : une extension pour WordPress&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-plugin.png"><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-385" alt="citriq-wordpress-plugin" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-plugin.png" width="711" height="237" /></a></p>
+<p>Vous utilisez <a href="http://www.wordpress.org/">WordPress</a> pour votre blog littéraire ? L&rsquo;extension Citriq pour WordPress peut vous aider à mieux référencer vos articles en créant automatiquement des liens entre vos critiques et d&rsquo;autres critiques du même livre sur d&rsquo;autres sites littéraires ! <a href="http://citriq.net/">Citriq.net</a> est aussi un moteur de recherche qui recensent des dizaines milliers de critiques littéraires issues de centaines de sites et blogs.</p>
+<h3>Installation</h3>
+<p>La première chose à faire est d&rsquo;inscrire votre blog sur <a href="http://citriq.net/">Citriq.net</a> (si ce n&rsquo;est pas déjà fait).</p>
+<p>Citriq pour WordPress est disponible dans <a href="http://wordpress.org/plugins/citriqnet/">l&rsquo;annuaire des extensions</a> de WordPress, ce qui vous permettra de l&rsquo;installer facilement et de bénéficier des mises à jour automatique à chaque nouvelle version. Rendez-vous dans l&rsquo;onglet <strong>Extensions</strong> de WordPress, cliquer sur <strong>Rechercher</strong> et entrez <em>Citriq</em> comme mot-clé. Repérez l&rsquo;extension, cliquez sur <strong>Installer maintenant</strong> puis sur <strong>Activez l&rsquo;extension</strong>, et c&rsquo;est tout !</p>
+<p>Si vous préférez installer l&rsquo;extension manuellement, voici la marche à suivre :</p>
+<ol>
+<li>Téléchargez le fichier zip de <a href="http://wordpress.org/plugins/citriqnet/">la dernière version de l&rsquo;extension</a>.</li>
+<li>Sur la page des extensions de WordPress, en haut à droite, cliquez sur <strong>Ajouter</strong>.</li>
+<li>Dans les onglets sous <strong>Installer des extensions</strong>, cliquez sur <strong>Envoyer</strong>.</li>
+<li>Sélectionnez sur votre ordinateur le fichier zip téléchargé plus tôt, puis cliquez sur <strong>Installez maintenant.</strong></li>
+<li>Une fois l&rsquo;installation terminée, cliquez sur <strong>Activer l&rsquo;extension</strong>.</li>
+<li>L&rsquo;extension est activée et prête à être utilisée !</li>
+</ol>
+<h3>Utilisation</h3>
+<p>Une fois l&rsquo;extension installée et activée sur votre blog, il vous faudra utiliser les <strong>champs personnalisés</strong> de WordPress pour que l&rsquo;extension sache lesquels de vos articles doivent être référencés sur Citriq, et à quel livre correspond la critique.</p>
+<p>Il faudra donc, dans un premier temps, activer les champs personnalisés (si ce n&rsquo;est pas déjà fait) en cliquant, sur la page d&rsquo;écriture des articles, sur <strong>Options de l&rsquo;écran</strong> (en haut à droite) puis en cochant la case <strong>Champs personnalisés</strong>.</p>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-1.jpg"><img decoding="async" class="aligncenter size-large wp-image-376" alt="citriq-wordpress-1" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-1-1024x442.jpg" width="604" height="260" /></a></p>
+<p>Pour signaler à l&rsquo;extension qu&rsquo;un article est une critique à référencer, il vous faudra renseigner l&rsquo;ISBN du livre en créant un champ personnalisé <em>isbn<strong></strong></em>. Repérez la zone la zone <strong>Ajouter un champ personnalisé</strong> puis entrez <em>isbn </em>(en minuscule, c&rsquo;est important) dans le champ <b>Nom</b> et l&rsquo;ISBN du livre critique dans le champ <strong>Valeur</strong>. Cliquez enfin sur <strong>Mettre à jour </strong>pour enregistrer les modifications de votre article.</p>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-2.jpg"><img decoding="async" class="aligncenter size-full wp-image-378" alt="citriq-wordpress-2" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-2.jpg" width="817" height="312" /></a></p>
+<p>NB : L’ISBN est un numéro unique attribué à chaque livre publié, long de 13 chiffres et commençant toujours par 978 ou 979. On le trouve dans les premières pages du livre ou au dos, généralement près du code barre. Il peut être entré avec ou sans tiret.</p>
+<p>Répétez ensuite cette opération pour chaque article à référencer dans Citriq.</p>
+<h3> Résolution des problèmes</h3>
+<p>Pour vérifiez que l&rsquo;extension fonctionne correctement, ajoutez <strong>?debug=1</strong> ou <strong>&amp;debug=1</strong> à l’adresse de la page de l’article dans la barre de votre navigateur. Le widget Citriq affichera un message d’erreur détaillant le problème s’il y a lieu.</p>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-debug.jpg"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-381" alt="citriq-wordpress-debug" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-debug.jpg" width="961" height="513" /></a></p>
+<p>Si vous parvenez pas à résoudre le problème, n&rsquo;hésitez pas poster le message d&rsquo;erreur en commentaire à cet article (avec l&rsquo;adresse de l&rsquo;article posant problème), je tâcherai de vous aider.</p>
+<h3>Pour aller plus loin</h3>
+<p>Pour envoyer plus d&rsquo;information à Citriq, il est possible d&rsquo;utiliser d&rsquo;autres champs personnalisés. Le champ <em>isbn</em><em> est </em>le seul obligatoire, mais voici d&rsquo;autres champs que vous pouvez utiliser :</p>
+<ul>
+<li><em>excerpt</em> : un extrait de la critique (jusqu’à 500 caractères) ;</li>
+<li><em>reviewer</em> : l’auteur de la critique (s’il y en a plusieurs sur le site) ;</li>
+<li><em>source</em> : support dont est issue la critique (si différent du site) ;</li>
+<li><em>rating</em> : permet d’indiquer une note (un entier, sur 100) ;</li>
+</ul>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-custom-params.png"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-383" alt="citriq-wordpress-custom-params" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-custom-params.png" width="791" height="334" /></a></p>
+<h3>Historique des modifications</h3>
+<h5>1.0.3 (13/02/2014)</h5>
+<ul>
+<li>Les liens s&rsquo;affichent désormais aussi si la critique est affiché sur une page avec d&rsquo;autres articles (accueil, catégorie, tag) mais l&rsquo;adresse de la critique n&rsquo;est pas enregistrée dans ce cas (paramètre ‘ignore’)</li>
+<li>Ajout d&rsquo;un paramètre ‘plugin’ pour détecter les blogs utilisateurs de l&rsquo;extension à des fins statistiques</li>
+<li>La date de publication de l&rsquo;article est désormais transmise avec le paramètre ‘date’</li>
+</ul>
+<h5>1.0.2 (11/02/2014)</h5>
+<ul>
+<li>Suppression du fichier inutile wp_auto_update.class.php</li>
+</ul>
+<h5>1.0.1 (10/02/2014)</h5>
+<ul>
+<li>Suppression de la mise à jour automatique</li>
+</ul>
+<h5>1.0 (08/02/2014)</h5>
+<ul>
+<li>Première version de l&rsquo;extension</li>
+</ul>
+<h3>Les blogs qui utilisent l&rsquo;extension WordPress</h3>
+<p>N&rsquo;hésitez pas à me signaler toute utilisation de cette extension (en précisant la version de WordPress utilisée). Outre le fait que ça me fera plaisir, je pourrais vérifier que tout fonctionne correctement et lister sur cette page les blogs utilisants l&rsquo;extension.</p>
+<ul>
+<li><a href="https://nokto.net/">nokto.net</a></li>
+<li><a href="http://mesimaginaires.net/">Mes imaginaires</a></li>
+<li><a href="http://www.valunivers.fr/">Valunivers</a></li>
+<li><a href="http://www.vagabondsdureve.fr/">Les Vagabonds du rêve</a></li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/02/08/citriq-wordpress-plugin/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">371</post-id>	</item>
+	</channel>
+</rss>

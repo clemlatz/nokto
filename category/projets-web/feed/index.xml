@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Projets Web &#8211; nokto</title>
+	<atom:link href="/category/projets-web/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Sat, 08 Feb 2014 18:16:24 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+<site xmlns="com-wordpress:feed-additions:1">165226571</site>	<item>
+		<title>Citriq : une extension pour WordPress</title>
+		<link>/2014/02/08/citriq-wordpress-plugin/</link>
+					<comments>/2014/02/08/citriq-wordpress-plugin/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Sat, 08 Feb 2014 18:16:24 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[citriq]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=371</guid>
+
+					<description><![CDATA[Vous utilisez WordPress pour votre blog littéraire ? L&#8217;extension Citriq pour WordPress peut vous aider à mieux référencer vos articles en créant automatiquement des liens entre vos critiques et d&#8217;autres critiques du même livre sur d&#8217;autres sites littéraires ! Citriq.net est aussi un moteur de recherche qui recensent des dizaines milliers de critiques littéraires issues &#8230; <p class="link-more"><a href="/2014/02/08/citriq-wordpress-plugin/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Citriq : une extension pour WordPress&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-plugin.png"><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-385" alt="citriq-wordpress-plugin" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-plugin.png" width="711" height="237" /></a></p>
+<p>Vous utilisez <a href="http://www.wordpress.org/">WordPress</a> pour votre blog littéraire ? L&rsquo;extension Citriq pour WordPress peut vous aider à mieux référencer vos articles en créant automatiquement des liens entre vos critiques et d&rsquo;autres critiques du même livre sur d&rsquo;autres sites littéraires ! <a href="http://citriq.net/">Citriq.net</a> est aussi un moteur de recherche qui recensent des dizaines milliers de critiques littéraires issues de centaines de sites et blogs.</p>
+<h3>Installation</h3>
+<p>La première chose à faire est d&rsquo;inscrire votre blog sur <a href="http://citriq.net/">Citriq.net</a> (si ce n&rsquo;est pas déjà fait).</p>
+<p>Citriq pour WordPress est disponible dans <a href="http://wordpress.org/plugins/citriqnet/">l&rsquo;annuaire des extensions</a> de WordPress, ce qui vous permettra de l&rsquo;installer facilement et de bénéficier des mises à jour automatique à chaque nouvelle version. Rendez-vous dans l&rsquo;onglet <strong>Extensions</strong> de WordPress, cliquer sur <strong>Rechercher</strong> et entrez <em>Citriq</em> comme mot-clé. Repérez l&rsquo;extension, cliquez sur <strong>Installer maintenant</strong> puis sur <strong>Activez l&rsquo;extension</strong>, et c&rsquo;est tout !</p>
+<p>Si vous préférez installer l&rsquo;extension manuellement, voici la marche à suivre :</p>
+<ol>
+<li>Téléchargez le fichier zip de <a href="http://wordpress.org/plugins/citriqnet/">la dernière version de l&rsquo;extension</a>.</li>
+<li>Sur la page des extensions de WordPress, en haut à droite, cliquez sur <strong>Ajouter</strong>.</li>
+<li>Dans les onglets sous <strong>Installer des extensions</strong>, cliquez sur <strong>Envoyer</strong>.</li>
+<li>Sélectionnez sur votre ordinateur le fichier zip téléchargé plus tôt, puis cliquez sur <strong>Installez maintenant.</strong></li>
+<li>Une fois l&rsquo;installation terminée, cliquez sur <strong>Activer l&rsquo;extension</strong>.</li>
+<li>L&rsquo;extension est activée et prête à être utilisée !</li>
+</ol>
+<h3>Utilisation</h3>
+<p>Une fois l&rsquo;extension installée et activée sur votre blog, il vous faudra utiliser les <strong>champs personnalisés</strong> de WordPress pour que l&rsquo;extension sache lesquels de vos articles doivent être référencés sur Citriq, et à quel livre correspond la critique.</p>
+<p>Il faudra donc, dans un premier temps, activer les champs personnalisés (si ce n&rsquo;est pas déjà fait) en cliquant, sur la page d&rsquo;écriture des articles, sur <strong>Options de l&rsquo;écran</strong> (en haut à droite) puis en cochant la case <strong>Champs personnalisés</strong>.</p>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-1.jpg"><img decoding="async" class="aligncenter size-large wp-image-376" alt="citriq-wordpress-1" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-1-1024x442.jpg" width="604" height="260" /></a></p>
+<p>Pour signaler à l&rsquo;extension qu&rsquo;un article est une critique à référencer, il vous faudra renseigner l&rsquo;ISBN du livre en créant un champ personnalisé <em>isbn<strong></strong></em>. Repérez la zone la zone <strong>Ajouter un champ personnalisé</strong> puis entrez <em>isbn </em>(en minuscule, c&rsquo;est important) dans le champ <b>Nom</b> et l&rsquo;ISBN du livre critique dans le champ <strong>Valeur</strong>. Cliquez enfin sur <strong>Mettre à jour </strong>pour enregistrer les modifications de votre article.</p>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-2.jpg"><img decoding="async" class="aligncenter size-full wp-image-378" alt="citriq-wordpress-2" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-2.jpg" width="817" height="312" /></a></p>
+<p>NB : L’ISBN est un numéro unique attribué à chaque livre publié, long de 13 chiffres et commençant toujours par 978 ou 979. On le trouve dans les premières pages du livre ou au dos, généralement près du code barre. Il peut être entré avec ou sans tiret.</p>
+<p>Répétez ensuite cette opération pour chaque article à référencer dans Citriq.</p>
+<h3> Résolution des problèmes</h3>
+<p>Pour vérifiez que l&rsquo;extension fonctionne correctement, ajoutez <strong>?debug=1</strong> ou <strong>&amp;debug=1</strong> à l’adresse de la page de l’article dans la barre de votre navigateur. Le widget Citriq affichera un message d’erreur détaillant le problème s’il y a lieu.</p>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-debug.jpg"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-381" alt="citriq-wordpress-debug" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-debug.jpg" width="961" height="513" /></a></p>
+<p>Si vous parvenez pas à résoudre le problème, n&rsquo;hésitez pas poster le message d&rsquo;erreur en commentaire à cet article (avec l&rsquo;adresse de l&rsquo;article posant problème), je tâcherai de vous aider.</p>
+<h3>Pour aller plus loin</h3>
+<p>Pour envoyer plus d&rsquo;information à Citriq, il est possible d&rsquo;utiliser d&rsquo;autres champs personnalisés. Le champ <em>isbn</em><em> est </em>le seul obligatoire, mais voici d&rsquo;autres champs que vous pouvez utiliser :</p>
+<ul>
+<li><em>excerpt</em> : un extrait de la critique (jusqu’à 500 caractères) ;</li>
+<li><em>reviewer</em> : l’auteur de la critique (s’il y en a plusieurs sur le site) ;</li>
+<li><em>source</em> : support dont est issue la critique (si différent du site) ;</li>
+<li><em>rating</em> : permet d’indiquer une note (un entier, sur 100) ;</li>
+</ul>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-custom-params.png"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-383" alt="citriq-wordpress-custom-params" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-custom-params.png" width="791" height="334" /></a></p>
+<h3>Historique des modifications</h3>
+<h5>1.0.3 (13/02/2014)</h5>
+<ul>
+<li>Les liens s&rsquo;affichent désormais aussi si la critique est affiché sur une page avec d&rsquo;autres articles (accueil, catégorie, tag) mais l&rsquo;adresse de la critique n&rsquo;est pas enregistrée dans ce cas (paramètre ‘ignore’)</li>
+<li>Ajout d&rsquo;un paramètre ‘plugin’ pour détecter les blogs utilisateurs de l&rsquo;extension à des fins statistiques</li>
+<li>La date de publication de l&rsquo;article est désormais transmise avec le paramètre ‘date’</li>
+</ul>
+<h5>1.0.2 (11/02/2014)</h5>
+<ul>
+<li>Suppression du fichier inutile wp_auto_update.class.php</li>
+</ul>
+<h5>1.0.1 (10/02/2014)</h5>
+<ul>
+<li>Suppression de la mise à jour automatique</li>
+</ul>
+<h5>1.0 (08/02/2014)</h5>
+<ul>
+<li>Première version de l&rsquo;extension</li>
+</ul>
+<h3>Les blogs qui utilisent l&rsquo;extension WordPress</h3>
+<p>N&rsquo;hésitez pas à me signaler toute utilisation de cette extension (en précisant la version de WordPress utilisée). Outre le fait que ça me fera plaisir, je pourrais vérifier que tout fonctionne correctement et lister sur cette page les blogs utilisants l&rsquo;extension.</p>
+<ul>
+<li><a href="https://nokto.net/">nokto.net</a></li>
+<li><a href="http://mesimaginaires.net/">Mes imaginaires</a></li>
+<li><a href="http://www.valunivers.fr/">Valunivers</a></li>
+<li><a href="http://www.vagabondsdureve.fr/">Les Vagabonds du rêve</a></li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/02/08/citriq-wordpress-plugin/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">371</post-id>	</item>
+		<item>
+		<title>Citriq : automatiser le référencement de vos critiques littéraires avec PHP</title>
+		<link>/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/</link>
+					<comments>/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 02 Jan 2014 18:15:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[Technique]]></category>
+		<category><![CDATA[citriq]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=252</guid>
+
+					<description><![CDATA[Si votre site ou blog utilise php, il est facile de lui faire écrire le petit code JavaScript permettant de référencer automatiquement vos critiques dans Citriq. Cela vous évitera d’avoir à les entrer une par une. Voici une fonction qui permet de faire écrire automatiquement le code widget à PHP en fonction des paramètres reçus. &#8230; <p class="link-more"><a href="/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Citriq : automatiser le référencement de vos critiques littéraires avec PHP&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><span style="line-height: 1.5;">Si votre site ou blog utilise php, il est facile de lui faire écrire le petit code JavaScript permettant de référencer automatiquement vos critiques dans </span><a style="line-height: 1.5;" href="http://citriq.net/">Citriq</a><span style="line-height: 1.5;">. Cela vous évitera d’avoir à les entrer une par une.</span></p>
+<p>Voici une fonction qui permet de faire écrire automatiquement le code widget à PHP en fonction des paramètres reçus. Elle nécessite PHP 5.</p>
+<p>Cette fonction permet notamment via deux nouveaux paramètres <strong>excerpt</strong> et <strong>rating </strong>d&rsquo;envoyer à Citriq un extrait (jusqu&rsquo;à 500 caractères) de la critique et une note (sur 100). Ces paramètres étaient jusqu&rsquo;à présent réservés aux critiques entrées manuellement.  La fonction se charge en outre de l&rsquo;encodage du texte dans les paramètres du widget de manière à ce que les caractères soient correctement pris en charge par Citriq.</p>
+<h3>La fonction</h3>
+<pre>function citriq($params) {
+  if(empty($params["uid"])) $error = "Le paramètre uid est obligatoire";
+  elseif(empty($params["isbn"])) $error = "Le paramètre isbn est obligatoire";
+  else return '&lt;script type="text/javascript" src="http://citriq.net/w/crawl?'.http_build_query($params).'"&gt;&lt;script&gt;';
+  if($params["debug"] == 1 &amp;&amp; isset($error)) die("Erreur Citriq : ".$error);
+}</pre>
+<h3>Utilisation</h3>
+<p>Cette fonction prend comme seule valeur un tableau php (array) dont les clés sont les différents paramètres du widget Citriq. Sauf mention contraire, ils sont tous facultatifs. Notez que les noms des paramètres sont toujours en minuscules.</p>
+<ul>
+<li><em>uid</em> (obligatoire) : l’identifiant unique de la critique dans votre base ;</li>
+<li><em>isbn</em> (obligatoire) : le code IBSN du livre critiqué ;</li>
+<li><em>excerpt</em> : un extrait de la critique (jusqu’à 500 caractères) ;</li>
+<li><em>reviewer</em> : l’auteur de la critique (s’il y en a plusieurs sur le site) ;</li>
+<li><em>source</em> : support dont est issue la critique (si différent du site) ;</li>
+<li><em>rating</em> : permet d&rsquo;indiquer une note (un entier, sur 100) ;</li>
+<li><em>date</em> : la date de publication de la critique ;</li>
+<li><em>ignore</em> : permet d&rsquo;afficher le widget sans enregistrer la page en cours ;</li>
+<li><em>debug</em> : si ce paramètre facultatif est égal à 1, Citriq affichera des informations statistiques et un éventuel message d&rsquo;erreur sur votre site.</li>
+</ul>
+<p>La fonction retourne le code javascript du widget préparé qu&rsquo;on peut récupérer dans une variable ou afficher immédiatement avec l&rsquo;instruction <strong>echo</strong>.</p>
+<h3>Exemple</h3>
+<p>Ci-dessous, un exemple de code (fictif) qui permettrait de référencer la critique publiée <a href="http://www.belial.fr/blog/les-soldats-de-la-mer_3601">sur cette page</a>, pour le résultat sur cette page.</p>
+<pre>$params["uid"] = 3601;
+$params["isbn"] = 9782277492830;
+$params["excerpt"] = "Quand, voici quelques mois, les jeunes éditions Dystopia Workshop publièrent Le Prophète et le vizir, la surprise fut de taille. On ne s’attendait pas le moins du monde à voir le couple Rémy revenir à l’écriture et publier de l’inédit. Il avait eu une assez belle carrière dans les années 70, dont plus d’un se serait satisfait, mais il semblait qu’elle fût désormais de...";
+$params["reviewer"] = "Jean-Pierre Lion";
+$params["source"] = "Bifrost 71";
+$params["rating"] = "80"; // Equivaut à 4 étoiles sur 5
+echo citriq($params);</pre>
+<h3>Exemple avec WordPress</h3>
+<p>Il est possible d&rsquo;utiliser les champs personnalisés de WordPress pour faire générer automatiquement le code du widget Citriq par WordPress. On trouvera plus d&rsquo;information à ce sujet dans l&rsquo;article <a title="Citriq : automatiser le référencement des critiques avec WordPress" href="https://nokto.net/20130826citriq-automatiser-le-referencement-des-critiques-avec-wordpress/">Automatiser le référencement de vos critiques avec WordPress</a>.</p>
+<p>MAJ du 08/02/2014 : il existe aussi une <a href="https://nokto.net/citriq-wordpress-plugin/">extension WordPress pour Citriq</a>, qui utilise cette fonction php mais est beaucoup plus simple à mettre en oeuvre.</p>
+<pre>$params["uid"] = get_the_id(); // L'identifiant de l'article WordPress
+$params["isbn"] = get_post_meta(get_the_id(), "isbn", true); // Le champ personnalisé "isbn"
+$params["reviewer] = get_the_author(); // L'auteur de l'article WordPress
+$params["excerpt] = get_post_meta(get_the_id(), "extrait", true); // Le champ personnalisé "extrait"
+if(is_singular()) echo citriq($params);</pre>
+<h3>Résolution des problèmes</h3>
+<p>Si le code du widget ne s&rsquo;affiche pas correctement, vous pouvez utilisez le paramètre facultatif <em>debug</em> pour afficher un message d&rsquo;erreur. Si vous ne comprenez pas le message d&rsquo;erreur, n&rsquo;hésitez pas à poser la question dans les commentaires ci-dessous.</p>
+<p>Bonus : <a href="http://pastebin.com/a2guP2w3">l&rsquo;équivalent en Python</a> (merci Joachim)</p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">252</post-id>	</item>
+		<item>
+		<title>Le Bélial&#8217;, propulsé par Biblys 2.0</title>
+		<link>/2013/03/25/20130325le-belial-propulse-par-biblys-2/</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Mon, 25 Mar 2013 10:18:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=143</guid>
+
+					<description><![CDATA[Créé en 2009, le site du Bélial&#8217; est le premier a avoir été propulsé par le moteur Biblys (si l&#8217;on excepte la Librairie Ys pour qui le moteur avait été créé). Après son lancement, le site a beaucoup évolué pour répondre à de nouveaux besoins et parfois fait évoluer Biblys avec lui : le blog &#8230; <p class="link-more"><a href="/2013/03/25/20130325le-belial-propulse-par-biblys-2/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Le Bélial&#8217;, propulsé par Biblys 2.0&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p style="text-align: center"> <a href="http://www.biblys.fr/blog/le-belial-editions"><img decoding="async" alt="" src="http://www.biblys.fr/biblys/media/blog/belial-00.jpg" width="500" /></a></p>
+<p> Créé en 2009, le site du Bélial&rsquo; est le premier a avoir été propulsé par le moteur Biblys (si l&rsquo;on excepte la Librairie Ys pour qui le moteur avait été créé). Après son lancement, le site a beaucoup évolué pour répondre à de nouveaux besoins et parfois fait évoluer Biblys avec lui : le blog Bifrost, les forums, la plateforme numérique e-Bélial&rsquo;, le référencement des critiques de Bifrost, la recherche par mot-clé thématique, etc.</p>
+<p>Fin 2012, le site étant devenu lourd, labyrinthique et technologiquement obsolète, il nous a semblé que le moment était venu de travailler sur une nouvelle version. Lancé début mars, ce nouveau site fait du Bélial&rsquo; le premier éditeur propulsé par Biblys 2.0 !</p>
+<p><a href="http://www.biblys.fr/blog/le-belial-editions">En savoir plus sur Biblys.fr</a></p>
+]]></content:encoded>
+
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">143</post-id>	</item>
+		<item>
+		<title>La librairie Scylla, propulsée par Biblys 2.0</title>
+		<link>/2013/02/04/20130204la-librairie-scylla-propulsee-par-biblys-2-0/</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Mon, 04 Feb 2013 17:14:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=142</guid>
+
+					<description><![CDATA[Depuis juin 2008 à fin 2012, c&#8217;est la Librairie Ys qui s&#8217;est chargée de commercialiser les livres d&#8217;occasion de Scylla. Mais depuis qu&#8217;Ys est retournée au fond des flots, il a fallu doter Scylla d&#8217;un nouveau site lui permettant de gérer en direct la vente par correspondance. Naturellement propulsé par Biblys, le site rappelle celui &#8230; <p class="link-more"><a href="/2013/02/04/20130204la-librairie-scylla-propulsee-par-biblys-2-0/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;La librairie Scylla, propulsée par Biblys 2.0&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p style="text-align: center"> <a href="http://www.scylla.fr/"><img decoding="async" alt="" src="http://www.biblys.fr/biblys/media/blog/scylla.png" style="width: 500px;height: 198px" /></a></p>
+<p> Depuis juin 2008 à fin 2012, c&rsquo;est la Librairie Ys qui s&rsquo;est chargée de commercialiser les livres d&rsquo;occasion de Scylla. Mais depuis qu&rsquo;Ys est <a href="http://www.librys.fr/blog/la-librairie-ys-c-est-fini-mais-l-aventure-continue">retournée au fond des flots</a>, il a fallu doter Scylla d&rsquo;un nouveau site lui permettant de gérer en direct la vente par correspondance. Naturellement propulsé par <a href="http://www.biblys.fr/pages/biblys-pour-les-libraires">Biblys</a>, le site rappelle celui de la Librairie Ys mais propose aussi de nombreuses améliorations.</p>
+<p><a href="http://www.biblys.fr/blog/librairie-scylla">En savoir plus sur Biblys.fr</a></p>
+]]></content:encoded>
+
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">142</post-id>	</item>
+		<item>
+		<title>La Librairie Ys, c&#8217;est fini&#8230; mais l&#8217;aventure continue !</title>
+		<link>/2013/01/01/20130101la-librairie-ys-c-est-fini-mais-l-aventure-continue/</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Tue, 01 Jan 2013 01:49:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=141</guid>
+
+					<description><![CDATA[<p><img src="/media/tys.jpg" alt="tys.jpg" style="margin: 0 auto" /></p> <br />
+ <p>La <a href="http://www.librys.fr/">Librairie Ys</a> a définitivement fermé ses portes virtuelles le 1er janvier 2013, après plus de quatre ans d'existence. Avant de revenir sur les raisons de cette fermeture, permettez-moi de vous rassurer : la relève est assurée !</p>]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" src="/media/tys.jpg" alt="tys.jpg" style="margin: 0 auto" /></p>
+<p></p>
+<p>La <a href="http://www.librys.fr/">Librairie Ys</a> a définitivement fermé ses portes virtuelles le 1er janvier 2013, après plus de quatre ans d&rsquo;existence. Avant de revenir sur les raisons de cette fermeture, permettez-moi de vous rassurer : la relève est assurée !</p>
+<p><span id="more-141"></span></p>
+<p> En effet, si la Librairie Ys disparaît, son âme lui survivra, sous la forme d&rsquo;un nouveau site. Depuis plus d&rsquo;un an maintenant, la librairie n&rsquo;a plus son propre stock mais commercialise celui des librairies Charybde et Scylla. À partir d&rsquo;aujourd&rsquo;hui, vous pouvez retrouver tous ces livres sur le nouveau site de la librairie Scylla qui propose un service de vente par correspondance équivalent à celui d&rsquo;Ys. Je fais entièrement confiance à Xavier, le libraire, avec qui je collaborerai de façon étroite, pour fournir une qualité de service équivalente (voire supérieure, si c&rsquo;est possible !) à celle qui a fait la réputation de la Librairie Ys. Et pour ce qui est de la qualité du site, je ne me fais pas de souci, puisque c&rsquo;est moi qui en ait la charge. Vous retrouverez ainsi tous les services qui vous sont chers : moteur de recherche, alertes de disponibilité, suivi de commande, etc.</p>
+<p> Rendez-vous donc dès aujourd&rsquo;hui sur <a href="http://www.scylla.fr/">Scylla.fr</a> !</p>
+<p> Pourquoi arrêter Ys ? Après quatre ans, il m&rsquo;apparaît que si la vente en ligne est une bonne activité complémentaire pour une librairie physique, elle n&rsquo;est pas suffisante en tant que telle pour nourrir un libraire. Je me suis donc lancé depuis quelques années dans une activité annexe de création de sites web pour des librairies (<a href="http://www.charybde.fr/">Charybde</a>, <a href="http://www.librairiepolarys.com/">Polarys</a>), des éditeurs (<a href="http://www.belial.fr/">Le Bélial&rsquo;</a>, <a href="http://www.editions-actusf.fr/">ActuSF</a>, <a href="http://www.dystopia.fr/">Dystopia</a>) ou des festivals (<a href="http://www.imaginales.fr/">Les Imaginales</a>). Depuis quelques temps, je me rends compte que créer des outils et inventer des services originaux pour les autres m&rsquo;enthousiasme plus que jouer les libraires en ligne, mais que le temps me manque pour développer toutes mes idées, d&rsquo;où la décision de m&rsquo;y consacrer entièrement.</p>
+<p> Je ne vois pas donc l&rsquo;aventure Ys comme un échec, surtout dans la mesure où Scylla va lui succéder, mais plutôt comme la pierre fondatrice des quelques autres projets qui sont nés depuis (Charybde, Dystopia) et des nombreux autres qui suivront. Créer et gérer la librairie Ys pendant quatre ans m&rsquo;a permis d&rsquo;acquérir une certaine expérience en matière de commercialisation du livre sur internet. Aujourd&rsquo;hui, je suis heureux de mettre ces connaissances au service d&rsquo;autres, en particulier ceux avec qui je partage une certaine vision de la littérature et de ce vers quoi l&rsquo;industrie du livre devrait tendre.</p>
+<p> J&rsquo;ai vu quantité de projets dans ce domaine, librairies, maisons d&rsquo;édition, sites webs ou autres disparaître après quelques années d&rsquo;existence en ne laissant derrière eux que quelque message rancunier blâmant au choix la grande distribution, les algorithmes des moteurs de recherches, le livre numérique, le piratage, les éditeurs, les auteurs, les libraires, les lecteurs… Je préfère voir le domaine du livre comme un monde en perpétuelle mutation, un territoire aux frontières floues, une aventure qui demande de s&rsquo;interroger et de se réinventer sans cesse, mais qui n&rsquo;est pas prête de s&rsquo;arrêter. En clair, je m&rsquo;adapte, je rebondis, et je vois la disparition de la librairie Ys non comme une fin, mais comme un tremplin vers d&rsquo;autres histoires qui restent à écrire…</p>
+<p> Le site <a href="http://www.scylla.fr/">librys.fr</a> servira dans un premier temps de relais pour le nouveau <a href="http://www.scylla.fr/">scylla.fr</a>, puis deviendra autre chose qui devrait vous intéresser et dont je parlerai plus en détail dans une prochaine Lettre d&rsquo;Ys… Car oui, si Ys disparaît, sa Lettre lui survivra et je continuerai, si vous le souhaitez, à vous asséner ma prose mensuelle ! J&rsquo;y parlerai des arrivages de livres d&rsquo;occasion chez Scylla et Charybde, de l&rsquo;actualité des différents sites propulsés par Biblys (comme la parution prochaine des <a href="http://editions.dystopia.fr/yves-et-ada-remy/les-soldats-de-la-mer_numerique">Soldats de la mer</a> d&rsquo;Yves et Ada Rémy en numérique !), du développement de nouveaux projets. Vous pouvez bien entendu vous désabonner. Mais n&rsquo;oubliez pas de vous abonner à la nouvelle <a href="http://www.scylla.fr/pages/newsletter">newsletter de la librairie Scylla</a> !</p>
+<p> Pour les questions pratiques : s&rsquo;il n&rsquo;est plus possible de passer commande, j&rsquo;honorerai évidemment les commandes enregistrées avant le 1er janvier et qui sont encore en attente d&rsquo;expédition. Les commandes actuellement en attente de paiement seront annulées le 8 janvier. Quant aux commandes en attente de retrait chez Scylla, elles vous y attendront jusqu&rsquo;au samedi 12 janvier, après quoi elles seront également annulées.</p>
+<p> Il ne me reste plus qu&rsquo;à conclure cette Lettre par un proverbe danois de circonstance&nbsp;:</p>
+<p style="text-align: center"> «&nbsp;<em>Tout a une fin ; sauf le saucisson, qui en a deux.</em>&nbsp;»</p>
+<p> A très bientôt pour de nouvelles aventures,</p>
+<p> Clément</p>
+<div> &nbsp;</div>
+]]></content:encoded>
+
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">141</post-id>	</item>
+		<item>
+		<title>Biblys : nouvelle base Articles</title>
+		<link>/2012/09/02/20120902biblys-nouvelle-base-articles/</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Sun, 02 Sep 2012 22:18:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=140</guid>
+
+					<description><![CDATA[La base Articles est le cœur de Biblys : elle référence près de 40.000 œuvres avec des informations bibliographiques très détaillées, en grande majorité des livres papiers et numériques, mais aussi quelques CDs, DVD, produits dérivés, etc. Depuis la création de la librairie Ys en 2008, elle a beaucoup grossi mais peu évoluée, malgré des &#8230; <p class="link-more"><a href="/2012/09/02/20120902biblys-nouvelle-base-articles/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Biblys : nouvelle base Articles&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.biblys.fr/blog/nouvelle-base-articles"><img decoding="async" src="http://www.biblys.fr/biblys/media/blog/nouvelle-base.jpg" alt="Biblys" style="margin: auto" /></a></p>
+<p>La base Articles est le cœur de Biblys : elle référence près de 40.000 œuvres avec des informations bibliographiques très détaillées, en grande majorité des livres papiers et numériques, mais aussi quelques CDs, DVD, produits dérivés, etc. Depuis la création de la librairie Ys en 2008, elle a beaucoup grossi mais peu évoluée, malgré des besoins croissants et de nouveaux sites utilisateurs (libraires, éditeurs, festivals, etc.). Ces derniers temps, elle était devenue lourde, peu ergonomique et technologiquement obsolète. Le mois d&rsquo;août étant traditionnellement une période calme dans le monde du livre, j&rsquo;en ai profité pour revoir entièrement la structure de la base, avec pour principaux objectif d&rsquo;améliorer la vitesse d&rsquo;affichage des pages et l&rsquo;efficacité du moteur de recherche.</p>
+<p><a href="http://www.biblys.fr/blog/nouvelle-base-articles">En savoir plus sur Biblys.fr</a></p>
+]]></content:encoded>
+
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">140</post-id>	</item>
+		<item>
+		<title>Les Imaginales 2012, propulsé par Biblys 2.0 !</title>
+		<link>/2012/03/27/20120327les-imaginales-2012-premier-site-propulse-par-biblys-2-0/</link>
+					<comments>/2012/03/27/20120327les-imaginales-2012-premier-site-propulse-par-biblys-2-0/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Tue, 27 Mar 2012 00:20:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=139</guid>
+
+					<description><![CDATA[Créé en 2008 pour les besoins de la Librairie Ys, le logiciel Biblys s&#8217;est depuis grandement complexifié et a évolué pour devenir le moteur sous le capot de quelques autres sites de librairies, mais aussi d&#8217;éditeurs ou de festival comme les Imaginales. Fruit de ces besoins, de l&#8217;évolution en quatre ans des technologies et de &#8230; <p class="link-more"><a href="/2012/03/27/20120327les-imaginales-2012-premier-site-propulse-par-biblys-2-0/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Les Imaginales 2012, propulsé par Biblys 2.0 !&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.imaginales.fr/"><img decoding="async" src="/media/.imaginales_m.jpg" alt="imaginales.png" style="margin: 0 auto" /></a> </p>
+<p>Créé en 2008 pour les besoins de la <a href="http://www.librys.fr/">Librairie Ys</a>, le logiciel <a href="http://www.biblys.fr/">Biblys</a> s&rsquo;est depuis grandement complexifié et a évolué pour devenir le moteur sous le capot de <a href="http://www.biblys.fr/pages/utilisateurs">quelques autres sites</a> de librairies, mais aussi d&rsquo;éditeurs ou de festival comme les Imaginales. Fruit de ces besoins, de l&rsquo;évolution en quatre ans des technologies et de mes propres compétences, la version 2 de Biblys est une réécriture complète du logiciel utilisant toutes sortes de technologies récentes avec un 5 dedans : PHP5, MySQL5, HTML5 mais aussi CSS3. L&rsquo;objectif étant d&rsquo;offrir de plus grandes performances et plus de liberté pour chacun des sites propulsés. Les sites déjà existant seront progressivement migrés au cours de l&rsquo;année, mais le festival <a href="http://www.imaginales.fr/">Imaginales 2012</a> est le premier site à utiliser Biblys 2.0.</p>
+<p><a href="http://www.biblys.fr/blog/imaginales-2012">En savoir plus sur Biblys.fr</a></p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2012/03/27/20120327les-imaginales-2012-premier-site-propulse-par-biblys-2-0/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">139</post-id>	</item>
+		<item>
+		<title>La Librairie Charybde, propulsée par Biblys</title>
+		<link>/2011/11/28/20111128la-librairie-charybde-propulsee-par-biblys/</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Mon, 28 Nov 2011 14:46:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=138</guid>
+
+					<description><![CDATA[Créé il y a plus d&#8217;un an maintenant, le site de la librairie Charybde, est désormais ouvert au public. Il permet aux clients de se tenir informé de l&#8217;actualité de la librairie, des évènements qu&#8217;elles organisent et de ses coups de coeur littéraires. Grâce à Biblys, il permet également aux libraires de la rue de &#8230; <p class="link-more"><a href="/2011/11/28/20111128la-librairie-charybde-propulsee-par-biblys/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;La Librairie Charybde, propulsée par Biblys&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" src="/media/charybde.png" alt="charybde.png" style="margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto" /></p>
+<p>Créé il y a plus d&rsquo;un an maintenant, le site de la librairie <a href="http://www.charybde.fr/">Charybde</a>, est désormais ouvert au public. Il permet aux clients de se tenir informé de l&rsquo;actualité de la librairie, des évènements qu&rsquo;elles organisent et de ses coups de coeur littéraires. Grâce à <a href="http://www.biblys.fr/">Biblys</a>, il permet également aux libraires de la rue de Charenton de gérer leur stock, leur compatibilité, et même l&rsquo;encaissement en magasin.</p>
+<p><a href="http://www.biblys.fr/blog/librairie-charybde">En savoir plus sur Biblys.fr</a></p>
+]]></content:encoded>
+
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">138</post-id>	</item>
+		<item>
+		<title>CITRIQ 2.2 : Mes critiques / Mes visites</title>
+		<link>/2011/10/24/20111024citriq-2-2-mes-critiques-mes-visites/</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Mon, 24 Oct 2011 12:21:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[citriq]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=137</guid>
+
+					<description><![CDATA[<p><img src="/media/.citriq_2-2_m.jpg" alt="citriq_2-2.jpg" style="margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto" /></p> <p>Nouvelle version de <a href="http://citriq.net/">CITRIQ</a> que je continue de développer au cours de mon temps libre. Le site s'offre deux nouvelles options permettant aux utilisateurs de connaître des statistiques de lecture et la provenance exactes des visiteurs transitant par Citriq, et améliore son interface.</p>]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" style="margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" alt="citriq_2-2.jpg" src="/media/.citriq_2-2_m.jpg" /></p>
+<p>Nouvelle version de <a href="http://citriq.net/">CITRIQ</a> que je continue de développer au cours de mon temps libre. Le site s&rsquo;offre deux nouvelles options permettant aux utilisateurs de connaître des statistiques de lecture et la provenance exactes des visiteurs transitant par Citriq, et améliore son interface.</p>
+<p><span id="more-137"></span></p>
+<p><strong>Les nouveautés de Citriq 2.2 :</strong></p>
+<ul>
+<li><strong>Mes critiques </strong>vous permet enfin de gérer vos critiques une fois qu&rsquo;elles ont été ajoutées : en voir la liste, les modifier en cas d&rsquo;erreur, voire les supprimer définitivement. Cette page vous permet également de connaître le nombre de fois où un lien vers votre critique a été affiché sur un autre site du réseau (Vues) et le nombre de fois où ce lien a été cliqué (Clics).</li>
+<li><strong>Mes visites</strong> vous permet de découvrir en détail la provenance des derniers visiteurs transitant par Citriq et vous indique la critique concernée, la page où le lien vers votre critique a été cliqué (soit sur Citriq, soit sur un site du réseau) et la date du clic.</li>
+</ul>
+<p>Ces deux options sont accessibles via le menu Axys en haut à droite.</p>
+<div>
+<ul>
+<li>Les pages livre recensant toutes les critiques d&rsquo;un même livre (voir par exemple celle de <a href="http://citriq.net/9782070355709">Janua Vera</a>) est désormais intégré au site, avec le menu sur la gauche et le moteur de recherche au-dessus, ce qui permet de passer facilement d&rsquo;un livre à un autre.</li>
+<li>Toutes les critiques d&rsquo;un livre sont désormais affichées sur les pages <a href="http://citriq.net/?o=headline">À la une</a> et <a href="http://citriq.net/?o=news">Dernières critiques</a> et pas seulement les critiques qui sont à la une et les plus récentes. En d&rsquo;autres termes, lorsqu&rsquo;un livre est « à la une » (c&rsquo;est-à-dire s&rsquo;il fait parti de ceux qui ont été critiqués le plus au cours des derniers jours), toutes ses critiques sont affichées et pas seulement les critiques publiées au cours des derniers jours.</li>
+<li>Enfin, une nouvelle page <a href="http://citriq.net/pages/network">Réseau Citriq</a> permet d&rsquo;accéder à la liste des sites représentés et des critiques participants.</li>
+</ul>
+<p>À ce sujet, saluons l&rsquo;arrivée dans le moteur Citriq de la revue Bifrost, puisque les éditions du Bélial&rsquo; ont entrepris de mettre en ligne l&rsquo;intégralité (ou peu s&rsquo;en faut) des critiques parues dans la revue, et que celles-ci seront progressivement référencées dans Citriq.</p>
+</div>
+<p>La base Citriq référence, à l&rsquo;heure où j&rsquo;écris ces lignes, <strong>11784 critiques</strong> de <strong>9102 livres</strong> issues de <strong>50 sites</strong> différents et a favorisé <strong>8509 échanges</strong> entre ces sites ! De nouveaux blogs rejoignent le réseau chaque semaine. Profitons-en pour saluer la performance des cinq blogueurs les plus prolixes :</p>
+<div>
+<ul>
+<li><a href="http://leslecturesdecachou.over-blog.com/">Les Lectures de Cachou</a> (<a href="http://citriq.net/?q=Les%20Lectures%20de%20Cachou">123 critiques</a>)</li>
+<li><a href="http://www.maasbiolab.net/">Maas Biolab</a> (<a href="http://citriq.net/?q=Maas%20Biolab">140 critiques</a>)</li>
+<li><a href="http://rsfblog.canalblog.com/">RSF Blog</a> (<a href="http://citriq.net/?q=RSF%20Blog">164 critiques</a>)</li>
+<li><a href="http://glowmoonlight.unblog.fr/">Bibliothèque de Glow</a> (<a href="http://citriq.net/?q=Biblioth%E8que%20de%20Glow">261 critiques !</a>)</li>
+<li><a href="http://nebalestuncon.over-blog.com/">Welcome to Nebalia</a> (<a href="http://citriq.net/?q=Welcome%20to%20Nebalia">424 critiques !!</a>)</li>
+</ul>
+<p>Citriq cherche toujours à accroitre son réseau avec de nouveaux beta-testeurs, n&rsquo;hésitez donc pas à faire passer le mot autour de vous !</p>
+<p>Prévu pour les prochaines mises à jour :</p>
+<ul>
+<li>L&rsquo;utilisation de nouvelles bases de données (nooSFere, Biblys, LibraryThing ?) pour permettre un meilleur référencement des livres et de plus nombreuses références (notamment les livres numériques). Et pourquoi pas la possibilité pour les utilisateurs de modifier eux-même les infos ?</li>
+<li>Des liens vers des sites de librairies pour acheter le livre.</li>
+<li>Widget public permettant d&rsquo;afficher les liens vers les critiques correspondant à un ISBN sans pour autant participer à CITRIQ en tant que blog de critiques (à destination des sites d&rsquo;éditeurs, de libraires, etc.)</li>
+<li>Frame supérieure apparaissant lors du clic sur une critique, permettant de passer facilement d&rsquo;une critique à l&rsquo;autre, de voter pour sur une critique, d&rsquo;acheter le livre, etc.</li>
+<li>Liens « voir aussi » sur la page d&rsquo;un livre pour voir les livres d&rsquo;un même auteur, d&rsquo;une même collection, etc.</li>
+<li>etc.</li>
+</ul>
+</div>
+]]></content:encoded>
+
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">137</post-id>	</item>
+		<item>
+		<title>Biblys</title>
+		<link>/2011/07/15/20110715biblys/</link>
+					<comments>/2011/07/15/20110715biblys/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Fri, 15 Jul 2011 11:15:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=136</guid>
+
+					<description><![CDATA[&#8230; est le nouveau nom de Tys (qui était déjà une marque déposée), logiciel qui permet de faire tourner la Librairie Ys, le site des éditions du Bélial&#8217; (et la plateforme e-Bélial&#8217;) ou celui du festival des Imaginales (entre autres). L&#8217;occasion de mettre à jour la page qui lui est consacrée.]]></description>
+										<content:encoded><![CDATA[<p><a href="/pages/biblys"><img decoding="async" src="/media/biblys.png" alt="biblys.png" style="margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto" /></a>&#8230; est le nouveau nom de Tys (qui était déjà une marque déposée), logiciel qui permet de faire tourner la <a href="http://www.librys.fr/">Librairie Ys</a>, le site des éditions du <a href="http://www.belial.fr/">Bélial&rsquo;</a> (et la plateforme <a href="http://e.belial.fr/">e-Bélial&rsquo;</a>) ou celui du festival des <a href="http://www.imaginales.fr/">Imaginales</a> (entre autres). L&rsquo;occasion de mettre à jour <a href="/pages/biblys">la page qui lui est consacrée</a>.</p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2011/07/15/20110715biblys/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">136</post-id>	</item>
+	</channel>
+</rss>

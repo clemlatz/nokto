@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+
+	>
+<channel>
+	<title>
+	Commentaires sur : Citriq : une extension pour WordPress	</title>
+	<atom:link href="/2014/02/08/citriq-wordpress-plugin/feed/" rel="self" type="application/rss+xml" />
+	<link>/2014/02/08/citriq-wordpress-plugin/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Sat, 08 Feb 2014 23:13:34 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+	<item>
+		<title>
+		Par : Clément Latzarus		</title>
+		<link>/2014/02/08/citriq-wordpress-plugin/#comment-199</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Sat, 08 Feb 2014 23:13:34 +0000</pubDate>
+		<guid isPermaLink="false">http://nokto.net/?p=371#comment-199</guid>
+
+					<description><![CDATA[En réponse à &lt;a href=&quot;/2014/02/08/citriq-wordpress-plugin/#comment-198&quot;&gt;Val&lt;/a&gt;.
+
+J&#039;ai corrigé un truc, ça fonctionne ! Note que l&#039;extension Wordpress ne peut pas cohabiter avec la méthode de référencement classique des critiques, donc si tu optes pour, il faudra que tu retires les codes des anciennes critiques, sinon il risque d&#039;y avoir dédoublement.]]></description>
+			<content:encoded><![CDATA[<p>En réponse à <a href="/2014/02/08/citriq-wordpress-plugin/#comment-198">Val</a>.</p>
+<p>J&rsquo;ai corrigé un truc, ça fonctionne ! Note que l&rsquo;extension WordPress ne peut pas cohabiter avec la méthode de référencement classique des critiques, donc si tu optes pour, il faudra que tu retires les codes des anciennes critiques, sinon il risque d&rsquo;y avoir dédoublement.</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : Val		</title>
+		<link>/2014/02/08/citriq-wordpress-plugin/#comment-198</link>
+
+		<dc:creator><![CDATA[Val]]></dc:creator>
+		<pubDate>Sat, 08 Feb 2014 20:20:02 +0000</pubDate>
+		<guid isPermaLink="false">http://nokto.net/?p=371#comment-198</guid>
+
+					<description><![CDATA[Hello, zut ça ne fonctionne pas du premier coup ;-)
+message d&#039;erreur trouvé grâce au ?debug=1
+CITRIQ : Référecement automatique désactivé.
+Testé sur l&#039;article : http://www.valunivers.fr/blog/thriller-2/donato-carrisi-le-chuchoteur/
+
+Je ne pense pas que cela soit bien méchant.
+Bon courage et merci pour cette nouvelle appli !
+Val]]></description>
+			<content:encoded><![CDATA[<p>Hello, zut ça ne fonctionne pas du premier coup 😉<br />
+message d&rsquo;erreur trouvé grâce au ?debug=1<br />
+CITRIQ : Référecement automatique désactivé.<br />
+Testé sur l&rsquo;article : <a href="http://www.valunivers.fr/blog/thriller-2/donato-carrisi-le-chuchoteur/" rel="nofollow ugc">http://www.valunivers.fr/blog/thriller-2/donato-carrisi-le-chuchoteur/</a></p>
+<p>Je ne pense pas que cela soit bien méchant.<br />
+Bon courage et merci pour cette nouvelle appli !<br />
+Val</p>
+]]></content:encoded>
+
+			</item>
+	</channel>
+</rss>

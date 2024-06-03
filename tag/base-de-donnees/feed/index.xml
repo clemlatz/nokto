@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>base de données &#8211; nokto</title>
+	<atom:link href="/tag/base-de-donnees/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Thu, 05 Jun 2014 09:37:27 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+<site xmlns="com-wordpress:feed-additions:1">165226571</site>	<item>
+		<title>TextUID : Propositions pour un identifiant unique d’un livre, commun à ses différentes éditions, générable automatiquement</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/</link>
+					<comments>/2014/06/05/textuid-identifiant-unique-livre/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 05 Jun 2014 09:37:27 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[base de données]]></category>
+		<category><![CDATA[bibliographie]]></category>
+		<category><![CDATA[interopérabilité]]></category>
+		<category><![CDATA[isbn]]></category>
+		<category><![CDATA[istc]]></category>
+		<category><![CDATA[textuid]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=600</guid>
+
+					<description><![CDATA[Dans cet article, je propose des pistes pour une méthode facilement reproductible permettant de générer automatiquement un identifiant de texte. Ce n&#8217;est pas une méthode parfaite, mais plutôt la « moins mauvaise » méthode, aussi je suis ouvert à toute suggestion permettant de l&#8217;améliorer. MAJ 08/06/2014 : ajout des règles 6 et 7 et de deux nouveaux exemples. Merci à &#8230; <p class="link-more"><a href="/2014/06/05/textuid-identifiant-unique-livre/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;TextUID : Propositions pour un identifiant unique d’un livre, commun à ses différentes éditions, générable automatiquement&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p>Dans cet article, je propose des pistes pour une méthode facilement reproductible permettant de générer automatiquement un identifiant de texte. Ce n&rsquo;est pas une méthode parfaite, mais plutôt la « moins mauvaise » méthode, aussi je suis ouvert à toute suggestion permettant de l&rsquo;améliorer.</p>
+<p>MAJ 08/06/2014 : ajout des règles 6 et 7 et de deux nouveaux exemples. Merci à <a href="https://twitter.com/edasfr">@edasfr</a> pour ces remarques.</p>
+<h2>Pourquoi ?</h2>
+<p>Lorsque je développe un site ou un outil pour les libraires, un besoin récurent celui est de pouvoir identifier les différents livres correspondant à un même texte (nouvelle édition, réédition en poche, version numérique ou audio, etc.).</p>
+<p>Par exemple, le site de la librairie <a href="http://www.scylla.fr/">Scylla</a>, sur chaque fiche livre, propose le même livre dans d&rsquo;autres formats ou d&rsquo;anciennes éditions épuisés disponibles d&rsquo;occasion. Autre exemple, la librairie <a href="http://www.charybde.fr/">Charybde</a>, pour le calcul de ses meilleures ventes, souhaite que les ventes d&rsquo;un même texte chez différents éditeurs soient additionnés et pas considérés comme des livres différents.</p>
+<p>Aujourd&rsquo;hui, ce recoupement demande que les librairies (ou autres utilisateurs de Biblys) créent manuellement ces relations, opération fastidieuse qui peut être source d&rsquo;erreur.</p>
+<h2>Cahiers des charges</h2>
+<p>La méthode de génération de l&rsquo;identifiant doit :</p>
+<ul>
+<li>être facilement à mettre en œuvre afin que n&rsquo;importe qui puisse générer un identifiant sans passer par une autorité centrale ;</li>
+<li>être suffisamment détaillée et prévoir tous les pièges possibles : deux acteurs générant un identifiant pour le même texte doivent parvenir systématiquement au même résultat.</li>
+</ul>
+<h2>D’autres (mauvaises) solutions</h2>
+<ul>
+<li>Le<strong> titre du livre</strong>, de toute évidence, ne peut convenir puisque que, si deux editions d&rsquo;un livre ont a priori le même titre, il n&rsquo;est pas rare que deux livres sans aucun rapport ait également le même titre. Par exemple, dans la base Biblys (qui est loin d&rsquo;être exhaustive), il y a pas moins de cinq titres d&rsquo;auteurs différents intitulé « <a href="http://www.biblys.fr/pages/search?q=titre:Les+Insoumis">Les Insoumis</a>« &#8230;</li>
+<li>Les <a href="http://fr.wikipedia.org/wiki/International_Standard_Book_Number"><strong>ISBN</strong></a> sont propres à chaque édition d&rsquo;un livre, il arrive parfois qu&rsquo;un même livre chez un même éditeur puisse obtenir des ISBN différents au fil des réimpressions, ils ne peuvent donc convenir à cet usage.</li>
+<li>La norme <a href="http://www.istc-international.org/html/"><strong>ISTC</strong></a> (pour International Standard Text Code) se rapproche de nos besoins, mais elle a deux désavantages. D&rsquo;abord, elle ne nécessite de passer par une autorité centrale, une agence (en France, Électre) qui ne peut créer de nouveaux codes qu&rsquo;à la demande d&rsquo;un éditeur ou d&rsquo;un ayant droit. De plus, elle semble peu utilisée aujourd&rsquo;hui.</li>
+</ul>
+<h2>Description de la norme TextUID</h2>
+<p>Elle se présente sous la forme un ensemble de règles, dont le but est de décrire la méthode de génération de l&rsquo;identifiant en tentant de prévoir un maximum de cas particuliers pour indiquer la marche à suivre le cas échéant. De nouvelles règles pourront donc être ajoutées si de nouveaux cas particuliers problématique sont découverts.</p>
+<h3>Règle 1</h3>
+<p>Le TextUID est une <a href="http://fr.wikipedia.org/wiki/MD5">empreinte MD5</a> généré d’après une chaîne de caractères précises, encodé en UTF-8, en majuscules, contenant :<br />
+TITRE ORIGINAL du livre<br />
+barre oblique entouré d’espaces : ‘ / ‘<br />
+NOM PRÉNOM de l’auteur (ou NOM uniquement le cas échéant)</p>
+<p>Soit : <strong>TITRE ORIGINAL / NOM PRÉNOM</strong></p>
+<h3>Règle 2</h3>
+<p>Le titre du livre doit être dans la langue de publication originale, afin que les différentes traductions d’une oeuvre possèdent bien le même identifiant que l&rsquo;original.</p>
+<h3>Règle 3</h3>
+<p>Si le livre a plusieurs auteurs, on les ajoute dans l&rsquo;ordre alphabétique, l&rsquo;un après l&rsquo;autre, séparés par une virgule et une espace : NOM PRÉNOM, NOM PRÉNOM (ou NOM uniquement le cas échéant)</p>
+<p>Soit : <strong>TITRE ORIGINAL / NOM PRÉNOM, NOM, NOM PRÉNOM</strong></p>
+<h4>Règle 4</h4>
+<p>S&rsquo;il existe plusieurs graphies pour un titre de livre, on utilise celui mentionné sur la couverture de la première édition.</p>
+<h4>Règle 5</h4>
+<p>S&rsquo;il existe plusieurs graphies pour un nom d&rsquo;auteur, on utilise celui mentionné sur la couverture de la première édition de son premier livre publié.</p>
+<h4>Règle 6</h4>
+<p>Si le livre fait partie d&rsquo;une série, on utilise le titre du tome uniquement. Si le tome n&rsquo;a pas de titre, on utilise le nom de la série, suivi d&rsquo;un tiret et du numéro du tome.</p>
+<h4>Règle 7</h4>
+<p>Si le livre est un ouvrage collectif et qu&rsquo;un ou plusieurs directeurs d&rsquo;ouvrage sont mentionnés (« Sous la direction de&#8230; »), ce sont ces noms qui seront utilisés au lieu du nom des auteurs.</p>
+<h2>Quelques exemples :</h2>
+<h3>Le Petit Prince</h3>
+<p>Chaîne : <span style="color: #000000;">LE PETIT PRINCE / DE SAINT-EXUPÉRY ANTOINE</span><br />
+Empreinte MD5 : <span style="color: #000000;">31943e821c39ccd479441a2b0bdcf2b7</span></p>
+<h3>L’Attrape-coeurs</h3>
+<p>Chaîne : <span style="color: #000000;">THE CATCHER IN THE RYE / SALINGER J. D.</span><br />
+Empreinte MD5 : <span style="color: #000000;">9c93c0d32ee994bddf65bb6f3bcfa421</span></p>
+<h3>Les Soldats de la mer</h3>
+<p>Chaîne : <span style="color: #000000;">LES SOLDATS DE LA MER / RÉMY ADA, RÉMY YVES</span><br />
+Empreinte MD5 : <span style="color: #000000;">d44c3bf585ee56cf1ae02f043492de81</span></p>
+<h3>À la recherche du temps perdu, tome 2</h3>
+<p>Chaîne : À L&rsquo;OMBRE DES JEUNES FILLES EN FLEURS / PROUST MARCEL<br />
+Empreinte MD5 : <span style="color: #000000;">736ac35cc4ce8b67dfbaaa901c03f398</span></p>
+<h3><a href="http://www.cnrseditions.fr/Biologie/6710-l-energie-a-decouvert-sous-la-direction-de-remy-mosseri-et-catherine-jandel.html">L&rsquo;énergie à découvert</a>, sous la direction de&#8230;</h3>
+<p>Chaîne : L&rsquo;ÉNERGIE À DÉCOUVERT / JEANDEL CATHERINE, MOSSERI REMY<br />
+Empreinte MD5 : <span style="color: #000000;">97ff30f497e277265045e3cbdf08a37c</span></p>
+<h2>Exemples de code</h2>
+<h3>PHP</h3>
+<pre>&lt;?php
+
+function textuid($title, $authors)
+{
+    foreach ($authors as $author)
+    {
+        if (!isset($authors_string)) $authors_string = NULL;
+        else $authors_string .= ', ';
+        $authors_string .= trim($author['last_name'].' '.$author['first_name']);
+    }
+    $string = mb_strtoupper($title.' / '.$authors_string, 'UTF-8');
+    $hash = md5($string);
+    return array('string' =&gt; $string, 'hash' =&gt; $hash);
+}
+
+$book_title = "Les Soldats de la mer";
+$book_authors = array(
+    array('first_name' =&gt; 'Ada', 'last_name' =&gt; 'Rémy'),
+    array('first_name' =&gt; 'Yves', 'last_name' =&gt; 'Rémy')
+);
+
+var_dump(textuid($book_title, $book_authors));
+</pre>
+<p><a href="http://codepad.viper-7.com/TfRsCv">Voir aussi ici le code en action.</a></p>
+<h2>Conclusion</h2>
+<p>J&rsquo;utilise déjà cette méthode, à des fins de test, pour la base Biblys. Je la partage ici car je pense qu&rsquo;elle pourrait être utile à d&rsquo;autres en interne, mais aussi parce qu&rsquo;elle prendrait un tout autre intérêt dans le cadre d&rsquo;un échange de données entre des bases différentes.</p>
+<p>Je suis conscient que cette méthode ne pourra jamais fonctionner à 100%, mais je pense que la première règle doit pouvoir couvrir 99% des cas et que les suivantes doivent pouvoir permettre de se rapprocher au maximum de la perfection&#8230; tout en sachant qu&rsquo;on ne pourra jamais l&rsquo;atteindre ! Mais c&rsquo;est sans doute le prix à payer pour une génération automatique, sans vérification humaine.</p>
+<p>Je suis donc bien entendu ouvert à toute question, remarque ou proposition de règles qui pourrait permettrait d&rsquo;améliorer la méthode !</p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/06/05/textuid-identifiant-unique-livre/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">600</post-id>	</item>
+	</channel>
+</rss>

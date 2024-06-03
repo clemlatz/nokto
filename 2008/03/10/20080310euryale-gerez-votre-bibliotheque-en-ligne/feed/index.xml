@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+
+	>
+<channel>
+	<title>
+	Commentaires sur : Euryale, votre bibliothèque en ligne !	</title>
+	<atom:link href="/2008/03/10/20080310euryale-gerez-votre-bibliotheque-en-ligne/feed/" rel="self" type="application/rss+xml" />
+	<link>/2008/03/10/20080310euryale-gerez-votre-bibliotheque-en-ligne/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Thu, 01 Apr 2010 16:30:27 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+	<item>
+		<title>
+		Par : Jonas		</title>
+		<link>/2008/03/10/20080310euryale-gerez-votre-bibliotheque-en-ligne/#comment-113</link>
+
+		<dc:creator><![CDATA[Jonas]]></dc:creator>
+		<pubDate>Thu, 01 Apr 2010 16:30:27 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=123#comment-113</guid>
+
+					<description><![CDATA[&lt;p&gt;Je vois que le projet n&#039;est plus en ligne et j&#039;en étais curieux. Du coup je me permet de vous proposer &lt;a href=&quot;http://booknode.com&quot;/ rel=&quot;nofollow&quot;&gt;booknode&lt;/a&gt; qui propose le même type de fonctionalités et dans le même esprit (gratuit).&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Je vois que le projet n&rsquo;est plus en ligne et j&rsquo;en étais curieux. Du coup je me permet de vous proposer <a href="http://booknode.com/" rel="nofollow">booknode</a> qui propose le même type de fonctionalités et dans le même esprit (gratuit).</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : Clément		</title>
+		<link>/2008/03/10/20080310euryale-gerez-votre-bibliotheque-en-ligne/#comment-112</link>
+
+		<dc:creator><![CDATA[Clément]]></dc:creator>
+		<pubDate>Mon, 10 Mar 2008 22:35:39 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=123#comment-112</guid>
+
+					<description><![CDATA[&lt;p&gt;Effectivement, les livres déjà référencés sont ceux que j&#039;ai dans ma bibliothèque. Mais je ne suis en train de bosser sur un système pour pouvoir importer les informations d&#039;un livre d&#039;Amazon en entrant seulement le code EAN, ça permettra de gagner pas mal de temps !&lt;/p&gt; &lt;p&gt;Et merci aux quatres premiers inscrits !&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Effectivement, les livres déjà référencés sont ceux que j&rsquo;ai dans ma bibliothèque. Mais je ne suis en train de bosser sur un système pour pouvoir importer les informations d&rsquo;un livre d&rsquo;Amazon en entrant seulement le code EAN, ça permettra de gagner pas mal de temps !</p>
+<p>Et merci aux quatres premiers inscrits !</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : galadrieve		</title>
+		<link>/2008/03/10/20080310euryale-gerez-votre-bibliotheque-en-ligne/#comment-111</link>
+
+		<dc:creator><![CDATA[galadrieve]]></dc:creator>
+		<pubDate>Mon, 10 Mar 2008 11:11:42 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=123#comment-111</guid>
+
+					<description><![CDATA[&lt;p&gt;Hello!&lt;br /&gt;
+Alors... d&#039;abord, comment se fait-il qu&#039;il y ait si peu de références dans la bdd? C&#039;est toi qui as tout mis à la main?&lt;br /&gt;
+Ensuite... Il serait plus pratique qu&#039;un livre qu&#039;on rajoute soit sur &quot;déjà lu&quot;, mais c&#039;est très personnel (parce que je préfère commencer par faire une bibli de ce que j&#039;ai déjà lu)&lt;br /&gt;
+Sinon pour le moment, ça marche bien :)&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Hello!<br />
+Alors&#8230; d&rsquo;abord, comment se fait-il qu&rsquo;il y ait si peu de références dans la bdd? C&rsquo;est toi qui as tout mis à la main?<br />
+Ensuite&#8230; Il serait plus pratique qu&rsquo;un livre qu&rsquo;on rajoute soit sur « déjà lu », mais c&rsquo;est très personnel (parce que je préfère commencer par faire une bibli de ce que j&rsquo;ai déjà lu)<br />
+Sinon pour le moment, ça marche bien 🙂</p>
+]]></content:encoded>
+
+			</item>
+	</channel>
+</rss>

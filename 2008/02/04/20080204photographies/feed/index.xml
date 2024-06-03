@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+
+	>
+<channel>
+	<title>
+	Commentaires sur : Photographies	</title>
+	<atom:link href="/2008/02/04/20080204photographies/feed/" rel="self" type="application/rss+xml" />
+	<link>/2008/02/04/20080204photographies/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Fri, 20 Jun 2008 23:37:54 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+	<item>
+		<title>
+		Par : Ailis		</title>
+		<link>/2008/02/04/20080204photographies/#comment-98</link>
+
+		<dc:creator><![CDATA[Ailis]]></dc:creator>
+		<pubDate>Fri, 20 Jun 2008 23:37:54 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=105#comment-98</guid>
+
+					<description><![CDATA[&lt;p&gt;Oo&lt;/p&gt; &lt;p&gt;Donc, la fille de l&#039;ENS qui assistait avec moi à des cours à la fac, et que j&#039;aimais bien regarder parce qu&#039;elle a un teint de porcelaine, et qui parle parfaitement l&#039;espagnol (mexicain), et tout et tout, non seulement t&#039;en fais des photos, mais en plus elle a un blog, et il est connu, apparemment.&lt;/p&gt; &lt;p&gt;Et c&#039;est pas la seule normalienne-internaute que je &quot;redécouvre&quot; par des biais insolites, en plus.&lt;/p&gt; &lt;p&gt;*stupeur et tremblements*&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Oo</p>
+<p>Donc, la fille de l&rsquo;ENS qui assistait avec moi à des cours à la fac, et que j&rsquo;aimais bien regarder parce qu&rsquo;elle a un teint de porcelaine, et qui parle parfaitement l&rsquo;espagnol (mexicain), et tout et tout, non seulement t&rsquo;en fais des photos, mais en plus elle a un blog, et il est connu, apparemment.</p>
+<p>Et c&rsquo;est pas la seule normalienne-internaute que je « redécouvre » par des biais insolites, en plus.</p>
+<p>*stupeur et tremblements*</p>
+]]></content:encoded>
+
+			</item>
+	</channel>
+</rss>

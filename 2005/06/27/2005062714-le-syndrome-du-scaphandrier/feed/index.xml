@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+
+	>
+<channel>
+	<title>
+	Commentaires sur : Le syndrome du scaphandrier, de Serge Brussolo	</title>
+	<atom:link href="/2005/06/27/2005062714-le-syndrome-du-scaphandrier/feed/" rel="self" type="application/rss+xml" />
+	<link>/2005/06/27/2005062714-le-syndrome-du-scaphandrier/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Sun, 11 May 2008 20:33:29 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+	<item>
+		<title>
+		Par : Lavoux		</title>
+		<link>/2005/06/27/2005062714-le-syndrome-du-scaphandrier/#comment-26</link>
+
+		<dc:creator><![CDATA[Lavoux]]></dc:creator>
+		<pubDate>Sun, 11 May 2008 20:33:29 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=16#comment-26</guid>
+
+					<description><![CDATA[&lt;p&gt;&#039;les musees de demain seront plein de reves&#039;, j&#039;ai du mal à coprendre, j&#039;avoue :) en tot cas merci pour ce billet intéressant ! c&#039;es toujours sympathique de passer suur ce blog :)&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>&lsquo;les musees de demain seront plein de reves&rsquo;, j&rsquo;ai du mal à coprendre, j&rsquo;avoue 🙂 en tot cas merci pour ce billet intéressant ! c&rsquo;es toujours sympathique de passer suur ce blog 🙂</p>
+]]></content:encoded>
+
+			</item>
+	</channel>
+</rss>

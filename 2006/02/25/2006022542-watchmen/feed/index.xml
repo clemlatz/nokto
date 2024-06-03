@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+
+	>
+<channel>
+	<title>
+	Commentaires sur : Watchmen, par Alan Moore	</title>
+	<atom:link href="/2006/02/25/2006022542-watchmen/feed/" rel="self" type="application/rss+xml" />
+	<link>/2006/02/25/2006022542-watchmen/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Sun, 15 Mar 2009 23:53:18 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+	<item>
+		<title>
+		Par : seb monticule aerien		</title>
+		<link>/2006/02/25/2006022542-watchmen/#comment-87</link>
+
+		<dc:creator><![CDATA[seb monticule aerien]]></dc:creator>
+		<pubDate>Sun, 15 Mar 2009 23:53:18 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=24#comment-87</guid>
+
+					<description><![CDATA[&lt;p&gt;Tuyen apprend a lire une date ..&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Tuyen apprend a lire une date ..</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : tuyen		</title>
+		<link>/2006/02/25/2006022542-watchmen/#comment-86</link>
+
+		<dc:creator><![CDATA[tuyen]]></dc:creator>
+		<pubDate>Tue, 10 Mar 2009 17:00:15 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=24#comment-86</guid>
+
+					<description><![CDATA[&lt;p&gt;euh... le film est déjà sorti les mecs! faut se mettre au gout du jour mdr!!&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>euh&#8230; le film est déjà sorti les mecs! faut se mettre au gout du jour mdr!!</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : Mélanie		</title>
+		<link>/2006/02/25/2006022542-watchmen/#comment-85</link>
+
+		<dc:creator><![CDATA[Mélanie]]></dc:creator>
+		<pubDate>Thu, 05 Mar 2009 20:05:28 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=24#comment-85</guid>
+
+					<description><![CDATA[&lt;p&gt;Rhaaa, c&#039;est malin, j&#039;ai envie de le relire du coup... Déjà que je n&#039;arrête pas de le feuilleter depuis hier soir... ;)&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Rhaaa, c&rsquo;est malin, j&rsquo;ai envie de le relire du coup&#8230; Déjà que je n&rsquo;arrête pas de le feuilleter depuis hier soir&#8230; 😉</p>
+]]></content:encoded>
+
+			</item>
+	</channel>
+</rss>

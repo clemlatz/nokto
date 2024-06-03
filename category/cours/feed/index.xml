@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Cours &#8211; nokto</title>
+	<atom:link href="/category/cours/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Thu, 23 Jan 2014 11:14:49 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+<site xmlns="com-wordpress:feed-additions:1">165226571</site>	<item>
+		<title>La Baleine à bulle et autres librairies imaginaires</title>
+		<link>/2014/01/23/la-baleine-a-bulle-et-autres-librairies-imaginaires/</link>
+					<comments>/2014/01/23/la-baleine-a-bulle-et-autres-librairies-imaginaires/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 23 Jan 2014 11:14:49 +0000</pubDate>
+				<category><![CDATA[Cours]]></category>
+		<category><![CDATA[biblys]]></category>
+		<category><![CDATA[css]]></category>
+		<category><![CDATA[html]]></category>
+		<category><![CDATA[saint-cloud]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=282</guid>
+
+					<description><![CDATA[Comme en 2012 et 2011, j&#8217;ai donné de septembre à décembre un cours de 14h sur la communication sur internet au Pôle Métiers du Livre de Saint-Cloud. Cette année, le cours s&#8217;adressait aux étudiantes de l&#8217;option librairie du Master 1, mais n&#8217;était pas lié à un projet tutoré de création de librairie. Elles ont donc &#8230; <p class="link-more"><a href="/2014/01/23/la-baleine-a-bulle-et-autres-librairies-imaginaires/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;La Baleine à bulle et autres librairies imaginaires&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://nokto.net/wp-content/uploads/2014/01/baleine-a-bulle.png"><img fetchpriority="high" decoding="async" class="aligncenter size-large wp-image-289" alt="baleine-a-bulle" src="https://nokto.net/wp-content/uploads/2014/01/baleine-a-bulle-1024x986.png" width="604" height="581" /></a></p>
+<p>Comme en <a href="https://nokto.net/20130119site-internet-et-librairie-2012-cours-metiers-du-livre/">2012</a> et <a href="https://nokto.net/20120208la-librairie-heros-de-papier-n-existe-pas/">2011</a>, j&rsquo;ai donné de septembre à décembre un cours de 14h sur la communication sur internet au Pôle Métiers du Livre de Saint-Cloud. Cette année, le cours s&rsquo;adressait aux étudiantes de l&rsquo;option librairie du Master 1, mais n&rsquo;était pas lié à un projet tutoré de création de librairie. Elles ont donc dû, dans le cadre de ce cours, inventer chacune une librairie imaginaire dont nous avons ensemble conçu le site web.</p>
+<p>Le cours portait sur :</p>
+<ul>
+<li>mon expérience de libraire en ligne (à l&rsquo;époque de la <a href="http://www.biblys.fr/blog/la-librairie-ys-c-est-fini-mais-l-aventure-continue">Librairie Ys</a>) et plus récemment mon travail avec d&rsquo;autres librairies <a href="http://www.biblys.fr/pages/biblys-pour-les-libraires">dont j&rsquo;ai conçu les sites</a> et que j&rsquo;accompagne au quotidien ;</li>
+<li>une initiation aux langages HTML5 et CSS3, mais aussi au design graphique avec Photoshop ;</li>
+<li>un travail préalable à la conception du site sur le cahier des charges, la maquette et  l&rsquo;arborescence du site ;</li>
+<li>la création pratique du site en lui-même, étape par étape, accompagné d&rsquo;une réflexion sur l&rsquo;ergonomie des pages web, l&rsquo;optimisation pour le référencement, la communication sur les réseaux sociaux et l&rsquo;utilisation d&rsquo;un outil de statistiques.</li>
+</ul>
+<p>Pour la création du site, les étudiantes ont pu utiliser le moteur <a href="http://www.biblys.fr/">Biblys</a> et son éditeur HTML intégré. Elles ont ainsi pu profiter d&rsquo;un véritable site d&rsquo;e-commerce avec un moteur de recherche, un panier, un système de commande et une base bibliographique très fournie, pour lequel elles ont eu à créer le squelette HTML et les feuilles de styles CSS.</p>
+<p>L&rsquo;enjeu n&rsquo;était évidemment pas de leur enseigner la création d&rsquo;un site de A à Z, ce qui demanderait plus de 14h, mais de les initiera aux langages de base du web et de leur donner les notions et la culture générale nécessaire pour dialoguer efficacement avec un prestataire technique, ainsi qu&rsquo;un aperçu des bonnes pratiques de création de site web spécifiques aux domaines du livre.</p>
+<p>Quatre sites de librairies imaginaires ont été créés dans le cadre du cours :</p>
+<ul>
+<li><a href="http://bubulle.biblys.fr/">La Baleine à bulle</a></li>
+<li><a href="http://phalene.biblys.fr/">La Phalène</a></li>
+<li><a href="http://englit.biblys.fr/">Englit Bookseller</a></li>
+<li><a href="http://songe.biblys.fr/">Le Songe des livres</a></li>
+</ul>
+<p>(On regrettera au passage que l&rsquo;intérêt des aspirants libraires pour les littératures de l&rsquo;imaginaire — ici deux librairies sur quatre — ne soit pas du tout représentatif de l&rsquo;intérêt du public pour le genre).</p>
+<p>Plusieurs documents utilisés pour ce cours sont téléchargeables en PDF :</p>
+<ul>
+<li><a href="http://mdl.nokto.net/initiation-html5-css3.pdf">Initiation HTML5 / CSS3</a></li>
+<li><a href="http://mdl.nokto.net/memo-html5.pdf">Mémo HTML 5</a></li>
+<li><a href="http://mdl.nokto.net/memo-css3.pdf">Mémo CSS 3</a></li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/01/23/la-baleine-a-bulle-et-autres-librairies-imaginaires/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">282</post-id>	</item>
+		<item>
+		<title>Site internet et librairie 2012 (cours Métiers du Livre)</title>
+		<link>/2013/01/19/20130119site-internet-et-librairie-2012-cours-metiers-du-livre/</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Sat, 19 Jan 2013 15:30:00 +0000</pubDate>
+				<category><![CDATA[Cours]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=170</guid>
+
+					<description><![CDATA[Comme l&#8217;année dernière, j&#8217;ai donné de septembre à décembre un cours sur la communication sur internet aux étudiants en Master 2 option librairie du Pôle Métiers du Livre de Saint-Cloud, comprenant la fabrication pratique d&#8217;un site web dans le cadre de leur projet tutoré de création de librairie. Ce cours de vingt heures, téléchargeable intégralement &#8230; <p class="link-more"><a href="/2013/01/19/20130119site-internet-et-librairie-2012-cours-metiers-du-livre/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Site internet et librairie 2012 (cours Métiers du Livre)&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="/post/2012/02/08/La-librairie-Heros-de-papier-n-existe-pas">Comme l&rsquo;année dernière</a>, j&rsquo;ai donné de septembre à décembre un cours sur la communication sur internet aux étudiants en Master 2 option librairie du Pôle Métiers du Livre de Saint-Cloud, comprenant la fabrication pratique d&rsquo;un site web dans le cadre de leur projet tutoré de création de librairie. Ce cours de vingt heures, téléchargeable intégralement en PDF, portait sur :</p>
+<ul>
+<li>Une présentation de mon parcours avec études des différents sites de libraires et éditeurs sur lesquels j&rsquo;ai travaillé ;</li>
+<li>Une initiation aux langages web HTML5 et CSS3 ;</li>
+<li>La création du site lui-même avec l&rsquo;ergonomie des pages web, leur optimisation pour le référencement, la communication sur les réseaux sociaux et l&rsquo;utilisation d&rsquo;un outil de statistiques.</li>
+</ul>
+<p>Les étudiants devaient réaliser dans le cadre de ce cours le site internet de la librairie qu&rsquo;ils créent virtuellement de A à Z pour leur projet tutoré. Nouveauté cette année, les étudiants ont pu pour cela utiliser <a href="http://www.biblys.fr/">Biblys</a> et son éditeur HTML intégré. Ils ont ainsi eu à profiter d&rsquo;un moteur de recherche, d&rsquo;un panier, de fiches articles dont il n&rsquo;ont eu qu&rsquo;à créer les squelettes HTML et les feuilles de styles afférentes.&nbsp;</p>
+<p><a href="/media/iut_2012_editeur-html-biblys.png" title="iut_2012_editeur-html-biblys.png"><img decoding="async" src="/media/.iut_2012_editeur-html-biblys_m.jpg" alt="iut_2012_editeur-html-biblys.png" style="margin: 0 auto" /></a></p>
+<p>Trois sites de « fausses » librairies ont été créés dans ce cadre :</p>
+<div>
+<ul>
+<li><a href="http://etc.biblys.fr/">Librairie &amp;cætera</a></li>
+<li><a href="http://tintamarre.biblys.fr/">Librairie Tintamarre</a></li>
+<li><a href="http://cinema.biblys.fr/">Librairie CinéLib&rsquo;</a></li>
+</ul>
+<p>Même si les étudiants ont entièrement réalisé la partie HTML/CSS eux-mêmes, le cours n&rsquo;avait évidemment pas pour objectif d&rsquo;enseigner aux étudiants la création d&rsquo;un site web de librairie de A à Z, mais de leur donner les notions de bases et la culture générale nécessaires pour dialoguer avec un prestataire technique, ainsi qu&rsquo;un aperçu des bonnes pratiques spécifiques au domaine du livre.</p>
+<p> <a href="/media/iut_2012_site-librairie-etc.png" title="iut_2012_site-librairie-etc.png"><img decoding="async" src="/media/.iut_2012_site-librairie-etc_m.jpg" alt="iut_2012_site-librairie-etc.png" style="margin: 0 auto" /></a> </p>
+<p>Plusieurs documents utilisés pour ce cours sont téléchargeables en PDF :</p>
+<ul>
+<li><a href="/media/iut_2012_site-internet-et-librairie.pdf">Présentation de mon parcours</a></li>
+<li><a href="/media/iut_2012_initiation-html5-css3.pdf">Initiation HTML5 &amp; CSS3</a></li>
+<li><a href="/media/iut_2012_memo-html5.pdf">Mémo HTML5</a> / <a href="/media/iut_2012_memo-css3.pdf">Mémo CSS3</a></li>
+</ul></div>
+]]></content:encoded>
+
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">170</post-id>	</item>
+		<item>
+		<title>La librairie « Héros de papier » n&#8217;existe pas&#8230;</title>
+		<link>/2012/02/08/20120208la-librairie-heros-de-papier-n-existe-pas/</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Wed, 08 Feb 2012 19:55:00 +0000</pubDate>
+				<category><![CDATA[Cours]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=169</guid>
+
+					<description><![CDATA[&#8230; mais son site web, oui ! Il a été réalisé intégralement par des étudiants en Master 2 dans le cadre d&#8217;un cours sur la librairie électronique que j&#8217;ai donné à l&#8217;automne dernier au Pôle Métiers du livre de Saint-Cloud. Ce cours de vingt heures portait sur : L&#8217;acquisition de bases en HTML et CSS &#8230; <p class="link-more"><a href="/2012/02/08/20120208la-librairie-heros-de-papier-n-existe-pas/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;La librairie « Héros de papier » n&#8217;existe pas&#8230;&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p>&#8230; mais son <a href="http://herosdepapier.nokto.net/">site web</a>, oui !</p>
+<p><a href="/media/herosdepapier-home.png" title="herosdepapier-home.png"><img decoding="async" src="/media/.herosdepapier-home_m.jpg" alt="herosdepapier-home.png" style="margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto" /></a></p>
+<p>Il a été réalisé intégralement par des étudiants en Master 2 dans le cadre d&rsquo;un cours sur la librairie électronique que j&rsquo;ai donné à l&rsquo;automne dernier au Pôle Métiers du livre de Saint-Cloud. Ce cours de vingt heures portait sur :</p>
+<ul>
+<li>L&rsquo;acquisition de bases en HTML et CSS et l&rsquo;utilisation d&rsquo;un outil d&rsquo;édition de code et de mise en ligne de fichier développé spécialement pour l&rsquo;occasion ;</li>
+<li>L&rsquo;ergonomie de pages web typiques de sites de librairie (pages d&rsquo;accueil, catalogue, fiche livre) ;</li>
+<li>L&rsquo;optimisation d&rsquo;une page web pour le référencement ;</li>
+<li>La communication sur internet en général et les réseaux sociaux en particulier ;</li>
+<li>L&rsquo;utilisation d&rsquo;un outil de statistiques (Google Analytics) ;</li>
+<li>En pratique, la création d&rsquo;une <a href="http://herosdepapier.nokto.net/">page d&rsquo;accueil</a>&nbsp;avec bannière défilante, d&rsquo;une <a href="http://herosdepapier.nokto.net/livre.html">fiche livre</a> avec coup de coeur de libraire et bande-annonce vidéo, et la création d&rsquo;une <a href="https://www.facebook.com/Heros.de.Papier">page Facebook</a> et d&rsquo;un <a href="https://twitter.com/#!/HerosdePapier">compte Twitter</a> pour la librairie.</li>
+</ul>
+<p>Le cours n&rsquo;avait évidemment pas pour objectif d&rsquo;enseigner aux étudiants la création d&rsquo;un site web de librairie de A à Z (cela me mettrait au chomage !) mais de leur donner les notions de bases et la culture générale nécessaires pour dialoguer avec un prestataire technique, ainsi qu&rsquo;un aperçu des bonnes pratiques spécifiques au domaine du livre.</p>
+<div><a href="/media/herosdepapier-book.png" title="herosdepapier-book.png"><img decoding="async" src="/media/.herosdepapier-book_m.jpg" alt="herosdepapier-book.png" style="margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto" /></a></div>
+]]></content:encoded>
+
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">169</post-id>	</item>
+		<item>
+		<title>Intervention à l&#8217;IUT Métiers du livre Saint-Cloud sur la Librairie Ys</title>
+		<link>/2010/10/26/20101026intervention-iut-metiers-du-livre-saint-cloud-librairie-ys/</link>
+					<comments>/2010/10/26/20101026intervention-iut-metiers-du-livre-saint-cloud-librairie-ys/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Tue, 26 Oct 2010 19:36:00 +0000</pubDate>
+				<category><![CDATA[Cours]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=168</guid>
+
+					<description><![CDATA[<p>J'ai donné hier et avant-hier une petite présentation de la <a href="http://www.librys.fr/">Librairie Ys</a>, en relatant sa création, en donnant quelques idées pour se démarquer de la concurrence et pour communiquer quand on est libraire sur internet. Voici le plan détaillé de cette intervention, qu'il est aussi possible de <a href="/media/intervention-iut-ys.pdf">télécharger en PDF</a>. A noter qu'il ne s'agit que de notes rapidement rédigées, n'hésitez pas à utiliser les commentaires ou à&#160;<a href="/contact/">me contacter</a> si vous voulez plus d'informations sur un point.</p>]]></description>
+										<content:encoded><![CDATA[<p>J&rsquo;ai donné hier et avant-hier une petite présentation de la <a href="http://www.librys.fr/">Librairie Ys</a>, en relatant sa création, en donnant quelques idées pour se démarquer de la concurrence et pour communiquer quand on est libraire sur internet. Voici le plan détaillé de cette intervention, qu&rsquo;il est aussi possible de <a href="/media/intervention-iut-ys.pdf">télécharger en PDF</a>. A noter qu&rsquo;il ne s&rsquo;agit que de notes rapidement rédigées, n&rsquo;hésitez pas à utiliser les commentaires ou à&nbsp;<a href="/contact/">me contacter</a> si vous voulez plus d&rsquo;informations sur un point.</p>
+<p><span id="more-168"></span></p>
+<div>
+<h3> Introduction </h3>
+<ul>
+<li>On va parler de la vente de livre sur internet et de la communication sur le réseau. Il faut distinguer deux types de ventes sur internet&nbsp;: la vente de livres papiers par correspondance et, plus récemment, la vente de livres numériques. On abordera uniquement le premier sujet.</li>
+<li>Contexte : le livre est un media très ancien (plusieurs siècles) et le milieu du livre l&rsquo;est aussi. Grandes maisons d&rsquo;édition ont souvent plus d&rsquo;un siècle (Gallimard, Flammarion, Hachette), entreprise familiale qui se transmettent en famille (Antoine Gallimard). Secteur très ancré dans ses habitudes et très effrayé par les nouvelles technologies, notamment par : livre électronique, numérisation des fonds (google entre autres), vente en ligne.</li>
+<li>Vente en ligne représente presque 10% du marché du livre (contre 5% en 2007), 10,5 % de progression sur l&rsquo;année 2009 contre 1,5% pour l&rsquo;ensemble du marché du livre. Marché VPC français détenu à 80% par FNAC et Amazon. Projet 1001libraires pour permettre à la librairie indépendante de se fédérer et d&rsquo;accéder à la vente en ligne, lancement courant novembre.</li>
+<li>Je relaterais mon aventure de la librairie en ligne (Ys spécialisée SF), comment j&rsquo;ai créé mon entreprise, quelle était l&rsquo;idée de départ et comment elle a évolué jusqu&rsquo;à aujourd&rsquo;hui, notamment partenariat avec d&rsquo;autres librairies concurrentes. Problématique&nbsp;: comment exister parmi les géants&nbsp;?</li>
+<li>Il s&rsquo;agit évidemment de présenter mon point de vue qui n&rsquo;est pas le seul, de proposer quelques idées et de faire part de mon expérience. J&rsquo;essaierai de ne pas être trop technique, limiter à ce qu&rsquo;un libraire doit savoir.</li>
+</ul>
+<h3> 1. Présentation </h3>
+<ul>
+<li>Etudes à la fac, job d&rsquo;étudiant chez Phosphore &amp; Sens, puis deux ans d&rsquo;apprentissage à l&rsquo;INFL et employé dans les librairies Fontaine. Projet de librairie mais pas à court terme.</li>
+<li>Rencontre avec Xavier Vernet. Présentation de la librairie Scylla&nbsp;: crée en 2004 spécialisée SF, avec important fonds d&rsquo;occasion puis implémentation progressive du neuf. Rencontre fin 2005, beaucoup discuté et quand il apprend que je maîtrise le web, il me propose de m&rsquo;occuper de la vente en ligne pour lui (sur l&rsquo;occasion uniquement). Mais esprit d&rsquo;indépendance, chacun son entreprise, vente avec commission. Puis carrément chacun son stock, pour permettre à mon entreprise de générer du bénéfice.</li>
+</ul>
+<h3> 2. Création de la Librairie Ys </h3>
+<p> Diplômé fin 2007 de l&rsquo;INFL, fin de mon apprentissage. Création de la Librairie Ys en 2008. </p>
+<p> Avec un mode de fonctionnement original&nbsp;: </p>
+<ul>
+<li>Ys vend son propre stock d&rsquo;occasion en ligne, mais aussi le stock d&rsquo;occasion de la Librairie Scylla, contre une commission.</li>
+<li>Possibilité pour les clients de retirer leurs commandes Ys à la Librairie Scylla pour économiser les frais de port.</li>
+</ul>
+<h4> Avantages pour Ys&nbsp;: </h4>
+<ul>
+<li>Lancement du site avec un fonds déjà conséquent&nbsp;: 1000 livres seulement pour le stock Ys, mais 3000 de plus avec le stock Scylla. Aujourd&rsquo;hui, 4000 livres pour Ys et 5000 livres pour Scylla. =&gt; Mise de fond de 2500 € pour Ys, pas besoin d&#8217;emprunter à une banque.</li>
+<li>Profiter de la notoriété et de la base de clients de la Librairie Scylla dès le lancement de la Librairie Ys.</li>
+</ul>
+<h4> Avantages pour Scylla&nbsp;: </h4>
+<ul>
+<li>Etendre considérablement sa zone de chalandise, toucher des villes de province qui n&rsquo;ont pas de librairie spécialisée, voire pas de librairie du tout.</li>
+<li>Vendre des livres qu&rsquo;il n&rsquo;aurait jamais vendu sans ça, faute de clientèle.</li>
+<li>Faire découvrir la librairie à de nouveaux clients en leur proposant de venir retirer leurs clients. Souvent, les clients achètent de nouveaux livres, certains sont devenus des clients fidèles.</li>
+</ul>
+<h4> L&rsquo;union fait la force : </h4>
+<ul>
+<li>La librairie Scylla offre un endroit à la librairie Ys (immatériel) pour faire des dédicaces, Ys fait venir du monde à Scylla.</li>
+<li>Cas du distributeur Hachette avec lequel Scylla ne travaille pas.</li>
+<li>Communication commune : réduction des frais, impact plus important.</li>
+</ul>
+<h3> 3. Se démarquer de la concurrence </h3>
+<p> Vu le poids des structures comme Amazon et Fnac (80% du marché de la VPC Internet), difficile de venir les concurrencer sur leurs propre terrain, à savoir librairie généraliste, même si certains réussissent plus ou moins (Bibliosurf). Il faut donc se démarquer par le concept et par le service.&nbsp;</p>
+<h4> 3.1 Fonds </h4>
+<p> La librairie ne propose, dans un premier temps au moins, que des livres d&rsquo;occasions, épuisés, rares et de collections. Sur le terrain du livre neuf sur internet, on peut difficilement lutter contre des structures comme Amazon ou la FNAC qui offre, en plus des 5% réglementaires, les frais de port gratuits. L&rsquo;idée est donc de se démarquer en offrant des livres moins chers (d&rsquo;occasion) ou introuvables sur ces sites (livres épuisés). Il y a un véritable marché à ce niveau-là dans le domaine des littératures de l&rsquo;imaginaire, où des textes pourtant de qualité ne sont pas réimprimés, et donc très recherchés par les amateurs. </p>
+<h4> 3.2 Site </h4>
+<ul>
+<li>Moteur de recherche spécialisé avec nombreuses options et filtres qui va plus loin que les moteurs de librairies classiques pour répondre au besoin des collectionneurs (année d&rsquo;édition, illustrateur, etc.)</li>
+<li>Page auteurs, page collections, page séries qui proposent en plus des livres correspondant des informations biographiques ou bibliographiques.</li>
+<li>Livres photographiés un par un, légèrement de biais pour permettre au client d&rsquo;apprécier aussi bien la première de couverture que le dos.</li>
+<li>Système d&rsquo;alertes pour être averti par e-mail dès qu&rsquo;un livre d&rsquo;occasion est disponible. Possibilité de personnaliser l&rsquo;alerte selon critères avancée.</li>
+<li>Possibilité de gérer sa bibliothèque (à venir).</li>
+</ul>
+<h4> 3.3 Contenu éditorial </h4>
+<p> Avoir une page d&rsquo;accueil renouvelée régulièrement, mais pas uniquement nouveautés, proposer contenu éditorial. L&rsquo;objectif&nbsp;: donner envie aux internautes de venir régulièrement sur le site, même s&rsquo;ils n&rsquo;ont pas spécialement envie d&rsquo;acheter de livres. Sur Ys&nbsp;: blog très réactif, présentation des arrivages d&rsquo;occasions chaque mercredi, &nbsp;de temps en temps, historique de grandes collections, conseil au collectionneur, actualité de la SF. La Lettre d&rsquo;Ys (newsletter) qui permet rapport encore plus intime au client. Il faut avoir le temps ou envisager des partenariats. </p>
+<h4> 3.4 Relation client </h4>
+<p> Sans doute le point le plus important et sur lequel on peut le plus de se démarquer des grandes enseignes&nbsp;: il s&rsquo;agit «&nbsp;d&rsquo;automatiser dans déshumaniser ». Création du personnage du petit robot Tys pour rendre les échanges automatisés ludiques, mais surtout&nbsp;: </p>
+<ul>
+<li>Avant la commande&nbsp;: alertes et recherches automatisées, mais possibilité de « poser une question » sur chaque fiche de livre qui permet de dialoguer avec le libraire et avoir plus d&rsquo;informations, par exemple, sur l&rsquo;état d&rsquo;un livre. Rappel fréquent « n&rsquo;hésitez pas à contacter »&nbsp;: il existe un libraire derrière l&rsquo;écran. L&rsquo;idée est de permettre au client de tout faire tout seul sans avoir à attendre l&rsquo;intervention du libraire (ce qui permet aux deux de gagner du temps pour tous les deux) tout en lui offrant toujours la possibilité de contacter un humain s&rsquo;il le souhaite.</li>
+<li>Pendant la commande : inscription sur le site, panier, paiement sécurisé : aspect pro du site qui rassure le client. Pas de numéro de téléphone sur le site, mais je n&rsquo;hésite pas à téléphoner au client s&rsquo;il y a un souci d&rsquo;approvisionnement pour établir une relation. Mais l&rsquo;expédition se fait « à la main » et le client doit le sentir : Ajout d&rsquo;un petit mot personnalisé sur chaque commande. Prend peu de temps et pourrait être automatisé, mais grand plus pour humaniser la relation client.</li>
+<li>Après la commande&nbsp;: automatisation du suivi de la commande, confirmation de réception de la commande, si tout va bien. Par contre, si litige, possibilité de déclarer un incident en contactant le libraire. Un seul interlocuteur qui a bien en tête tous les détails de la commande et peut proposer une réponse adaptée.</li>
+</ul>
+<p> Ma première démarche a été de chercher à reproduire le plus fidèlement possible la relation client-libraire d&rsquo;une librairie physique (chat, vidéo-conférence). Familiarité du client avec le libraire, être reconnu quand on entre. Mais je me suis aperçu que je faisais fausse route&nbsp;: il faut au contraire utiliser les formidables possibilités d&rsquo;une librairie en ligne pour inventer une nouvelle relation libraire-client. </p>
+<h3> 4. Partenariat avec la librairie Soleil Vert </h3>
+<p> Courant 2009, contacté par la toute jeune librairie Soleil Vert (spécialisée Polar/SF) située à Calvisson (environs de Nîmes) qui souhaite établir un partenariat du même type que celui avec Scylla. C&rsquo;est impossible puisque Soleil Vert est trop loin, mais Ys différent type de partenariat. </p>
+<ul>
+<li>La librairie Ys loue une version personnalisée du site à Soleil Vert, avec son propre stock, son propre contenu éditorial.</li>
+<li>Soleil Vert reçoit ses commandes indépendamment (pas de possibilité d&rsquo;acheter sur les deux sites) et les envoie directement depuis Calvisson.</li>
+<li>Soleil Vert reverse à Ys une commission sur chaque commande.</li>
+<li>La base de données livre est commune, nourrie par les deux librairies, pas besoin de recréer une fiche si elle a déjà été créée par une autre librairie.</li>
+<li>Les alertes sont communes aux deux sites&nbsp;: elles peuvent être créées sur l&rsquo;un ou l&rsquo;autre et concerne les deux stocks.</li>
+</ul>
+<p> Autres partenariats avec des éditeurs et des festival, et à venir avec d&rsquo;autres librairies…</p>
+<h3> 5. Communiquer sur internet </h3>
+<p> On peut légitimement se poser la question de savoir s&rsquo;il est intéressant pour une librairie physique indépendante de vendre sur internet, vu la concurrence existante. Ce qui est certain, c&rsquo;est qu&rsquo;il est intéressant de communiquer sur internet, même avec un site vitrine qui ne vend rien. </p>
+<h4> 5.1 Blog, site vitrine ou e-commerce </h4>
+<ul>
+<li>Un blog est le minimum que devrait avoir une librairie aujourd&rsquo;hui. Il permet d&rsquo;établir facilement un lien avec les clients du magasin quand ceux-ci n&rsquo;y sont pas, de fidéliser la clientèle et de lui donner envie de venir en magasin. Outre rappeler les coordonnées et les horaires de la librairie, le blog, alimenté régulièrement, permettra de publier critiques et coups de cœurs des libraires, avertir des évènements organisés par la librairie, annoncer les parutions importantes, publier des interviews d&rsquo;auteurs, etc.</li>
+<li>Un site vitrine présente tout ou une sélection des livres vendus par la librairie, avec idéalement un moteur de recherche. Il permet aux clients fidèles de se tenir au courant des parutions et aux autres de savoir si la librairie possède le livre qu&rsquo;ils recherchent en stock, éventuellement de le réserver.</li>
+<li>Un site e-commerce est un site vitrine qui propose, en plus, la vente de livres par correspondance.</li>
+</ul>
+<h4> 5.2 Référencement</h4>
+<p> Le nerf de la guerre, à soigner. Au début, la plupart des clients d&rsquo;Ys étaient des clients de Scylla. Aujourd&rsquo;hui, 90% des nouveaux clients arrivent via Google. Plus la spécialité de la librairie est pointue, plus le référencement est important pour se faire connaître des clients qui recherchent des choses pointues. </p>
+<p> Longue traîne&nbsp;: Le référencement doit se faire non pas simplement sur la page d&rsquo;accueil mais sur toutes les pages, points d&rsquo;entrées plus importantes quand cumulée. L&rsquo;erreur est de vouloir lutter pour un mot-clé (par exemple «&nbsp;Librairie SF&nbsp;») quand il est plus facile d&rsquo;insister sur un grand nombre de mots-clés différent. Exemple de FNAC / Fnac.com. </p>
+<p> Le référencement est une science à part entière, traitée par de nombreux livres et site, sujet un peu technique, mais quelques astuces élémentaires à connaître&nbsp;: </p>
+<ul>
+<li>Une fiche pour chaque livre, pas juste listing. Impact plus grand pour le moteur de recherche et plus de lisibilité pour le client qui arrive après une recherche.</li>
+<li>Titre de page et adresse de la page doivent être titre / auteur, pas titre générique ou numéro.</li>
+<li>Les Sitemaps sont des fichiers XML généré par un site qui permettent d&rsquo;informer Google (et autres moteurs) de l&rsquo;existence des pages et de leur mises à jours.&nbsp;</li>
+</ul>
+<h4> 5.3 Réseaux sociaux </h4>
+<p> Mine de rien, Facebook et consorts ont changé la face du web et la façon dont les gens obtiennent des informations, à tel point que, malgré les critiques, il serait dommageable de s&rsquo;en passer aujourd&rsquo;hui. </p>
+<ul>
+<li>Nombreux outils mis à disposition par Facebook pour promouvoir sa société&nbsp;: créer une page plutôt qu&rsquo;un profil, ajouter des boutons de partage sur le site. Permet de toucher de nouveaux utilisateurs et de fidéliser les anciens, mais aussi permet aux utilisateurs de communiquer eux-mêmes (marketing viral).</li>
+<li>Twitter moins important, mais monte en puissance.</li>
+</ul>
+<p> Il est possible d&rsquo;automatiser la publication d&rsquo;informations sur Twitter et Facebook à partir du flux RSS d&rsquo;un blog et donc de toucher un public plus large sans effort supplémentaire&nbsp;: il serait dommage de s&rsquo;en passer.</p>
+<p><span class="Apple-style-span" style="font-size: 14px;font-weight: bold">Pour aller plus loin</span></p>
+<ul>
+<li> <a href="http://www.librys.fr/">http://www.librys.fr/</a> (Librairie Ys)</li>
+<li><a href="http://www.nokto.net/">http://www.nokto.net/</a> (mon blog personnel)</li>
+<li><a href="http://www.bibliosurf.com/">http://www.bibliosurf.com/</a> (un autre exemple de librairie en ligne)</li>
+<li><a href="http://www.webrankinfo.com/">http://www.webrankinfo.com/</a> (site d&rsquo;informations sur le référencement)</li>
+</ul></div>
+]]></content:encoded>
+
+					<wfw:commentRss>/2010/10/26/20101026intervention-iut-metiers-du-livre-saint-cloud-librairie-ys/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">168</post-id>	</item>
+	</channel>
+</rss>

@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>citriq &#8211; nokto</title>
+	<atom:link href="/tag/citriq/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Sat, 08 Feb 2014 18:16:24 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+<site xmlns="com-wordpress:feed-additions:1">165226571</site>	<item>
+		<title>Citriq : une extension pour WordPress</title>
+		<link>/2014/02/08/citriq-wordpress-plugin/</link>
+					<comments>/2014/02/08/citriq-wordpress-plugin/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Sat, 08 Feb 2014 18:16:24 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[citriq]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=371</guid>
+
+					<description><![CDATA[Vous utilisez WordPress pour votre blog littéraire ? L&#8217;extension Citriq pour WordPress peut vous aider à mieux référencer vos articles en créant automatiquement des liens entre vos critiques et d&#8217;autres critiques du même livre sur d&#8217;autres sites littéraires ! Citriq.net est aussi un moteur de recherche qui recensent des dizaines milliers de critiques littéraires issues &#8230; <p class="link-more"><a href="/2014/02/08/citriq-wordpress-plugin/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Citriq : une extension pour WordPress&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-plugin.png"><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-385" alt="citriq-wordpress-plugin" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-plugin.png" width="711" height="237" /></a></p>
+<p>Vous utilisez <a href="http://www.wordpress.org/">WordPress</a> pour votre blog littéraire ? L&rsquo;extension Citriq pour WordPress peut vous aider à mieux référencer vos articles en créant automatiquement des liens entre vos critiques et d&rsquo;autres critiques du même livre sur d&rsquo;autres sites littéraires ! <a href="http://citriq.net/">Citriq.net</a> est aussi un moteur de recherche qui recensent des dizaines milliers de critiques littéraires issues de centaines de sites et blogs.</p>
+<h3>Installation</h3>
+<p>La première chose à faire est d&rsquo;inscrire votre blog sur <a href="http://citriq.net/">Citriq.net</a> (si ce n&rsquo;est pas déjà fait).</p>
+<p>Citriq pour WordPress est disponible dans <a href="http://wordpress.org/plugins/citriqnet/">l&rsquo;annuaire des extensions</a> de WordPress, ce qui vous permettra de l&rsquo;installer facilement et de bénéficier des mises à jour automatique à chaque nouvelle version. Rendez-vous dans l&rsquo;onglet <strong>Extensions</strong> de WordPress, cliquer sur <strong>Rechercher</strong> et entrez <em>Citriq</em> comme mot-clé. Repérez l&rsquo;extension, cliquez sur <strong>Installer maintenant</strong> puis sur <strong>Activez l&rsquo;extension</strong>, et c&rsquo;est tout !</p>
+<p>Si vous préférez installer l&rsquo;extension manuellement, voici la marche à suivre :</p>
+<ol>
+<li>Téléchargez le fichier zip de <a href="http://wordpress.org/plugins/citriqnet/">la dernière version de l&rsquo;extension</a>.</li>
+<li>Sur la page des extensions de WordPress, en haut à droite, cliquez sur <strong>Ajouter</strong>.</li>
+<li>Dans les onglets sous <strong>Installer des extensions</strong>, cliquez sur <strong>Envoyer</strong>.</li>
+<li>Sélectionnez sur votre ordinateur le fichier zip téléchargé plus tôt, puis cliquez sur <strong>Installez maintenant.</strong></li>
+<li>Une fois l&rsquo;installation terminée, cliquez sur <strong>Activer l&rsquo;extension</strong>.</li>
+<li>L&rsquo;extension est activée et prête à être utilisée !</li>
+</ol>
+<h3>Utilisation</h3>
+<p>Une fois l&rsquo;extension installée et activée sur votre blog, il vous faudra utiliser les <strong>champs personnalisés</strong> de WordPress pour que l&rsquo;extension sache lesquels de vos articles doivent être référencés sur Citriq, et à quel livre correspond la critique.</p>
+<p>Il faudra donc, dans un premier temps, activer les champs personnalisés (si ce n&rsquo;est pas déjà fait) en cliquant, sur la page d&rsquo;écriture des articles, sur <strong>Options de l&rsquo;écran</strong> (en haut à droite) puis en cochant la case <strong>Champs personnalisés</strong>.</p>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-1.jpg"><img decoding="async" class="aligncenter size-large wp-image-376" alt="citriq-wordpress-1" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-1-1024x442.jpg" width="604" height="260" /></a></p>
+<p>Pour signaler à l&rsquo;extension qu&rsquo;un article est une critique à référencer, il vous faudra renseigner l&rsquo;ISBN du livre en créant un champ personnalisé <em>isbn<strong></strong></em>. Repérez la zone la zone <strong>Ajouter un champ personnalisé</strong> puis entrez <em>isbn </em>(en minuscule, c&rsquo;est important) dans le champ <b>Nom</b> et l&rsquo;ISBN du livre critique dans le champ <strong>Valeur</strong>. Cliquez enfin sur <strong>Mettre à jour </strong>pour enregistrer les modifications de votre article.</p>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-2.jpg"><img decoding="async" class="aligncenter size-full wp-image-378" alt="citriq-wordpress-2" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-2.jpg" width="817" height="312" /></a></p>
+<p>NB : L’ISBN est un numéro unique attribué à chaque livre publié, long de 13 chiffres et commençant toujours par 978 ou 979. On le trouve dans les premières pages du livre ou au dos, généralement près du code barre. Il peut être entré avec ou sans tiret.</p>
+<p>Répétez ensuite cette opération pour chaque article à référencer dans Citriq.</p>
+<h3> Résolution des problèmes</h3>
+<p>Pour vérifiez que l&rsquo;extension fonctionne correctement, ajoutez <strong>?debug=1</strong> ou <strong>&amp;debug=1</strong> à l’adresse de la page de l’article dans la barre de votre navigateur. Le widget Citriq affichera un message d’erreur détaillant le problème s’il y a lieu.</p>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-debug.jpg"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-381" alt="citriq-wordpress-debug" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-debug.jpg" width="961" height="513" /></a></p>
+<p>Si vous parvenez pas à résoudre le problème, n&rsquo;hésitez pas poster le message d&rsquo;erreur en commentaire à cet article (avec l&rsquo;adresse de l&rsquo;article posant problème), je tâcherai de vous aider.</p>
+<h3>Pour aller plus loin</h3>
+<p>Pour envoyer plus d&rsquo;information à Citriq, il est possible d&rsquo;utiliser d&rsquo;autres champs personnalisés. Le champ <em>isbn</em><em> est </em>le seul obligatoire, mais voici d&rsquo;autres champs que vous pouvez utiliser :</p>
+<ul>
+<li><em>excerpt</em> : un extrait de la critique (jusqu’à 500 caractères) ;</li>
+<li><em>reviewer</em> : l’auteur de la critique (s’il y en a plusieurs sur le site) ;</li>
+<li><em>source</em> : support dont est issue la critique (si différent du site) ;</li>
+<li><em>rating</em> : permet d’indiquer une note (un entier, sur 100) ;</li>
+</ul>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-custom-params.png"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-383" alt="citriq-wordpress-custom-params" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-custom-params.png" width="791" height="334" /></a></p>
+<h3>Historique des modifications</h3>
+<h5>1.0.3 (13/02/2014)</h5>
+<ul>
+<li>Les liens s&rsquo;affichent désormais aussi si la critique est affiché sur une page avec d&rsquo;autres articles (accueil, catégorie, tag) mais l&rsquo;adresse de la critique n&rsquo;est pas enregistrée dans ce cas (paramètre ‘ignore’)</li>
+<li>Ajout d&rsquo;un paramètre ‘plugin’ pour détecter les blogs utilisateurs de l&rsquo;extension à des fins statistiques</li>
+<li>La date de publication de l&rsquo;article est désormais transmise avec le paramètre ‘date’</li>
+</ul>
+<h5>1.0.2 (11/02/2014)</h5>
+<ul>
+<li>Suppression du fichier inutile wp_auto_update.class.php</li>
+</ul>
+<h5>1.0.1 (10/02/2014)</h5>
+<ul>
+<li>Suppression de la mise à jour automatique</li>
+</ul>
+<h5>1.0 (08/02/2014)</h5>
+<ul>
+<li>Première version de l&rsquo;extension</li>
+</ul>
+<h3>Les blogs qui utilisent l&rsquo;extension WordPress</h3>
+<p>N&rsquo;hésitez pas à me signaler toute utilisation de cette extension (en précisant la version de WordPress utilisée). Outre le fait que ça me fera plaisir, je pourrais vérifier que tout fonctionne correctement et lister sur cette page les blogs utilisants l&rsquo;extension.</p>
+<ul>
+<li><a href="https://nokto.net/">nokto.net</a></li>
+<li><a href="http://mesimaginaires.net/">Mes imaginaires</a></li>
+<li><a href="http://www.valunivers.fr/">Valunivers</a></li>
+<li><a href="http://www.vagabondsdureve.fr/">Les Vagabonds du rêve</a></li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/02/08/citriq-wordpress-plugin/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">371</post-id>	</item>
+		<item>
+		<title>Citriq : automatiser le référencement de vos critiques littéraires avec PHP</title>
+		<link>/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/</link>
+					<comments>/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 02 Jan 2014 18:15:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[Technique]]></category>
+		<category><![CDATA[citriq]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=252</guid>
+
+					<description><![CDATA[Si votre site ou blog utilise php, il est facile de lui faire écrire le petit code JavaScript permettant de référencer automatiquement vos critiques dans Citriq. Cela vous évitera d’avoir à les entrer une par une. Voici une fonction qui permet de faire écrire automatiquement le code widget à PHP en fonction des paramètres reçus. &#8230; <p class="link-more"><a href="/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Citriq : automatiser le référencement de vos critiques littéraires avec PHP&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><span style="line-height: 1.5;">Si votre site ou blog utilise php, il est facile de lui faire écrire le petit code JavaScript permettant de référencer automatiquement vos critiques dans </span><a style="line-height: 1.5;" href="http://citriq.net/">Citriq</a><span style="line-height: 1.5;">. Cela vous évitera d’avoir à les entrer une par une.</span></p>
+<p>Voici une fonction qui permet de faire écrire automatiquement le code widget à PHP en fonction des paramètres reçus. Elle nécessite PHP 5.</p>
+<p>Cette fonction permet notamment via deux nouveaux paramètres <strong>excerpt</strong> et <strong>rating </strong>d&rsquo;envoyer à Citriq un extrait (jusqu&rsquo;à 500 caractères) de la critique et une note (sur 100). Ces paramètres étaient jusqu&rsquo;à présent réservés aux critiques entrées manuellement.  La fonction se charge en outre de l&rsquo;encodage du texte dans les paramètres du widget de manière à ce que les caractères soient correctement pris en charge par Citriq.</p>
+<h3>La fonction</h3>
+<pre>function citriq($params) {
+  if(empty($params["uid"])) $error = "Le paramètre uid est obligatoire";
+  elseif(empty($params["isbn"])) $error = "Le paramètre isbn est obligatoire";
+  else return '&lt;script type="text/javascript" src="http://citriq.net/w/crawl?'.http_build_query($params).'"&gt;&lt;script&gt;';
+  if($params["debug"] == 1 &amp;&amp; isset($error)) die("Erreur Citriq : ".$error);
+}</pre>
+<h3>Utilisation</h3>
+<p>Cette fonction prend comme seule valeur un tableau php (array) dont les clés sont les différents paramètres du widget Citriq. Sauf mention contraire, ils sont tous facultatifs. Notez que les noms des paramètres sont toujours en minuscules.</p>
+<ul>
+<li><em>uid</em> (obligatoire) : l’identifiant unique de la critique dans votre base ;</li>
+<li><em>isbn</em> (obligatoire) : le code IBSN du livre critiqué ;</li>
+<li><em>excerpt</em> : un extrait de la critique (jusqu’à 500 caractères) ;</li>
+<li><em>reviewer</em> : l’auteur de la critique (s’il y en a plusieurs sur le site) ;</li>
+<li><em>source</em> : support dont est issue la critique (si différent du site) ;</li>
+<li><em>rating</em> : permet d&rsquo;indiquer une note (un entier, sur 100) ;</li>
+<li><em>date</em> : la date de publication de la critique ;</li>
+<li><em>ignore</em> : permet d&rsquo;afficher le widget sans enregistrer la page en cours ;</li>
+<li><em>debug</em> : si ce paramètre facultatif est égal à 1, Citriq affichera des informations statistiques et un éventuel message d&rsquo;erreur sur votre site.</li>
+</ul>
+<p>La fonction retourne le code javascript du widget préparé qu&rsquo;on peut récupérer dans une variable ou afficher immédiatement avec l&rsquo;instruction <strong>echo</strong>.</p>
+<h3>Exemple</h3>
+<p>Ci-dessous, un exemple de code (fictif) qui permettrait de référencer la critique publiée <a href="http://www.belial.fr/blog/les-soldats-de-la-mer_3601">sur cette page</a>, pour le résultat sur cette page.</p>
+<pre>$params["uid"] = 3601;
+$params["isbn"] = 9782277492830;
+$params["excerpt"] = "Quand, voici quelques mois, les jeunes éditions Dystopia Workshop publièrent Le Prophète et le vizir, la surprise fut de taille. On ne s’attendait pas le moins du monde à voir le couple Rémy revenir à l’écriture et publier de l’inédit. Il avait eu une assez belle carrière dans les années 70, dont plus d’un se serait satisfait, mais il semblait qu’elle fût désormais de...";
+$params["reviewer"] = "Jean-Pierre Lion";
+$params["source"] = "Bifrost 71";
+$params["rating"] = "80"; // Equivaut à 4 étoiles sur 5
+echo citriq($params);</pre>
+<h3>Exemple avec WordPress</h3>
+<p>Il est possible d&rsquo;utiliser les champs personnalisés de WordPress pour faire générer automatiquement le code du widget Citriq par WordPress. On trouvera plus d&rsquo;information à ce sujet dans l&rsquo;article <a title="Citriq : automatiser le référencement des critiques avec WordPress" href="https://nokto.net/20130826citriq-automatiser-le-referencement-des-critiques-avec-wordpress/">Automatiser le référencement de vos critiques avec WordPress</a>.</p>
+<p>MAJ du 08/02/2014 : il existe aussi une <a href="https://nokto.net/citriq-wordpress-plugin/">extension WordPress pour Citriq</a>, qui utilise cette fonction php mais est beaucoup plus simple à mettre en oeuvre.</p>
+<pre>$params["uid"] = get_the_id(); // L'identifiant de l'article WordPress
+$params["isbn"] = get_post_meta(get_the_id(), "isbn", true); // Le champ personnalisé "isbn"
+$params["reviewer] = get_the_author(); // L'auteur de l'article WordPress
+$params["excerpt] = get_post_meta(get_the_id(), "extrait", true); // Le champ personnalisé "extrait"
+if(is_singular()) echo citriq($params);</pre>
+<h3>Résolution des problèmes</h3>
+<p>Si le code du widget ne s&rsquo;affiche pas correctement, vous pouvez utilisez le paramètre facultatif <em>debug</em> pour afficher un message d&rsquo;erreur. Si vous ne comprenez pas le message d&rsquo;erreur, n&rsquo;hésitez pas à poser la question dans les commentaires ci-dessous.</p>
+<p>Bonus : <a href="http://pastebin.com/a2guP2w3">l&rsquo;équivalent en Python</a> (merci Joachim)</p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">252</post-id>	</item>
+		<item>
+		<title>Citriq : automatiser le référencement des critiques avec WordPress</title>
+		<link>/2013/08/26/20130826citriq-automatiser-le-referencement-des-critiques-avec-wordpress/</link>
+					<comments>/2013/08/26/20130826citriq-automatiser-le-referencement-des-critiques-avec-wordpress/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Mon, 26 Aug 2013 18:40:00 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[citriq]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=156</guid>
+
+					<description><![CDATA[Si vous avez un blog de critiques littéraires sous WordPress, il est possible d&#8217;automatiser simplement le référencement de vos critiques dans Citriq. La manipulation consiste à utiliser les champs personnalisés de WordPress pour associer à chaque critique l&#8217;ISBN du livre critiqué, puis de modifier votre thème pour qu&#8217;il génére automatiquement le code du widget Citriq en utilisant &#8230; <p class="link-more"><a href="/2013/08/26/20130826citriq-automatiser-le-referencement-des-critiques-avec-wordpress/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Citriq : automatiser le référencement des critiques avec WordPress&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p>Si vous avez un blog de critiques littéraires sous WordPress, il est possible d&rsquo;automatiser simplement le référencement de vos critiques dans <a href="http://citriq.net/">Citriq</a>. La manipulation consiste à utiliser les <a href="http://codex.wordpress.org/fr:Utiliser_les_champs_personnalis%C3%A9s">champs personnalisés</a> de WordPress pour associer à chaque critique l&rsquo;ISBN du livre critiqué, puis de modifier votre thème pour qu&rsquo;il génére automatiquement le code du widget <a href="http://citriq.net/">Citriq</a> en utilisant cet ISBN.</p>
+<p>MAJ du 08/02/2014 : Il existe désormais une <a href="https://nokto.net/citriq-wordpress-plugin/">extension WordPress pour Citriq</a>, bien plus facile à mettre en oeuvre, et qui vous évitera d&rsquo;avoir à modifier votre thème.</p>
+<p>Avant toute chose, il faut bien entendu, si ce n&rsquo;est pas déjà fait, que votre blog soit <a href="http://citriq.net/">inscrit à Citriq</a>.</p>
+<h3>Marche à suivre</h3>
+<p>1. Choisissez une critique de votre blog déjà en ligne mais encore non référencée sur Citriq. Cliquez sur <strong>Modifier </strong>pour accéder à la page d&rsquo;édition de l&rsquo;article.</p>
+<p>2. Cliquez en haut à droite de la fenêtre d&rsquo;édition sur <strong>Options de l&rsquo;écran</strong>, puis cochez la case <strong>Champs personnalisés</strong> pour faire apparaître la section correspondante sur la page d&rsquo;édition, sous la zone de texte.</p>
+<p><a title="citriq-wordpress-1.jpg" href="/media/citriq-wordpress-1.jpg"><img decoding="async" style="margin: 0 auto;" alt="citriq-wordpress-1.jpg" src="/media/.citriq-wordpress-1_m.jpg" /></a></p>
+<p>3. Repérez la zone <strong>Ajouter un champ personnalisé</strong> et entrez <em>isbn</em> (en minuscules, c&rsquo;est important) dans le champ <strong>Nom</strong> et entrez l&rsquo;ISBN du livre critiqué dans le champ <strong>Valeur</strong>. Cliquez sur <strong>Mettre à jour</strong> pour enregistrer votre article.</p>
+<p><a title="citriq-wordpress-2.jpg" href="/media/citriq-wordpress-2.jpg"><img decoding="async" style="margin: 0 auto;" alt="citriq-wordpress-2.jpg" src="/media/.citriq-wordpress-2_m.jpg" /></a></p>
+<p>NB : L&rsquo;ISBN est un numéro unique attribué à chaque livre publié, long de 13 chiffres et commençant toujours par 978 ou 979. On le trouve dans les premières pages du livre ou au dos, généralement près du code barre. Il peut être entré avec ou sans tiret.</p>
+<p>Il va falloir ensuite modifier votre thème pour permettre à WordPress de générer automatiquement le code du widget Citriq. La manipulation peut varier selon le thème utilisé, dans les exemples ci-dessous, j&rsquo;utilise le thème par défaut <em>Twenty Twelve</em>.</p>
+<p>4. Rendez-vous dans le menu <strong>Apparence</strong> puis dans le sous-menu <strong>Éditeur</strong> pour modifier le thème actuellement utilisé. Dans la liste des fichiers à droite, ouvrez celui qui gère l&rsquo;affichage des articles (ici <strong>content.php</strong>, parfois <strong>content-single.php</strong>).</p>
+<p><a title="citriq-wordpress-3.jpg" href="/media/citriq-wordpress-3.jpg"><img decoding="async" style="margin: 0 auto;" alt="citriq-wordpress-3.jpg" src="/media/.citriq-wordpress-3_m.jpg" /></a></p>
+<p>5. Repérez l&rsquo;endroit où vous voulez faire apparaître le widget Citriq, probablement après le contenu du billet (affiché par la fonction <strong>the_content()</strong>). Copiez-collez-y le code php ci-dessous.</p>
+<pre>&lt;?php
+    $isbn = get_post_meta(get_the_id(), "isbn", true);
+    if(is_singular() &amp;&amp; $isbn != '') echo '&lt;script type="text/javascript" src="http://citriq.net/w/crawl?uid='.get_the_id().'&amp;isbn='.get_post_meta(get_the_id(),'isbn',true).'"&gt;&lt;/script&gt;';
+    ?&gt;</pre>
+<p>6. Cliquez sur <strong>Mettre à jour le fichier</strong> pour enregistrer vos modifications.</p>
+<p>7. Vous pouvez à présent afficher le code source de l&rsquo;article pour vérifier que le code Citriq est bien généré. Pensez à vider votre cache et celui de WordPress si le code ne s&rsquo;affiche pas.</p>
+<p><a title="citriq-wordpress-4.jpg" href="/media/citriq-wordpress-4.jpg"><img decoding="async" style="margin: 0 auto;" alt="citriq-wordpress-4.jpg" src="/media/.citriq-wordpress-4_m.jpg" /></a></p>
+<p>8. Afin que le référencement automatique fonctionne, il faut que j&rsquo;active l&rsquo;option de mon côté dans Citriq pour votre blog. Une fois que vous avez ajouté le widget à votre thème et associé au moins un ISBN à une critique, <a href="/contact">contactez-moi</a> pour que je vérifie que tout est en ordre et que j&rsquo;active le référencement automatique.</p>
+<p>9. Vous pourrez ensuite ajouter facilement d&rsquo;autres critiques à Citriq. Il suffira à chaque fois d&rsquo;indiquer l&rsquo;ISBN du livre concerné dans le champ personnalisé <em>isbn</em> de chaque critique.</p>
+<h3>Si le code du widget n&rsquo;apparaît pas dans le code source</h3>
+<ul>
+<li>Vérifiez que vous avez bien le nom du champ personnalisé <em>isbn</em> en minuscule et non en majuscule.</li>
+<li>Vérifiez que le fichier que vous avez modifié (<strong>content.php </strong>dans l&rsquo;exemple) est bien celui qui gère l&rsquo;affichage d&rsquo;un article seul, par exemple en effectuant d&rsquo;autres modifications pour voir si elles apparaissent.</li>
+<li>Si vous utilisez une extension pour gérer le cache, pensez à le vider.</li>
+<li>Effectuez les vérifications décrites <a href="http://codex.wordpress.org/I_Make_Changes_and_Nothing_Happens">sur cette page</a> (en anglais).</li>
+</ul>
+<h3>Résolution des problèmes</h3>
+<p>Si le code du widget est correctement généré mais que le référencement ne fonctionne pas, ajoutez <strong>?debug=1</strong> ou <strong>&amp;debug=1</strong> à l&rsquo;adresse de la page de l&rsquo;article dans la barre de votre navigateur. Le widget Citriq affichera un message d&rsquo;erreur détaillant le problème s&rsquo;il y a lieu.</p>
+<p><a title="citriq-wordpress-5.jpg" href="/media/citriq-wordpress-5.jpg"><img decoding="async" style="margin: 0 auto;" alt="citriq-wordpress-5.jpg" src="/media/.citriq-wordpress-5_m.jpg" /></a></p>
+<h3><strong>Pour aller plus loin</strong></h3>
+<p>Nous avons vu ci-dessus un cas simple d&rsquo;utilisation du widget, mais il est également possible d&rsquo;utiliser d&rsquo;autres champs personnalisés pour communiquer à Citriq d&rsquo;autres informations lors du référencement de la critique. Il faut pour cela modifier le code du widget pour ajouter d&rsquo;autres paires clés/valeurs et créer les nouveaux champs personnalisés équivalents. Par défaut, le code du widget se présente ainsi :</p>
+<pre>&lt;script type="text/javascript" src="http://citriq.net/w/crawl?uid=9&amp;isbn=978-2-207-11266-3"&gt;&lt;/script&gt;</pre>
+<p>Avec deux variables obligatoires : <em>uid </em>qui est un identifiant unique (ici on utilise l&rsquo;identifiant de l&rsquo;article dans la base WordPress affiché grâce à la fonction <strong>get_the_id()</strong>) et <em>isbn</em> qui correspond à l&rsquo;ISBN du livre concerné (notre champ personnalisé, affiché grâce à la fonction <strong>get_post_meta()</strong>).</p>
+<p>Il existe trois autres variables facultatives :</p>
+<ul>
+<li><em>reviewer</em> : le nom de l&rsquo;auteur de la critique (utile si plusieurs chroniqueurs interviennent sur le même blog)</li>
+<li><em>source</em> : la source originelle de la critique (par exemple, nooSFere référence, en plus de ses propres critiques, des critiques issues de Bifrost, Galaxies, etc.)</li>
+<li><em>note</em> : la note donnée au livre, qui doit être sur 100 (3/5 = 60, 18/20 = 90, etc.)</li>
+<li><em>excerpt</em> : un extrait de la critique (500 caractères maximum). Pour un résultat optimal, il vaut mieux encoder le texte, par exemple avec la fonction php <a href="http://php.net/manual/fr/function.urlencode.php">urlencode()</a>.</li>
+</ul>
+<p>Pour utiliser une variable, il suffit de d&rsquo;ajouter les variables <a href="http://fr.openclassrooms.com/informatique/cours/concevez-votre-site-web-avec-php-et-mysql/envoyer-des-parametres-dans-l-url">sous la forme &amp;clé=valeur</a> au code du widget, par exemple :</p>
+<div>
+<pre>&lt;script type="text/javascript" src="http://citriq.net/w/crawl?uid=9&amp;isbn=978-2-207-11266-3&amp;reviewer=Clément&amp;note=75"&gt;&lt;/script&gt;</pre>
+</div>
+<p>Il faudra pour cela ajouter un premier champ personnalisé <strong>reviewer</strong> et un deuxième <strong>note</strong> à chaque article, puis utiliser la fonction get_post_meta() pour générer le code du widget en utilisant ces champs. Voici le code php à insérer dans ce cas :</p>
+<div>
+<pre>&lt;?php
+
+    $isbn = get_post_meta(get_the_id(), "isbn", true);
+    if(is_singular() &amp;&amp; $isbn != '') echo '&lt;script type="text/javascript" src="http://citriq.net/w/crawl?uid='.get_the_id().'&amp;isbn='.get_post_meta(get_the_id(),'isbn',true).'&amp;reviewer='.get_post_meta(get_the_id(),'reviewer',true).'&amp;note='.get_post_meta(get_the_id(),'note',true).'&amp;excerpt='.urlencode(get_post_meta(get_the_id(),'excerpt',true)).'"&gt;&lt;/script&gt;';
+
+?&gt;</pre>
+<p>Bien sûr, il n&rsquo;est pas toujours pertinent d&rsquo;utiliser les champs personnalisés. Pour l&rsquo;auteur de la critique (<strong>reviewer</strong>), on utilisera plus probablement l&rsquo;auteur de l&rsquo;article dans WordPress, en utilisant la fonction <strong>the_author()</strong> plutôt que la fonction <strong>get_post_meta().</strong></p>
+<p>Voici un exemple de code qui ne transmettra à Citriq que l&rsquo;ISBN (d&rsquo;après le champ personnalisé <em>isbn</em>) et le nom de l&rsquo;auteur du billet :</p>
+</div>
+<pre>&lt;?php
+
+    $isbn = get_post_meta(get_the_id(), "isbn", true);
+    if(is_singular() &amp;&amp; $isbn != '') echo '&lt;script type="text/javascript" src="http://citriq.net/w/crawl?uid='.get_the_id().'&amp;isbn='.get_post_meta(get_the_id(),'isbn',true).'&amp;reviewer='.the_author().'"&gt;&lt;/script&gt;';
+
+?&gt;</pre>
+<h3>Quelques blogs sous WordPress qui utilisent le référencement automatique</h3>
+<ul>
+<li><a href="http://www.lorhkan.com/">Mes imaginaires</a></li>
+<li><a href="http://www.les-lectures-de-cachou.com/">Les lectures de Cachou</a></li>
+<li><a href="http://casentlebook.fr/">Ça sent le book</a></li>
+<li><a href="http://blog.cyrille.free.fr/">Le Journal Extime de Cyrille</a></li>
+<li><a href="http://www.lorhkan.com/">Lorkhan et les mauvais genres</a></li>
+<li><a href="http://www.vagabondsdureve.fr/">Les Vagabonds du Rêve</a></li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2013/08/26/20130826citriq-automatiser-le-referencement-des-critiques-avec-wordpress/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">156</post-id>	</item>
+		<item>
+		<title>CITRIQ 2.2 : Mes critiques / Mes visites</title>
+		<link>/2011/10/24/20111024citriq-2-2-mes-critiques-mes-visites/</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Mon, 24 Oct 2011 12:21:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[citriq]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=137</guid>
+
+					<description><![CDATA[<p><img src="/media/.citriq_2-2_m.jpg" alt="citriq_2-2.jpg" style="margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto" /></p> <p>Nouvelle version de <a href="http://citriq.net/">CITRIQ</a> que je continue de développer au cours de mon temps libre. Le site s'offre deux nouvelles options permettant aux utilisateurs de connaître des statistiques de lecture et la provenance exactes des visiteurs transitant par Citriq, et améliore son interface.</p>]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" style="margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" alt="citriq_2-2.jpg" src="/media/.citriq_2-2_m.jpg" /></p>
+<p>Nouvelle version de <a href="http://citriq.net/">CITRIQ</a> que je continue de développer au cours de mon temps libre. Le site s&rsquo;offre deux nouvelles options permettant aux utilisateurs de connaître des statistiques de lecture et la provenance exactes des visiteurs transitant par Citriq, et améliore son interface.</p>
+<p><span id="more-137"></span></p>
+<p><strong>Les nouveautés de Citriq 2.2 :</strong></p>
+<ul>
+<li><strong>Mes critiques </strong>vous permet enfin de gérer vos critiques une fois qu&rsquo;elles ont été ajoutées : en voir la liste, les modifier en cas d&rsquo;erreur, voire les supprimer définitivement. Cette page vous permet également de connaître le nombre de fois où un lien vers votre critique a été affiché sur un autre site du réseau (Vues) et le nombre de fois où ce lien a été cliqué (Clics).</li>
+<li><strong>Mes visites</strong> vous permet de découvrir en détail la provenance des derniers visiteurs transitant par Citriq et vous indique la critique concernée, la page où le lien vers votre critique a été cliqué (soit sur Citriq, soit sur un site du réseau) et la date du clic.</li>
+</ul>
+<p>Ces deux options sont accessibles via le menu Axys en haut à droite.</p>
+<div>
+<ul>
+<li>Les pages livre recensant toutes les critiques d&rsquo;un même livre (voir par exemple celle de <a href="http://citriq.net/9782070355709">Janua Vera</a>) est désormais intégré au site, avec le menu sur la gauche et le moteur de recherche au-dessus, ce qui permet de passer facilement d&rsquo;un livre à un autre.</li>
+<li>Toutes les critiques d&rsquo;un livre sont désormais affichées sur les pages <a href="http://citriq.net/?o=headline">À la une</a> et <a href="http://citriq.net/?o=news">Dernières critiques</a> et pas seulement les critiques qui sont à la une et les plus récentes. En d&rsquo;autres termes, lorsqu&rsquo;un livre est « à la une » (c&rsquo;est-à-dire s&rsquo;il fait parti de ceux qui ont été critiqués le plus au cours des derniers jours), toutes ses critiques sont affichées et pas seulement les critiques publiées au cours des derniers jours.</li>
+<li>Enfin, une nouvelle page <a href="http://citriq.net/pages/network">Réseau Citriq</a> permet d&rsquo;accéder à la liste des sites représentés et des critiques participants.</li>
+</ul>
+<p>À ce sujet, saluons l&rsquo;arrivée dans le moteur Citriq de la revue Bifrost, puisque les éditions du Bélial&rsquo; ont entrepris de mettre en ligne l&rsquo;intégralité (ou peu s&rsquo;en faut) des critiques parues dans la revue, et que celles-ci seront progressivement référencées dans Citriq.</p>
+</div>
+<p>La base Citriq référence, à l&rsquo;heure où j&rsquo;écris ces lignes, <strong>11784 critiques</strong> de <strong>9102 livres</strong> issues de <strong>50 sites</strong> différents et a favorisé <strong>8509 échanges</strong> entre ces sites ! De nouveaux blogs rejoignent le réseau chaque semaine. Profitons-en pour saluer la performance des cinq blogueurs les plus prolixes :</p>
+<div>
+<ul>
+<li><a href="http://leslecturesdecachou.over-blog.com/">Les Lectures de Cachou</a> (<a href="http://citriq.net/?q=Les%20Lectures%20de%20Cachou">123 critiques</a>)</li>
+<li><a href="http://www.maasbiolab.net/">Maas Biolab</a> (<a href="http://citriq.net/?q=Maas%20Biolab">140 critiques</a>)</li>
+<li><a href="http://rsfblog.canalblog.com/">RSF Blog</a> (<a href="http://citriq.net/?q=RSF%20Blog">164 critiques</a>)</li>
+<li><a href="http://glowmoonlight.unblog.fr/">Bibliothèque de Glow</a> (<a href="http://citriq.net/?q=Biblioth%E8que%20de%20Glow">261 critiques !</a>)</li>
+<li><a href="http://nebalestuncon.over-blog.com/">Welcome to Nebalia</a> (<a href="http://citriq.net/?q=Welcome%20to%20Nebalia">424 critiques !!</a>)</li>
+</ul>
+<p>Citriq cherche toujours à accroitre son réseau avec de nouveaux beta-testeurs, n&rsquo;hésitez donc pas à faire passer le mot autour de vous !</p>
+<p>Prévu pour les prochaines mises à jour :</p>
+<ul>
+<li>L&rsquo;utilisation de nouvelles bases de données (nooSFere, Biblys, LibraryThing ?) pour permettre un meilleur référencement des livres et de plus nombreuses références (notamment les livres numériques). Et pourquoi pas la possibilité pour les utilisateurs de modifier eux-même les infos ?</li>
+<li>Des liens vers des sites de librairies pour acheter le livre.</li>
+<li>Widget public permettant d&rsquo;afficher les liens vers les critiques correspondant à un ISBN sans pour autant participer à CITRIQ en tant que blog de critiques (à destination des sites d&rsquo;éditeurs, de libraires, etc.)</li>
+<li>Frame supérieure apparaissant lors du clic sur une critique, permettant de passer facilement d&rsquo;une critique à l&rsquo;autre, de voter pour sur une critique, d&rsquo;acheter le livre, etc.</li>
+<li>Liens « voir aussi » sur la page d&rsquo;un livre pour voir les livres d&rsquo;un même auteur, d&rsquo;une même collection, etc.</li>
+<li>etc.</li>
+</ul>
+</div>
+]]></content:encoded>
+
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">137</post-id>	</item>
+		<item>
+		<title>CITRIQ 2.1 : Widget sans javascript</title>
+		<link>/2011/04/18/20110418citriq-2-1-widget-sans-javascript/</link>
+					<comments>/2011/04/18/20110418citriq-2-1-widget-sans-javascript/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Mon, 18 Apr 2011 08:05:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[citriq]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=135</guid>
+
+					<description><![CDATA[<img src="/media/citriq_2-1.png" alt="citriq_2-1.png" style="margin: 0 auto" /><br /><p>Grâce aux efforts des bêta-testeurs, <a href="http://citriq.net/">CITRIQ</a> se remplit petit à petit, corrige ses bugs et s'offre de nouvelles fonctionnalités. Parmi elles, la possibilité d'utiliser un widget sans javascript pour une plus grande compatibilité avec les services de blogs existants.</p>]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" style="margin: 0 auto;" alt="citriq_2-1.png" src="/media/citriq_2-1.png" /></p>
+<p>Grâce aux efforts des bêta-testeurs, <a href="http://citriq.net/">CITRIQ</a> se remplit petit à petit, corrige ses bugs et s&rsquo;offre de nouvelles fonctionnalités. Parmi elles, la possibilité d&rsquo;utiliser un widget sans javascript pour une plus grande compatibilité avec les services de blogs existants.</p>
+<p><span id="more-135"></span></p>
+<p>Le widget est au coeur de <a href="http://citriq.net/">CITRIQ</a> : c&rsquo;est le petit bout de code à ajouter à la suite de votre critique et qui permet à la fois de signaler son existence à CITRIQ pour qu&rsquo;elle soit référencée, mais aussi d&rsquo;afficher automatiquement les liens vers les autres critiques du même livre sur d&rsquo;autres sites. Au cours des premiers tests, il est rapidement apparu, comme je le craignais, que de nombreux services de blogging gratuit ne supportait pas le javascript.</p>
+<p><a href="http://citriq.net/">CITRIQ</a> propose donc maintenant deux widgets, donc un nouveau qui est une simple image et ne nécessite pas du tout de javascript. Celui-ci est par conséquent moins dynamique : il n&rsquo;est pas capable d&rsquo;afficher de liens vers chaque autre critique existante. Il se contente d&rsquo;indiquer le nombre de critiques existantes pour le livre et de pointer vers une page référençant toutes celles-ci. Mais c&rsquo;est mieux que rien ! Par exemple, sur ce blog, il a été ajouté à la fin de la critique de <a href="/post/2006/04/05/47-snow-crash">Snow Crash</a>.</p>
+<p>D&rsquo;autres nouvelles fonctionnalités :</p>
+<ul>
+<li>Il existe maintenant une page dédiée à chaque livre, affichant des informations bibliographiques, la couverture, et toutes les critiques existantes pour le livre, utilisée notamment pour le widget sans javascript. On y aussi accède en cliquant sur un titre ou une couverture de livre depuis CITRIQ. <a href="http://citriq.net/9782952923989">Par exemple</a>.</li>
+<li>Il est possible d&rsquo;ajouter un extrait de sa critique au moment de l&rsquo;enregistrer dans Citriq. Les extraits apparaîtront ensuite sur cette fameuse page dédiée au livre. <a href="http://citriq.net/9782953595109">Par exemple</a>.</li>
+<li>Pour les sites plus importants où officient plusieurs critiques, CITRIQ affiche désormais le nom de l&rsquo;auteur de la critique, ce qui permet de les distinguer entre elles dans le cas où il y en aurait plusieurs.</li>
+<li>Les notes associées à certaines critiques apparaissent après le lien vers la critique, sous la forme d&rsquo;étoiles.</li>
+</ul>
+<p>Prévu pour les prochaines mises à jour :</p>
+<ul>
+<li>La possibilité pour les utilisateurs d&rsquo;afficher toutes ses critiques enregistrées dans CITRIQ avec des statistiques (nombre de vues, nombre de clics, etc.).</li>
+<li>Des liens vers des sites de librairies pour acheter le livre.</li>
+<li>Widget public permettant d&rsquo;afficher les liens vers les critiques correspondant à un ISBN sans pour autant participer à CITRIQ en tant que blog de critiques (à destination des sites d&rsquo;éditeurs, de libraires, etc.)</li>
+<li>Frame supérieure apparaissant lors du clic sur une critique, permettant de passer facilement d&rsquo;une critique à l&rsquo;autre, de voter pour sur une critique, d&rsquo;acheter le livre, etc.</li>
+<li>Liens « voir aussi » sur la page d&rsquo;un livre pour voir les livres d&rsquo;un même auteur, d&rsquo;une même collection, etc.</li>
+<li>etc.</li>
+</ul>
+<p>Aujourd&rsquo;hui, s&rsquo;achève la première phase du beta-test auxquels ne participaient que des blogs dont les auteurs étaient sûr de pouvoir utiliser du javascript. En voici la liste, suivi du nombre de critiques qu&rsquo;ils ont référencés. Merci à eux !</p>
+<div>
+<ul>
+<li><a href="http://citriq.net/?q=RSF+Blog">RSF Blog</a> (23)</li>
+<li><a href="http://citriq.net/?q=Traqueur+Stellaire">Traqueur stellaire</a> (19)</li>
+<li><a href="http://citriq.net/?q=Biblioth%E8que+de+Glow">Bibliothèque de Glow</a> (14)</li>
+<li><a href="http://citriq.net/?q=Le+Bouquinovore">Le Bouquinovore</a> (2)</li>
+<li><a href="http://citriq.net/?q=Maas+Biolab">Maas Biolab</a> (1)</li>
+</ul>
+<div>Maintenant que la plupart des bugs ont été éliminés et les fonctions principales ajoutées, nous allons pouvoir passer à la deuxième phase, qui va voir l&rsquo;arrivée de tous les candidats restants, soit 12 nouveaux blogs !</div>
+</div>
+<p>N&rsquo;oubliez pas que vous pouvez demander à participer au beta-test en remplissant <a href="https://spreadsheets.google.com/viewform?formkey=dFdhalV3Y0RPVlBXZWFmdko0WnJLZUE6MQ">ce formulaire</a>.</p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2011/04/18/20110418citriq-2-1-widget-sans-javascript/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">135</post-id>	</item>
+		<item>
+		<title>CITRIQ : Participez au beta-test !</title>
+		<link>/2011/03/31/20110331citriq-participez-au-beta-test/</link>
+					<comments>/2011/03/31/20110331citriq-participez-au-beta-test/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 31 Mar 2011 22:34:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[citriq]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=134</guid>
+
+					<description><![CDATA[<p><a href="http://citriq.net/"><img src="/media/citriq_beta.png" alt="citriq_beta.png" style="margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto" /></a></p> <p><a href="http://citriq.net/">CITRIQ</a> est désormais ouvert au beta-test !</p>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://citriq.net/"><img decoding="async" style="margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" alt="citriq_beta.png" src="/media/citriq_beta.png" /></a></p>
+<p><a href="http://citriq.net/">CITRIQ</a> est désormais ouvert au beta-test !</p>
+<p><span id="more-134"></span></p>
+<p>Pour mémoire, <a href="http://citriq.net/">CITRIQ</a> est un moteur de recherche et d&rsquo;échanges de critiques littéraires. Le principe est simple : vous écrivez une critique sur votre blog, vous l&rsquo;enregistrez sur CITRIQ et vous ajoutez ensuite un widget (code javascript) à la critique sur votre blog. Comme par magie, un lien vers votre critique apparaîtra à la suite de toutes les critiques du même livre sur les autres sites participants, et votre propre critique affichera automatiquement des liens vers celles-ci. Vous pouvez lire aussi <a href="/post/2010/12/18/CITRIQ-Toutes-les-critiques-litteraires">la description détaillée du service</a>.</p>
+<p>Aujourd&rsquo;hui, <a href="http://citriq.net/">CITRIQ</a> référence près de 12.000 critiques de plus de 8500 livres différents issus de quatre important sites de critiques. Dès le début du projet, l&rsquo;objectif était de d&rsquo;ouvrir CITRIQ aux blogs personnels et de permettre à tout un chacun d&rsquo;y ajouter ses critiques. De nombreux points restent à développer mais, aujourd&rsquo;hui, l&rsquo;interface d&rsquo;ajout de critique est opérationnel et n&rsquo;attend plus que de joyeux volontaires pour la tester.</p>
+<p>Si vous êtes l&rsquo;auteur d&rsquo;un blog proposant des critiques littéraires et que vous souhaitez participer à <a href="http://citriq.net/">CITRIQ</a>, vous pouvez remplir <a href="https://spreadsheets.google.com/viewform?formkey=dFdhalV3Y0RPVlBXZWFmdko0WnJLZUE6MQ">le formulaire suivant</a>. Notez qu&rsquo;il n&rsquo;y a aucune connaissance technique à avoir, il suffit de suivre les instructions, d&rsquo;essayer, et de me faire part des éventuels erreurs et bugs.</p>
+<p>Si vous êtes responsable d&rsquo;un site de critiques plus important, et que celui-ci dispose d&rsquo;une base de données contenant les ISBN des livres critiqués, il est possible d&rsquo;automatiser le référencement des critiques. Dans ce cas, n&rsquo;hésitez pas à <a href="/contact/">me contacter directement</a>.</p>
+<p>Autres fonctionnalités à développer :</p>
+<ul>
+<li>La possibilité pour les utilisateurs d&rsquo;afficher toutes ses critiques enregistrées dans CITRIQ avec des statistiques (nombre de vues, nombre de clics).</li>
+<li>Page individuelle pour chaque livre affichant des informations bibliographiques, l&rsquo;ensemble des critiques, des liens vers des librairies.</li>
+<li>Widget public permettant d&rsquo;afficher les liens vers les critiques correspondant à un ISBN sans pour autant participer à CITRIQ en tant que blog de critiques (à destination des sites d&rsquo;éditeurs, de libraires, etc.)</li>
+<li>Frame supérieure apparaissant lors du clic sur une critique, permettant de passer facilement d&rsquo;une critique à l&rsquo;autre, de voter pour sur une critique, d&rsquo;acheter le livre, etc.</li>
+<li>etc.</li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2011/03/31/20110331citriq-participez-au-beta-test/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">134</post-id>	</item>
+		<item>
+		<title>CITRIQ ouvert au public</title>
+		<link>/2011/03/07/20110307citriq-ouvert-au-public/</link>
+					<comments>/2011/03/07/20110307citriq-ouvert-au-public/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Mon, 07 Mar 2011 10:18:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[citriq]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=133</guid>
+
+					<description><![CDATA[J&#8217;en parlais dans la dernière Lettre d&#8217;Ys : mon projet CITRIQ avance peu, faute de temps libre pour avancer dessus. Mais la partie moteur de recherche est déjà fonctionnelle, c&#8217;est pourquoi j&#8217;ai décidé d&#8217;ouvrir le site au public, bien qu&#8217;il ne soit pas finalisé. N&#8217;hésitez donc pas à me faire part de vos retours dans les &#8230; <p class="link-more"><a href="/2011/03/07/20110307citriq-ouvert-au-public/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;CITRIQ ouvert au public&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p>J&rsquo;en parlais dans la dernière <a href="http://www.librys.fr/blog/2011/03/03/La-Lettre-d-Ys-n%C2%B0-22-Mars-2011-:-La-Librairie-Ys-%C3%A9volue-!">Lettre d&rsquo;Ys</a> : mon projet CITRIQ avance peu, faute de temps libre pour avancer dessus. Mais la partie moteur de recherche est déjà fonctionnelle, c&rsquo;est pourquoi j&rsquo;ai décidé d&rsquo;ouvrir le site au public, bien qu&rsquo;il ne soit pas finalisé. N&rsquo;hésitez donc pas à me faire part de vos retours dans les commentaires de ce billet !</p>
+<p>En attendant le beta-test public (où tout un chacun pourra ajouter les critiques de son blog à CITRIQ), je teste l&rsquo;intégration de gros sites de l&rsquo;envergure de ceux qui participaient à SEDNA (la condition requise étant de disposer des ISBN dans la base de données pour pouvoir automatiser l&rsquo;ajout des critiques). Si vous êtes rédacteur ou responsable d&rsquo;un site de ce genre, n&rsquo;hésitez pas à <a href="/contact/">me contacter</a> !</p>
+<p><a href="http://citriq.net/">http://citriq.net/</a></p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2011/03/07/20110307citriq-ouvert-au-public/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">133</post-id>	</item>
+		<item>
+		<title>CITRIQ : Toutes les critiques littéraires</title>
+		<link>/2010/12/18/20101218citriq-toutes-les-critiques-litteraires/</link>
+					<comments>/2010/12/18/20101218citriq-toutes-les-critiques-litteraires/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Sat, 18 Dec 2010 17:51:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[citriq]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=131</guid>
+
+					<description><![CDATA[<p><img src="/media/citriq.png" alt="citriq.png" style="margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto" /></p> <p>Voici <a href="/post/2010/11/25/Sedna-2">Sedna 2.0</a> : un agrégateur, moteur de recherche et d'échange de critiques littéraires ouvert à tous les sites et à tous les genres.</p>]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" style="margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" alt="citriq.png" src="/media/citriq.png" /></p>
+<p>Voici <a href="/post/2010/11/25/Sedna-2">Sedna 2.0</a> : un agrégateur, moteur de recherche et d&rsquo;échange de critiques littéraires ouvert à tous les sites et à tous les genres.</p>
+<p><span id="more-131"></span></p>
+<p><a href="http://citriq.net/">CITRIQ</a> est mon projet personnel du moment, celui sur lequel je bosse à mes (rares) heures perdues. Il est donc loin d&rsquo;être terminé pour l&rsquo;instant, mais en voici déjà un petit aperçu pour vous donner envie de participer à la bêta.</p>
+<p>Comme <a href="http://sedna.nokto.net/">SEDNA</a> créé en 2007, CITRIQ est un agrégateur, un moteur de recherche et un système d&rsquo;échanges de liens entre toutes les critiques concernant un même livre. Concrètement, chaque site ajoute un petit widget (code javascript) sur la page de ses critiques, CITRIQ enregistre le lien vers cette page dans base de données (la critique apparaît donc dans le <a href="http://sedna.nokto.net/">moteur de recherche</a>) et affiche ce lien sur toutes les autres critiques du même livre sur les autres sites. Le lecteur peut ainsi facilement trouver toutes les critiques d&rsquo;un même livre (via le moteur de recherche) et naviguer de l&rsquo;une à l&rsquo;autre (via les liens générés et mis à jour automatiquement).</p>
+<p><img decoding="async" style="margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" alt="citriq_sedna.png" src="/media/citriq_sedna.png" /></p>
+<p>Ce qui change avec <a href="http://citriq.net/">CITRIQ</a>, c&rsquo;est d&rsquo;abord que, là où SEDNA ne concernait que les littératures de l&rsquo;imaginaire (science-fiction, fantasy, fantastique), parce que reposant sur la base <a href="http://www.noosfere.org/">nooSFere</a>, CITRIQ prendra en compte tous les livres, sous toutes les formes (BD, Manga, Beaux-livres, Albums, etc.) et dans tous les genres (littérature blanche, polar, essais, cuisine, etc.), en bref, tout ce qui a un ISBN.</p>
+<p>En conséquence, la page d&rsquo;accueil a été repensée pour être plus agréable. Plutôt que d&rsquo;être une simple liste de critiques comme l&rsquo;était SEDNA, CITRIQ regroupera les critiques par livre et affichera leur couverture en plus des infos habituelles (titre, auteur, éditeur). Le site proposera plusieurs rubriques dont une <strong>A la une</strong> regroupant les livres les plus critiqués durant les sept derniers jours. Outre le moteur de recherche (par titre, auteur, éditeur, ISBN) l&rsquo;affichage des critiques les plus récentes, on pourra également afficher les livres les plus critiqués ou les mieux notés.</p>
+<p>En voici un aperçu (non définitif) :</p>
+<p><img decoding="async" style="margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" alt="citriq_home.png" src="/media/citriq_home.png" /></p>
+<p>Comme on le voit, il sera également possible d&rsquo;<strong>Ajouter une critique</strong>. C&rsquo;est en effet l&rsquo;un des autres améliorations de CITRIQ par rapport à SEDNA. La nouvelle base ne sera pas limité aux gros sites de critiques avec référencement automatique (CITRIQ Premium), mais ouvert aussi aux critiques amateurs qui publient sur leur propre blog. Un formulaire de soumission permettra d&rsquo;abord de rechercher le livre critiqué&#8230;</p>
+<p><img decoding="async" style="margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" alt="citriq_bookquery.png" src="/media/citriq_bookquery.png" /></p>
+<p>&#8230;puis d&rsquo;ajouter un lien vers la critique publié sur son blog, en ajoutant éventuellement un extrait et une note. A terme, l&rsquo;application permettra donc également d&rsquo;afficher, dans les résultats du moteur de recherche ou sur les sites utilisant le widget, des extraits de critiques et plus seulement des liens vers les critiques.</p>
+<p><img decoding="async" style="margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" alt="citriq_addreview.png" src="/media/citriq_addreview.png" /></p>
+<p>CITRIQ affiche ensuite un code javascript que le critique pourra ajouter à la suite de sa critique sur son blog pour afficher automatiquement des liens vers les autres critiques correspondant au même livre.</p>
+<p>La conséquence est que CITRIQ proposera beaucoup plus de critiques et pas forcément que des critiques intéressantes. L&rsquo;idée sera de toute façon d&rsquo;éviter les sites ne proposant que des critiques type amazon d&rsquo;utilisateurs pour se concentrer sur les sites spécialisés aux critiques plus développées et plus argumentées. Un système j&rsquo;aime / j&rsquo;aime pas permettra au lecteur de voter pour les critiques qui lui semblent les plus intéressantes et ainsi d&rsquo;afficher les résultats en conséquence.</p>
+<p>CITRIQ proposera enfin un widget public pour permettre à n&rsquo;importe quel site (librairies, éditeurs, etc.) d&rsquo;afficher toutes les critiques d&rsquo;un livre facilement à partir d&rsquo;un ISBN.</p>
+<p>CITRIQ est loin d&rsquo;être prêt, mais je vais avoir rapidement besoin de bêta-testeurs, notamment en ce qui concerne l&rsquo;ajout de critiques (actuellement, le site fonctionne avec la base SEDNA). Que vous soyez rédacteur en chef d&rsquo;un gros site de critiques ou simple blogger, si l&rsquo;aventure vous tente, n&rsquo;hésitez pas à <a href="/contact/">me contacter</a> !</p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2010/12/18/20101218citriq-toutes-les-critiques-litteraires/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">131</post-id>	</item>
+	</channel>
+</rss>

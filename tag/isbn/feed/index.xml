@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>isbn &#8211; nokto</title>
+	<atom:link href="/tag/isbn/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Thu, 05 Jun 2014 09:37:27 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+<site xmlns="com-wordpress:feed-additions:1">165226571</site>	<item>
+		<title>TextUID : Propositions pour un identifiant unique d’un livre, commun à ses différentes éditions, générable automatiquement</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/</link>
+					<comments>/2014/06/05/textuid-identifiant-unique-livre/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 05 Jun 2014 09:37:27 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[base de données]]></category>
+		<category><![CDATA[bibliographie]]></category>
+		<category><![CDATA[interopérabilité]]></category>
+		<category><![CDATA[isbn]]></category>
+		<category><![CDATA[istc]]></category>
+		<category><![CDATA[textuid]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=600</guid>
+
+					<description><![CDATA[Dans cet article, je propose des pistes pour une méthode facilement reproductible permettant de générer automatiquement un identifiant de texte. Ce n&#8217;est pas une méthode parfaite, mais plutôt la « moins mauvaise » méthode, aussi je suis ouvert à toute suggestion permettant de l&#8217;améliorer. MAJ 08/06/2014 : ajout des règles 6 et 7 et de deux nouveaux exemples. Merci à &#8230; <p class="link-more"><a href="/2014/06/05/textuid-identifiant-unique-livre/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;TextUID : Propositions pour un identifiant unique d’un livre, commun à ses différentes éditions, générable automatiquement&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p>Dans cet article, je propose des pistes pour une méthode facilement reproductible permettant de générer automatiquement un identifiant de texte. Ce n&rsquo;est pas une méthode parfaite, mais plutôt la « moins mauvaise » méthode, aussi je suis ouvert à toute suggestion permettant de l&rsquo;améliorer.</p>
+<p>MAJ 08/06/2014 : ajout des règles 6 et 7 et de deux nouveaux exemples. Merci à <a href="https://twitter.com/edasfr">@edasfr</a> pour ces remarques.</p>
+<h2>Pourquoi ?</h2>
+<p>Lorsque je développe un site ou un outil pour les libraires, un besoin récurent celui est de pouvoir identifier les différents livres correspondant à un même texte (nouvelle édition, réédition en poche, version numérique ou audio, etc.).</p>
+<p>Par exemple, le site de la librairie <a href="http://www.scylla.fr/">Scylla</a>, sur chaque fiche livre, propose le même livre dans d&rsquo;autres formats ou d&rsquo;anciennes éditions épuisés disponibles d&rsquo;occasion. Autre exemple, la librairie <a href="http://www.charybde.fr/">Charybde</a>, pour le calcul de ses meilleures ventes, souhaite que les ventes d&rsquo;un même texte chez différents éditeurs soient additionnés et pas considérés comme des livres différents.</p>
+<p>Aujourd&rsquo;hui, ce recoupement demande que les librairies (ou autres utilisateurs de Biblys) créent manuellement ces relations, opération fastidieuse qui peut être source d&rsquo;erreur.</p>
+<h2>Cahiers des charges</h2>
+<p>La méthode de génération de l&rsquo;identifiant doit :</p>
+<ul>
+<li>être facilement à mettre en œuvre afin que n&rsquo;importe qui puisse générer un identifiant sans passer par une autorité centrale ;</li>
+<li>être suffisamment détaillée et prévoir tous les pièges possibles : deux acteurs générant un identifiant pour le même texte doivent parvenir systématiquement au même résultat.</li>
+</ul>
+<h2>D’autres (mauvaises) solutions</h2>
+<ul>
+<li>Le<strong> titre du livre</strong>, de toute évidence, ne peut convenir puisque que, si deux editions d&rsquo;un livre ont a priori le même titre, il n&rsquo;est pas rare que deux livres sans aucun rapport ait également le même titre. Par exemple, dans la base Biblys (qui est loin d&rsquo;être exhaustive), il y a pas moins de cinq titres d&rsquo;auteurs différents intitulé « <a href="http://www.biblys.fr/pages/search?q=titre:Les+Insoumis">Les Insoumis</a>« &#8230;</li>
+<li>Les <a href="http://fr.wikipedia.org/wiki/International_Standard_Book_Number"><strong>ISBN</strong></a> sont propres à chaque édition d&rsquo;un livre, il arrive parfois qu&rsquo;un même livre chez un même éditeur puisse obtenir des ISBN différents au fil des réimpressions, ils ne peuvent donc convenir à cet usage.</li>
+<li>La norme <a href="http://www.istc-international.org/html/"><strong>ISTC</strong></a> (pour International Standard Text Code) se rapproche de nos besoins, mais elle a deux désavantages. D&rsquo;abord, elle ne nécessite de passer par une autorité centrale, une agence (en France, Électre) qui ne peut créer de nouveaux codes qu&rsquo;à la demande d&rsquo;un éditeur ou d&rsquo;un ayant droit. De plus, elle semble peu utilisée aujourd&rsquo;hui.</li>
+</ul>
+<h2>Description de la norme TextUID</h2>
+<p>Elle se présente sous la forme un ensemble de règles, dont le but est de décrire la méthode de génération de l&rsquo;identifiant en tentant de prévoir un maximum de cas particuliers pour indiquer la marche à suivre le cas échéant. De nouvelles règles pourront donc être ajoutées si de nouveaux cas particuliers problématique sont découverts.</p>
+<h3>Règle 1</h3>
+<p>Le TextUID est une <a href="http://fr.wikipedia.org/wiki/MD5">empreinte MD5</a> généré d’après une chaîne de caractères précises, encodé en UTF-8, en majuscules, contenant :<br />
+TITRE ORIGINAL du livre<br />
+barre oblique entouré d’espaces : ‘ / ‘<br />
+NOM PRÉNOM de l’auteur (ou NOM uniquement le cas échéant)</p>
+<p>Soit : <strong>TITRE ORIGINAL / NOM PRÉNOM</strong></p>
+<h3>Règle 2</h3>
+<p>Le titre du livre doit être dans la langue de publication originale, afin que les différentes traductions d’une oeuvre possèdent bien le même identifiant que l&rsquo;original.</p>
+<h3>Règle 3</h3>
+<p>Si le livre a plusieurs auteurs, on les ajoute dans l&rsquo;ordre alphabétique, l&rsquo;un après l&rsquo;autre, séparés par une virgule et une espace : NOM PRÉNOM, NOM PRÉNOM (ou NOM uniquement le cas échéant)</p>
+<p>Soit : <strong>TITRE ORIGINAL / NOM PRÉNOM, NOM, NOM PRÉNOM</strong></p>
+<h4>Règle 4</h4>
+<p>S&rsquo;il existe plusieurs graphies pour un titre de livre, on utilise celui mentionné sur la couverture de la première édition.</p>
+<h4>Règle 5</h4>
+<p>S&rsquo;il existe plusieurs graphies pour un nom d&rsquo;auteur, on utilise celui mentionné sur la couverture de la première édition de son premier livre publié.</p>
+<h4>Règle 6</h4>
+<p>Si le livre fait partie d&rsquo;une série, on utilise le titre du tome uniquement. Si le tome n&rsquo;a pas de titre, on utilise le nom de la série, suivi d&rsquo;un tiret et du numéro du tome.</p>
+<h4>Règle 7</h4>
+<p>Si le livre est un ouvrage collectif et qu&rsquo;un ou plusieurs directeurs d&rsquo;ouvrage sont mentionnés (« Sous la direction de&#8230; »), ce sont ces noms qui seront utilisés au lieu du nom des auteurs.</p>
+<h2>Quelques exemples :</h2>
+<h3>Le Petit Prince</h3>
+<p>Chaîne : <span style="color: #000000;">LE PETIT PRINCE / DE SAINT-EXUPÉRY ANTOINE</span><br />
+Empreinte MD5 : <span style="color: #000000;">31943e821c39ccd479441a2b0bdcf2b7</span></p>
+<h3>L’Attrape-coeurs</h3>
+<p>Chaîne : <span style="color: #000000;">THE CATCHER IN THE RYE / SALINGER J. D.</span><br />
+Empreinte MD5 : <span style="color: #000000;">9c93c0d32ee994bddf65bb6f3bcfa421</span></p>
+<h3>Les Soldats de la mer</h3>
+<p>Chaîne : <span style="color: #000000;">LES SOLDATS DE LA MER / RÉMY ADA, RÉMY YVES</span><br />
+Empreinte MD5 : <span style="color: #000000;">d44c3bf585ee56cf1ae02f043492de81</span></p>
+<h3>À la recherche du temps perdu, tome 2</h3>
+<p>Chaîne : À L&rsquo;OMBRE DES JEUNES FILLES EN FLEURS / PROUST MARCEL<br />
+Empreinte MD5 : <span style="color: #000000;">736ac35cc4ce8b67dfbaaa901c03f398</span></p>
+<h3><a href="http://www.cnrseditions.fr/Biologie/6710-l-energie-a-decouvert-sous-la-direction-de-remy-mosseri-et-catherine-jandel.html">L&rsquo;énergie à découvert</a>, sous la direction de&#8230;</h3>
+<p>Chaîne : L&rsquo;ÉNERGIE À DÉCOUVERT / JEANDEL CATHERINE, MOSSERI REMY<br />
+Empreinte MD5 : <span style="color: #000000;">97ff30f497e277265045e3cbdf08a37c</span></p>
+<h2>Exemples de code</h2>
+<h3>PHP</h3>
+<pre>&lt;?php
+
+function textuid($title, $authors)
+{
+    foreach ($authors as $author)
+    {
+        if (!isset($authors_string)) $authors_string = NULL;
+        else $authors_string .= ', ';
+        $authors_string .= trim($author['last_name'].' '.$author['first_name']);
+    }
+    $string = mb_strtoupper($title.' / '.$authors_string, 'UTF-8');
+    $hash = md5($string);
+    return array('string' =&gt; $string, 'hash' =&gt; $hash);
+}
+
+$book_title = "Les Soldats de la mer";
+$book_authors = array(
+    array('first_name' =&gt; 'Ada', 'last_name' =&gt; 'Rémy'),
+    array('first_name' =&gt; 'Yves', 'last_name' =&gt; 'Rémy')
+);
+
+var_dump(textuid($book_title, $book_authors));
+</pre>
+<p><a href="http://codepad.viper-7.com/TfRsCv">Voir aussi ici le code en action.</a></p>
+<h2>Conclusion</h2>
+<p>J&rsquo;utilise déjà cette méthode, à des fins de test, pour la base Biblys. Je la partage ici car je pense qu&rsquo;elle pourrait être utile à d&rsquo;autres en interne, mais aussi parce qu&rsquo;elle prendrait un tout autre intérêt dans le cadre d&rsquo;un échange de données entre des bases différentes.</p>
+<p>Je suis conscient que cette méthode ne pourra jamais fonctionner à 100%, mais je pense que la première règle doit pouvoir couvrir 99% des cas et que les suivantes doivent pouvoir permettre de se rapprocher au maximum de la perfection&#8230; tout en sachant qu&rsquo;on ne pourra jamais l&rsquo;atteindre ! Mais c&rsquo;est sans doute le prix à payer pour une génération automatique, sans vérification humaine.</p>
+<p>Je suis donc bien entendu ouvert à toute question, remarque ou proposition de règles qui pourrait permettrait d&rsquo;améliorer la méthode !</p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/06/05/textuid-identifiant-unique-livre/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">600</post-id>	</item>
+		<item>
+		<title>PHP : Conversion ISBN/EAN, la classe !</title>
+		<link>/2014/04/20/php-isbn-class/</link>
+					<comments>/2014/04/20/php-isbn-class/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Sun, 20 Apr 2014 17:00:12 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[isbn]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=583</guid>
+
+					<description><![CDATA[J&#8217;ai proposé ici-même, ces dernières années, plusieurs fonctions PHP permettant la manipulation, la conversion et la validation de codes ISBN, que j&#8217;utilise notamment dans le cadre de Biblys ou Citriq.  Entre temps, j&#8217;ai découvert la programmation orienté objet : voici donc une classe pour réunir toutes ses fonctions. Télécharger php-isbn-class sur Github Un autre intérêt de cette classe &#8230; <p class="link-more"><a href="/2014/04/20/php-isbn-class/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;PHP : Conversion ISBN/EAN, la classe !&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p>J&rsquo;ai proposé ici-même, ces dernières années, <a href="https://nokto.net/tag/isbn/">plusieurs fonctions PHP</a> permettant la manipulation, la conversion et la validation de codes ISBN, que j&rsquo;utilise notamment dans le cadre de <a href="http://www.biblys.fr/">Biblys</a> ou <a href="http://citriq.net/">Citriq</a>.  Entre temps, j&rsquo;ai découvert la programmation orienté objet : voici donc une classe pour réunir toutes ses fonctions.</p>
+<p><a href="https://github.com/iwazaru/php-isbn-class">Télécharger php-isbn-class sur Github</a></p>
+<p>Un autre intérêt de cette classe par rapport à mes précédentes fonctions est qu&rsquo;elle ne se limite pas aux ISBN francophones (978-2 et 979-10) mais qu&rsquo;elle fonctionne avec n&rsquo;importe quel code, grâce au fichier range.xml qui l&rsquo;accompagne.</p>
+<p>Cette classe peut être utilisée pour :</p>
+<ul>
+<li>Valider un code ISBN</li>
+<li>Convertir des codes entre les formats ISBN-10, ISBN-13 et EAN (sans tirets)</li>
+<li>Calculer le caractère de contrôle</li>
+<li>Afficher l&rsquo;agence d&rsquo;enregistrement du code (pays ou langage)</li>
+</ul>
+<h3>Démo</h3>
+<p>Une démo est disponible à l&rsquo;adresse : http://labs.nokto.net/php-isbn-class/</p>
+<h3>Installation</h3>
+<ul>
+<li>Incluez ISBN.class.php dans votre script PHP</li>
+<li>Procurez-vous une version récente du fichier range.xml auprès de l&rsquo;<a href="https://www.isbn-international.org/range_file_generation">ISBN International Agency</a> (ou utilisez celle fournie)</li>
+<li>Définissez la constante ISBN_RANGES_FILE avec le chemin du fichier range.xml</li>
+<li>Utilisez les autres constantes pour définir vos messages d&rsquo;erreurs (en anglais par défaut).</li>
+</ul>
+<h3>Utilisation</h3>
+<pre> &lt;?php
+     require_once('ISBN.class.php');
+     $isbn = new ISBN('9791091146098'); // créer un objet ISBN
+     if ($isbn-&gt;isValid()) // vérifie si le code est un ISBN valide
+     {
+         echo $isbn-&gt;format('ISBN-13'); // affiche le code au format ISBN-13
+         echo $isbn-&gt;format('ISBN-10'); // affiche le code au format ISBN-10
+         echo $isbn-&gt;getChecksum(); // calcule et affiche le caractère de contrôle
+         echo $isbn-&gt;getAgency(); // affiche l'agence d'enregistrement
+     }
+     else
+     {
+         echo $isbn-&gt;getErrors(); // show validation errors
+     }
+ ?&gt;</pre>
+<p>Image de une : <a href="https://www.flickr.com/photos/marfis75/6786201460/in/photolist-bkF4gs-B9D5d-7f7wnh-f4CQRe-jk8KYo-cDUUH5-emMkr-ebuL6A-as7j98-jaM3Sk-ffTcmb-b7xbK6-9r85KN-bxHsod-ffTceb-4eVh8T-7TkzUT-5s9JzK-822aTi-fi1iHp-5CoVQm-cp9pJu-8pcu1i-3AufNc-7uDzsa-9uj8BY-po8Zu-po8Zv-8DgWRM-9u2nd3-5qFoLs-75zg7i-4F1gky-8t4Cdk-5AxaQw-9VMiYi-4X1jGW-2vVaH-9mKBP5-8xndsS-8MAnY-c9YQRy-dHDC8-deEo9D-7uHr2j-fifxhj-7z9eta-2MmXzD-7uHrm7-5xjeTy/">Barcode</a> CC <a href="http://creativecommons.org/licenses/by-sa/2.0/deed.en">BY-SA</a>  <a href="https://www.flickr.com/photos/marfis75/">Martin Fisch</a></p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/04/20/php-isbn-class/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">583</post-id>	</item>
+		<item>
+		<title>PHP : Conversion EAN/ISBN, l&#8217;ultime fonction</title>
+		<link>/2010/12/22/20101222php-conversion-eanisbn-l-ultime-fonction/</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Wed, 22 Dec 2010 20:01:00 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[isbn]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=153</guid>
+
+					<description><![CDATA[<p><a href="/media/4097848238_d8004023b7_o.jpg" title="4097848238_d8004023b7_o.jpg"><img src="/media/.4097848238_d8004023b7_o_m.jpg" alt="4097848238_d8004023b7_o.jpg" style="margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto" /></a></p> <p>J'ai déjà proposé ici plusieurs fonctions PHP pour convertir convertir un <a href="http://nokto.net/post/2009/08/25/PHP-Convertir-un-ISBN-10-en-EAN-13">ISBN-10 en EAN-13</a> ou <a href="http://nokto.net/post/2010/01/31/PHP-Convertir-un-code-EAN-13-%28sans-tirets%29-en-ISBN-13-%28avec-tirets%29">l'inverse</a>, mais ce n'est pas toujours pratique d'avoir 36 fonctions différentes. Voici donc la fonction unique pour les rassembler toutes <del>et dans les ténèbres les lier</del>.</p>]]></description>
+										<content:encoded><![CDATA[<p><a title="4097848238_d8004023b7_o.jpg" href="/media/4097848238_d8004023b7_o.jpg"><img decoding="async" style="margin: 0 auto 0 auto;" src="/media/.4097848238_d8004023b7_o_m.jpg" alt="4097848238_d8004023b7_o.jpg" /></a></p>
+<p>J&rsquo;ai déjà proposé ici plusieurs fonctions PHP pour convertir convertir un <a href="https://nokto.net/post/2009/08/25/PHP-Convertir-un-ISBN-10-en-EAN-13">ISBN-10 en EAN-13</a> ou <a href="https://nokto.net/post/2010/01/31/PHP-Convertir-un-code-EAN-13-%28sans-tirets%29-en-ISBN-13-%28avec-tirets%29">l&rsquo;inverse</a>, mais ce n&rsquo;est pas toujours pratique d&rsquo;avoir 36 fonctions différentes. Voici donc la fonction unique pour les rassembler toutes <del>et dans les ténèbres les lier</del>.</p>
+<p><span id="more-153"></span></p>
+<p>MAJ du 20/04/2014 : <a href="https://nokto.net/php-isbn-class/">Une version plus récente et orientée-objet</a>.</p>
+<p>Quand on bosse sur le web et dans le secteur du livre, on a souvent l&rsquo;occasion d&rsquo;utiliser les ISBN-13 (ces identifiants unique dont tous les livres publiés depuis les années 70 sont dotés) et on a parfois besoin de les convertir en EAN-13 (les codes barres qui se trouvent au dos des livres) pour toutes sortes de raisons, voire en ISBN-10 (ISBN à 10 chiffres en usage avant janvier 2007). Pour cette raison, j&rsquo;ai développé plusieurs fonctions permettant de faire des conversions, mais je pensais depuis un moment à les regrouper en une seule qui soit multitâche. C&rsquo;est donc chose faite.</p>
+<p>La fonction <strong>isbn()</strong> accepte en entrée n&rsquo;importe quelle forme de code : ISBN-10, ISBN-13, EAN, avec ou sans tiret, avec ou sans clé de contrôle, et peut le restituer à la sortie sous forme d&rsquo;ISBN-10, d&rsquo;ISBN-13 ou d&rsquo;EAN. Il peut donc également servir à calculer la clé de contrôle d&rsquo;un ISBN (en l&rsquo;entrant sans le dernier caractère) ou à calculer la validité d&rsquo;un ISBN. Quelques exemples :</p>
+<p>Convertir un EAN en ISBN-13</p>
+<pre>isbn("9782953595109","ISBN13") // retourne 978-2-9535951-0-9</pre>
+<p>Convertir un ISBN-10 en EAN-13</p>
+<pre>isbn("2-9535951-0-4","EAN") // retourne 9782953595109</pre>
+<p>Calculer la clé de contrôle d&rsquo;un ISBN-13</p>
+<pre>isbn("978-2-9535951-0","ISBN13") // retourne 978-2-9535951-0-9</pre>
+<p>Vérifier la validité d&rsquo;un EAN</p>
+<pre>if(isbn("978-2-9535951-0","ISBN13") == "978-2-9535951-0") echo "ok" // affiche ok</pre>
+<h4>function.isbn.php 1.2 : <a href="http://labs.nokto.net/isbn/">Demo</a> / <a href="http://labs.nokto.net/isbn/function.isbn.1.2.zip">Télécharger</a></h4>
+<p>MAJ du 23/12/2010 (1.1) : OK, donc la première version était complètement bugguée, en voici une qui fonctionne vraiment.</p>
+<div>MAJ du 11/09/2013 (1.2) : Correction d&rsquo;un bug dans le calcul de la clé des ISBN-10 (merci Patrick).L&rsquo;une des dernières limitations de cette fonction, c&rsquo;est qu&rsquo;elle ne gère que les ISBN de livres en langue française (commençant par 978-2) d&rsquo;après les plages de valeur trouvés sur <a href="http://isbn-international.org/page/ranges">isbn.org</a>. Une amélioration intéressante pour être la prise en charge du fichier XML contenant ces valeurs pour une compatibilité avec toutes les valeurs possible, ou au moins avec les futurs ISBN commençant par 979. Mais j&rsquo;ai peur que la recherche des plages de valeurs dans un fichier XML ralentisse considérablement la fonction.MAJ du 23/12/2010 (1.1) : OK, donc la première version était complètement bugguée, en voici une qui fonctionne vraiment.</p>
+<p>Image : <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/deed.fr">CC-BY-ND</a> <a href="http://www.flickr.com/photos/vaxzine/4097848238/in/photostream/">Vaxzine</a></p>
+</div>
+]]></content:encoded>
+
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">153</post-id>	</item>
+		<item>
+		<title>PHP : Convertir un code EAN-13 (sans tirets) en ISBN-13 (avec tirets)</title>
+		<link>/2010/01/31/20100131php-convertir-un-code-ean-13-sans-tirets-en-isbn-13-avec-tirets/</link>
+					<comments>/2010/01/31/20100131php-convertir-un-code-ean-13-sans-tirets-en-isbn-13-avec-tirets/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Sun, 31 Jan 2010 00:48:00 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[isbn]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=151</guid>
+
+					<description><![CDATA[<p>Il y a quelques temps, je proposais ici-même une fonction php <a href="/n/post/2009/08/25/PHP-Convertir-un-ISBN-10-en-EAN-13">pour convertir ISBN-10 en EAN-13</a> (en recalculant la clé de contrôle) mais aussi une tentative de méthode pour convertir un EAN-13 en ISBN. Seul petit souci, aujourd'hui les ISBN sont à 13 chiffres, comme les EAN, la seule différence entre les deux formats étant les tirets qui les sépare, mais je n'avais aucune idée de la marche à suivre pour retrouver la place de ces fameux tirets dans le code. J'ai longtemps cherché comment faire, ayant besoin de convertir des EAN-13 en ISBN-13 dans le cadre de mon moteur Tys, qui propulse notamment la <a href="http://www.librys.fr/">Librairie Ys</a>, la <a href="http://www.svel.eu/">Librairie Soleil Vert</a> et le site des <a href="http://www.belial.fr/">Editions du Bélial</a>. Et bien, grâce au coup de pouce d'un <a href="/n/post/2009/08/25/PHP-Convertir-un-ISBN-10-en-EAN-13#c1730">gentil commentateur</a>, c'est maintenant chose faite.</p>]]></description>
+										<content:encoded><![CDATA[<p>Il y a quelques temps, je proposais ici-même une fonction php <a href="/n/post/2009/08/25/PHP-Convertir-un-ISBN-10-en-EAN-13">pour convertir ISBN-10 en EAN-13</a> (en recalculant la clé de contrôle) mais aussi une tentative de méthode pour convertir un EAN-13 en ISBN. Seul petit souci, aujourd&rsquo;hui les ISBN sont à 13 chiffres, comme les EAN, la seule différence entre les deux formats étant les tirets qui les sépare, mais je n&rsquo;avais aucune idée de la marche à suivre pour retrouver la place de ces fameux tirets dans le code. J&rsquo;ai longtemps cherché comment faire, ayant besoin de convertir des EAN-13 en ISBN-13 dans le cadre de mon moteur Tys, qui propulse notamment la <a href="http://www.librys.fr/">Librairie Ys</a>, la <a href="http://www.svel.eu/">Librairie Soleil Vert</a> et le site des <a href="http://www.belial.fr/">Editions du Bélial</a>. Et bien, grâce au coup de pouce d&rsquo;un <a href="/n/post/2009/08/25/PHP-Convertir-un-ISBN-10-en-EAN-13#c1730">gentil commentateur</a>, c&rsquo;est maintenant chose faite. <span id="more-151"></span> Petite recontextualisation : aujourd&rsquo;hui, on attribue à chaque livre un code ISBN (par exemple 978-2-07-035570-9 pour <a href="http://www.librys.fr/ys/jean-philippe-jaworski/janua-vera_9139">Janua Vera</a>) qui permet de le retrouver facilement dans une base (utile par exemple aux libraires pour commander un livre auprès d&rsquo;un fournisseur). A ce code ISBN, correspond un code EAN, qui est tout simplement un code ISBN sans tiret (9782070355709 pour le même exemple) et qui est celui que l&rsquo;on trouve sous le code barre au dos du livre. L&rsquo;avantage de ce code EAN est qu&rsquo;il est lisible par un lecteur de code barre et qu&rsquo;il est plus facile à traiter informatiquement, l&rsquo;avantage de l&rsquo;ISBN est qu&rsquo;il est plus facilement lisible par un être humain. De plus, cette séparation en tirets a un sens bien précis. Un ISBN-13 (à 13 chiffres, en vigueur depuis 2007) se décompose en 5 modules : A-B-C-D-E.</p>
+<ul>
+<li>A (978) est toujours égal à 978 ou 979, ça signifie qu&rsquo;on est en présence d&rsquo;un livre.</li>
+<li>B (2) correspond à la langue dans lequel le livre est écrit : 2 pour le français, 0 ou 1 pour l&rsquo;anglais, etc.</li>
+<li>C (07) est un code qui correspond à l&rsquo;éditeur (en l&rsquo;occurence 07 pour Gallimard, tous les ISBN de livres édités par Gallimard commenceront donc par 978-2-07). Il peut-être long de 2 à 7 chiffres.</li>
+<li>D (035570) est le numéro d&rsquo;ordre d&rsquo;ouvrage. En simplifiant grossièrement, on peut dire que Janua Vera est le 35570ème livre à être édité par les éditions Gallimard (depuis la mise en place des codes ISBN depuis les années 70). Il peut-être long de 1 à 6 chiffres.</li>
+<li>E (9) est une clé de contrôle à un chiffre qui permet de <a href="http://fr.wikipedia.org/wiki/ISBN#ISBN-13_et_code_.C3.A0_barres_EAN-13">vérifier la validité</a> du code ISBN.</li>
+</ul>
+<p>Autant il est facile de replacer les tirets qui séparent A de B, B de C, et D de E, autant retrouver l&#8217;emplacement du tiret qui sépare C de D paraît impossible, dans la mesure où les codes éditeurs et les numéros d&rsquo;ordre d&rsquo;ouvrage ont une longueur variable, longueur qu&rsquo;il est impossible de connaître quand on dispose uniquement de l&rsquo;EAN brut. Impossible ? Non ! Car jfrey, qu&rsquo;il en soit ici remercié, a attiré mon attention sur <a href="http://isbn-international.org/ia/isbncvt">cette page</a>. On y découvre notamment que, en fonction du code langue (B), les codes éditeurs (C) ne peuvent correspondre qu&rsquo;à une certaine plage de valeur (de 01 à 19, de 200 à 349, de 400 à 699, etc.). Cette information permet de retrouver facilement, en fonction de la du premier chiffre du code éditeur, quelle est la longueur de de code (en gros). D&rsquo;où la fonction suivante, qui permet donc de convertir des EAN-13 (sans tiret) en ISBN-13 (avec tirets) :</p>
+<pre><code>function ean2isbn($x) {   $x = str_replace(" ","",str_replace("-","",$x));   if(strlen($x) == 13) {     $a = substr($x,0,3);     $b = substr($x,3,1);     $cd = substr($x,4,8);     $k1 = substr($x,4,1);     $k3 = substr($x,4,3);     $k4 = substr($x,4,4);     $k5 = substr($x,4,5);     $k6 = substr($x,4,6);     $k7 = substr($x,4,7);     $e = substr($x,12,1);     if($a == "978" and $b == "2") {       if($k1 == "0" or $k1 == "1") $l = "2";       elseif($k3 &gt;= "200" and $k3 &lt;= "349") $l = "3";       elseif($k5 &gt;= "35000" and $k5 &lt;= "39999") $l = "5";       elseif($k3 &gt;= "400" and $k3 &lt;= "699") $l = "3";       elseif($k4 &gt;= "7000" and $k4 &lt;= "8399") $l = "4";       elseif($k5 &gt;= "84000" and $k5 &lt;= "89999") $l = "5";       elseif($k6 &gt;= "900000" and $k6 &lt;= "949999") $l = "6";       elseif($k7 &gt;= "9500000" and $k7 &lt;= "9999999") $l = "7";       $c = substr($cd,0,$l);       $d = substr($cd,$l,8-$l);       return $a."-".$b."-".$c."-".$d."-".$e;     }   } }</code></pre>
+<p>Utilisation :</p>
+<pre>$ISBN = ean2isbn(9782070355709); // retourne 978-2-07-035570-9</pre>
+<p>Notez que cette fonction ne fonctionnera qu&rsquo;avec les codes ISBN de livres francophones (donc commençant par 9782), mais qu&rsquo;elle peut être facilement adapté à d&rsquo;autres langues en y implémentant les pages de valeurs indiquées <a href="http://isbn-international.org/ia/isbncvt">à cette adresse</a>. J&rsquo;ai utilisé cette fonction pour convertir les six mille et quelques fiches livres de la base Tys qui avaient un EAN mais pas d&rsquo;ISBN, et je n&rsquo;ai a priori pas réussi à prendre cette portion de code en défaut. Si c&rsquo;est votre cas, n&rsquo;hésitez pas à me le signaler ! Vous pouvez essayer cette fonction ici : <a href="http://ext.nokto.net/convert.php">http://ext.nokto.net/convert.php</a></p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2010/01/31/20100131php-convertir-un-code-ean-13-sans-tirets-en-isbn-13-avec-tirets/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">151</post-id>	</item>
+		<item>
+		<title>PHP : Convertir un ISBN-10 en EAN-13 (et vice-versa)</title>
+		<link>/2009/08/25/20090825php-convertir-un-isbn-10-en-ean-13/</link>
+					<comments>/2009/08/25/20090825php-convertir-un-isbn-10-en-ean-13/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Tue, 25 Aug 2009 13:03:00 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[isbn]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=150</guid>
+
+					<description><![CDATA[<p>Quand on est développeur web et libraire (et un peu nerd sur les bords), on peut se retrouver à faire ce genre de choses : convertir des codes ISBN en code EAN et réciproquement via PHP. Comme je n'ai rien trouvé d'équivalent ailleurs, j'ai du créer ma propre petite fonction. Et comme j'ai pensé qu'elle pouvait à d'autres, je vous en livre le code ci-dessous. Ainsi que quelques interrogations.</p>]]></description>
+										<content:encoded><![CDATA[<p>Quand on est développeur web et libraire (et un peu nerd sur les bords), on peut se retrouver à faire ce genre de choses : convertir des codes ISBN en code EAN et réciproquement via PHP. Comme je n&rsquo;ai rien trouvé d&rsquo;équivalent ailleurs, j&rsquo;ai du créer ma propre petite fonction. Et comme j&rsquo;ai pensé qu&rsquo;elle pouvait à d&rsquo;autres, je vous en livre le code ci-dessous. Ainsi que quelques interrogations.</p>
+<p><span id="more-150"></span></p>
+<p>(Voir aussi <a href="/n/post/2010/01/31/PHP-Convertir-un-code-EAN-13-%28sans-tirets%29-en-ISBN-13-%28avec-tirets%29">PHP : Convertir un code EAN-13 (sans tirets) en ISBN-13 (avec tirets)</a>)</p>
+<p>Aujourd&rsquo;hui, les codes ISBN (qui apparaissent au dos des livres) et les codes EAN (code-barre) sont les mêmes, à la différence des petits tirets des codes ISBN. Pour passer d&rsquo;un ISBN-13 à un EAN-13, il suffit donc de retirer les tirets en question. Mais pour les livres parus avant janvier 2007, les codes ISBN ne comportaient que 10 chiffres (ISBN-10) dont une clé de contrôle (dernièr caractère) différente de la clé des EAN. Dans les métiers du livre, on a parfois besoin de convertir un ISBN-10 en EAN-13, et il ne suffit malheureusement de virer trois chiffres pour passer de l&rsquo;un à l&rsquo;autre : il faut recalculer la clé de contrôle. C&rsquo;est ce que fait la fonction ci-dessous :</p>
+<pre>function isbn2ean($x)
+{
+  $x = str_replace("-","",$x);
+  $x = str_replace(" ","",$x);
+  if(strlen($x) &lt; 10) $x = $x."X";
+  if(strlen($x) == 10) // ISBN10
+  {
+    $x = substr($x,0,-1);
+    $x = "978".$x;
+    $code = $x;
+    $x = str_split($x);
+    $i = 0;
+    while($i2 &lt;= 11)
+    {
+      if($i2%2 == 0) $p = "1";
+      else $p = "3";
+      $r += $x[$i] * $p;
+      if($x[$i] != "-") $i2++;
+      $i++;
+    }
+    $q = floor($r/10);
+    $x = 10 - ($r - $q * 10);
+    if($x == "10") $x = "0";
+    $x = $code.$x;
+  }
+  return $x;
+}</pre>
+<p>Utilisation :</p>
+<pre>$ean = isbn2ean("2-913039-18-9"); // retourne 9782913039148</pre>
+<p>J&rsquo;ai aussi une fonction qui permet de faire l&rsquo;inverse, à savoir convertir un EAN en ISBN. Mais cette conversion pose deux problème : d&rsquo;abord, pas moyen de savoir si l&rsquo;ISBN correspondant à notre EAN est un code à 10 ou à 13 chiffres sans connaître la date de parution de l&rsquo;ouvrage (et même, il y a eu quelques cafouillages début 2007). L&rsquo;autre souci est que le code ISBN se décompose en 4 fragments : A-B-C-D où A est un code correspondant à la langue (2 pour les pays francophones), D est la clé de contrôle, B un code correspondant à l&rsquo;éditeur et C le numéro du livre chez l&rsquo;éditeur. Si A et D sont toujours longs d&rsquo;un caractère, impossible de savoir (à ma connaissance) où se trouve le tiret qui sépare B et C à partir de l&rsquo;EAN. Cette fonction renvoie donc un ISBN-10 sans tiret.</p>
+<pre>function ean2isbn($x)
+{
+  $x = str_replace("-","",$x);
+  $x = str_replace(" ","",$x);
+  if(strlen($x) == 13)
+  {
+    $x = substr($x,-10,9);
+    $k = str_split($x);
+    $m = 10;
+    foreach($k as $K)
+    {
+      $K = $K*$m;
+      $t += $K;
+      $m--;
+    }
+    $k = 11 - ($t % 11);
+    if(strlen($k) &gt; 1) $k = "X";
+    $x = $x.$k;
+  }
+  return $x;
+}</pre>
+<p>Utilisation</p>
+<pre>$isbn = ean2isbn("9782913039148"); // retourne 2913039146</pre>
+<p>Vous pouvez essayer ces deux fonctions ici : <a href="http://ext.nokto.net/convert.php">http://ext.nokto.net/convert.php</a></p>
+<p>J&rsquo;étais tombé une fois sur un site (impossible de le retrouver, évidemment) qui proposait un formulaire convertissant un EAN-13 en ISBN avec tirets, mais sans code source. Perso, je ne vois pas comment faire ça sans avoir à disposition une base de données croisant ISBN et EAN. Mais si quelqu&rsquo;un a une idée, je suis preneur&#8230;</p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2009/08/25/20090825php-convertir-un-isbn-10-en-ean-13/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">150</post-id>	</item>
+	</channel>
+</rss>

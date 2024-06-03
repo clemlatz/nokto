@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+
+	>
+<channel>
+	<title>
+	Commentaires sur : Tutoriel : Installer Dotclear sur un serveur RPS OVH	</title>
+	<atom:link href="/2009/03/28/20090328tutoriel-installer-dotclear-sur-un-serveur-rps-ovh/feed/" rel="self" type="application/rss+xml" />
+	<link>/2009/03/28/20090328tutoriel-installer-dotclear-sur-un-serveur-rps-ovh/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Sun, 23 Feb 2014 16:54:25 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+	<item>
+		<title>
+		Par : Joe		</title>
+		<link>/2009/03/28/20090328tutoriel-installer-dotclear-sur-un-serveur-rps-ovh/#comment-121</link>
+
+		<dc:creator><![CDATA[Joe]]></dc:creator>
+		<pubDate>Sun, 23 Feb 2014 16:54:25 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=149#comment-121</guid>
+
+					<description><![CDATA[Bien joué le coup du MultivewsMatch Any !
+Tout fonctionnait chez mon hébergeur avec dotclear, et d&#039;un coup le site se retrouvait ds les choux car le multiviews ne fonctionnait plus !
+J&#039;ai rien compris jusqu&#039;à trouver cette fameuse ligne à rajouter dans le htacess :)]]></description>
+			<content:encoded><![CDATA[<p>Bien joué le coup du MultivewsMatch Any !<br />
+Tout fonctionnait chez mon hébergeur avec dotclear, et d&rsquo;un coup le site se retrouvait ds les choux car le multiviews ne fonctionnait plus !<br />
+J&rsquo;ai rien compris jusqu&rsquo;à trouver cette fameuse ligne à rajouter dans le htacess 🙂</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : loxi		</title>
+		<link>/2009/03/28/20090328tutoriel-installer-dotclear-sur-un-serveur-rps-ovh/#comment-120</link>
+
+		<dc:creator><![CDATA[loxi]]></dc:creator>
+		<pubDate>Mon, 26 Oct 2009 23:14:55 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=149#comment-120</guid>
+
+					<description><![CDATA[&lt;p&gt;Un petit message pour un grand merci, avec cet article tu ma fait gagner beaucoup de temps.. merci beaucoup&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Un petit message pour un grand merci, avec cet article tu ma fait gagner beaucoup de temps.. merci beaucoup</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : Clément		</title>
+		<link>/2009/03/28/20090328tutoriel-installer-dotclear-sur-un-serveur-rps-ovh/#comment-119</link>
+
+		<dc:creator><![CDATA[Clément]]></dc:creator>
+		<pubDate>Tue, 25 Aug 2009 11:43:50 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=149#comment-119</guid>
+
+					<description><![CDATA[&lt;p&gt;Hmm oui sauf que cette manip empêche la vérification qu&#039;InnoDB existe mais ne résouds en rien le problème. J&#039;imagine que si cette vérif existe, c&#039;est que Dotclear a besoin d&#039;InnoDB pour fonctionner et donc que c&#039;est plus prudent d&#039;activer le moteur...&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Hmm oui sauf que cette manip empêche la vérification qu&rsquo;InnoDB existe mais ne résouds en rien le problème. J&rsquo;imagine que si cette vérif existe, c&rsquo;est que Dotclear a besoin d&rsquo;InnoDB pour fonctionner et donc que c&rsquo;est plus prudent d&rsquo;activer le moteur&#8230;</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : Aureschnoe		</title>
+		<link>/2009/03/28/20090328tutoriel-installer-dotclear-sur-un-serveur-rps-ovh/#comment-118</link>
+
+		<dc:creator><![CDATA[Aureschnoe]]></dc:creator>
+		<pubDate>Sat, 22 Aug 2009 11:48:13 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=149#comment-118</guid>
+
+					<description><![CDATA[&lt;p&gt;Désolé, le bbcode fonctionne mal. Il faut enlever les @@ du code que j&#039;ai envoyé.&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Désolé, le bbcode fonctionne mal. Il faut enlever les @@ du code que j&rsquo;ai envoyé.</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : Aureschnoe		</title>
+		<link>/2009/03/28/20090328tutoriel-installer-dotclear-sur-un-serveur-rps-ovh/#comment-117</link>
+
+		<dc:creator><![CDATA[Aureschnoe]]></dc:creator>
+		<pubDate>Sat, 22 Aug 2009 11:47:23 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=149#comment-117</guid>
+
+					<description><![CDATA[&lt;p&gt;Salut.&lt;/p&gt; &lt;p&gt;J&#039;ai une autre solution en ce qui concerne innodb. Il suffit (avant l&#039;installation) d&#039;éditer le fichier dotclear/admin/install/check.php .&lt;br /&gt;
+Cherchez&lt;br /&gt;
+@@if (!$innodb) {&lt;br /&gt;
+$err&lt;a href=&quot;&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt; = __(&#039;MySQL InnoDB engine is not available.&#039;);&lt;br /&gt;
+}@@&lt;/p&gt; &lt;p&gt;et remplacez-le par&lt;br /&gt;
+@@/*if (!$innodb) {&lt;br /&gt;
+$err&lt;a href=&quot;&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt; = __(&#039;MySQL InnoDB engine is not available.&#039;);&lt;br /&gt;
+}*/@@&lt;/p&gt; &lt;p&gt;Normalement, ça fonctionne impec (j&#039;ai testé cela avant).&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Salut.</p>
+<p>J&rsquo;ai une autre solution en ce qui concerne innodb. Il suffit (avant l&rsquo;installation) d&rsquo;éditer le fichier dotclear/admin/install/check.php .<br />
+Cherchez<br />
+@@if (!$innodb) {<br />
+$err<a href="" rel="nofollow"></a> = __(&lsquo;MySQL InnoDB engine is not available.&rsquo;);<br />
+}@@</p>
+<p>et remplacez-le par<br />
+@@/*if (!$innodb) {<br />
+$err<a href="" rel="nofollow"></a> = __(&lsquo;MySQL InnoDB engine is not available.&rsquo;);<br />
+}*/@@</p>
+<p>Normalement, ça fonctionne impec (j&rsquo;ai testé cela avant).</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : Clément		</title>
+		<link>/2009/03/28/20090328tutoriel-installer-dotclear-sur-un-serveur-rps-ovh/#comment-116</link>
+
+		<dc:creator><![CDATA[Clément]]></dc:creator>
+		<pubDate>Thu, 30 Apr 2009 16:23:25 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=149#comment-116</guid>
+
+					<description><![CDATA[&lt;p&gt;Hmm, j&#039;imagine qu&#039;il faudrait créer une page d&#039;inscription avec un script qui crée les répertoires, et modifier les fichiers hosts qui vont bien. Je n&#039;ai pas ça à la main (je ne suis même pas sûr de savoir comment faire, faudrait que je fasse quelques recherches), mais promis si un jour je fais ça, je le mettrais en ligne !&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Hmm, j&rsquo;imagine qu&rsquo;il faudrait créer une page d&rsquo;inscription avec un script qui crée les répertoires, et modifier les fichiers hosts qui vont bien. Je n&rsquo;ai pas ça à la main (je ne suis même pas sûr de savoir comment faire, faudrait que je fasse quelques recherches), mais promis si un jour je fais ça, je le mettrais en ligne !</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : manaboko		</title>
+		<link>/2009/03/28/20090328tutoriel-installer-dotclear-sur-un-serveur-rps-ovh/#comment-115</link>
+
+		<dc:creator><![CDATA[manaboko]]></dc:creator>
+		<pubDate>Thu, 30 Apr 2009 10:08:35 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=149#comment-115</guid>
+
+					<description><![CDATA[&lt;p&gt;dans le cas d&#039;une vraie plateforme de blogs où les internautes créent leurs blogs et les sous-domaines se créent automatiquement, tu peux nous donner un tuto?&lt;/p&gt; &lt;p&gt;merci&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>dans le cas d&rsquo;une vraie plateforme de blogs où les internautes créent leurs blogs et les sous-domaines se créent automatiquement, tu peux nous donner un tuto?</p>
+<p>merci</p>
+]]></content:encoded>
+
+			</item>
+	</channel>
+</rss>

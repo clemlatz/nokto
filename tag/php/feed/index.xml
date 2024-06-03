@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>php &#8211; nokto</title>
+	<atom:link href="/tag/php/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Thu, 02 Jan 2014 18:15:00 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+<site xmlns="com-wordpress:feed-additions:1">165226571</site>	<item>
+		<title>Citriq : automatiser le référencement de vos critiques littéraires avec PHP</title>
+		<link>/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/</link>
+					<comments>/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 02 Jan 2014 18:15:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[Technique]]></category>
+		<category><![CDATA[citriq]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=252</guid>
+
+					<description><![CDATA[Si votre site ou blog utilise php, il est facile de lui faire écrire le petit code JavaScript permettant de référencer automatiquement vos critiques dans Citriq. Cela vous évitera d’avoir à les entrer une par une. Voici une fonction qui permet de faire écrire automatiquement le code widget à PHP en fonction des paramètres reçus. &#8230; <p class="link-more"><a href="/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Citriq : automatiser le référencement de vos critiques littéraires avec PHP&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><span style="line-height: 1.5;">Si votre site ou blog utilise php, il est facile de lui faire écrire le petit code JavaScript permettant de référencer automatiquement vos critiques dans </span><a style="line-height: 1.5;" href="http://citriq.net/">Citriq</a><span style="line-height: 1.5;">. Cela vous évitera d’avoir à les entrer une par une.</span></p>
+<p>Voici une fonction qui permet de faire écrire automatiquement le code widget à PHP en fonction des paramètres reçus. Elle nécessite PHP 5.</p>
+<p>Cette fonction permet notamment via deux nouveaux paramètres <strong>excerpt</strong> et <strong>rating </strong>d&rsquo;envoyer à Citriq un extrait (jusqu&rsquo;à 500 caractères) de la critique et une note (sur 100). Ces paramètres étaient jusqu&rsquo;à présent réservés aux critiques entrées manuellement.  La fonction se charge en outre de l&rsquo;encodage du texte dans les paramètres du widget de manière à ce que les caractères soient correctement pris en charge par Citriq.</p>
+<h3>La fonction</h3>
+<pre>function citriq($params) {
+  if(empty($params["uid"])) $error = "Le paramètre uid est obligatoire";
+  elseif(empty($params["isbn"])) $error = "Le paramètre isbn est obligatoire";
+  else return '&lt;script type="text/javascript" src="http://citriq.net/w/crawl?'.http_build_query($params).'"&gt;&lt;script&gt;';
+  if($params["debug"] == 1 &amp;&amp; isset($error)) die("Erreur Citriq : ".$error);
+}</pre>
+<h3>Utilisation</h3>
+<p>Cette fonction prend comme seule valeur un tableau php (array) dont les clés sont les différents paramètres du widget Citriq. Sauf mention contraire, ils sont tous facultatifs. Notez que les noms des paramètres sont toujours en minuscules.</p>
+<ul>
+<li><em>uid</em> (obligatoire) : l’identifiant unique de la critique dans votre base ;</li>
+<li><em>isbn</em> (obligatoire) : le code IBSN du livre critiqué ;</li>
+<li><em>excerpt</em> : un extrait de la critique (jusqu’à 500 caractères) ;</li>
+<li><em>reviewer</em> : l’auteur de la critique (s’il y en a plusieurs sur le site) ;</li>
+<li><em>source</em> : support dont est issue la critique (si différent du site) ;</li>
+<li><em>rating</em> : permet d&rsquo;indiquer une note (un entier, sur 100) ;</li>
+<li><em>date</em> : la date de publication de la critique ;</li>
+<li><em>ignore</em> : permet d&rsquo;afficher le widget sans enregistrer la page en cours ;</li>
+<li><em>debug</em> : si ce paramètre facultatif est égal à 1, Citriq affichera des informations statistiques et un éventuel message d&rsquo;erreur sur votre site.</li>
+</ul>
+<p>La fonction retourne le code javascript du widget préparé qu&rsquo;on peut récupérer dans une variable ou afficher immédiatement avec l&rsquo;instruction <strong>echo</strong>.</p>
+<h3>Exemple</h3>
+<p>Ci-dessous, un exemple de code (fictif) qui permettrait de référencer la critique publiée <a href="http://www.belial.fr/blog/les-soldats-de-la-mer_3601">sur cette page</a>, pour le résultat sur cette page.</p>
+<pre>$params["uid"] = 3601;
+$params["isbn"] = 9782277492830;
+$params["excerpt"] = "Quand, voici quelques mois, les jeunes éditions Dystopia Workshop publièrent Le Prophète et le vizir, la surprise fut de taille. On ne s’attendait pas le moins du monde à voir le couple Rémy revenir à l’écriture et publier de l’inédit. Il avait eu une assez belle carrière dans les années 70, dont plus d’un se serait satisfait, mais il semblait qu’elle fût désormais de...";
+$params["reviewer"] = "Jean-Pierre Lion";
+$params["source"] = "Bifrost 71";
+$params["rating"] = "80"; // Equivaut à 4 étoiles sur 5
+echo citriq($params);</pre>
+<h3>Exemple avec WordPress</h3>
+<p>Il est possible d&rsquo;utiliser les champs personnalisés de WordPress pour faire générer automatiquement le code du widget Citriq par WordPress. On trouvera plus d&rsquo;information à ce sujet dans l&rsquo;article <a title="Citriq : automatiser le référencement des critiques avec WordPress" href="https://nokto.net/20130826citriq-automatiser-le-referencement-des-critiques-avec-wordpress/">Automatiser le référencement de vos critiques avec WordPress</a>.</p>
+<p>MAJ du 08/02/2014 : il existe aussi une <a href="https://nokto.net/citriq-wordpress-plugin/">extension WordPress pour Citriq</a>, qui utilise cette fonction php mais est beaucoup plus simple à mettre en oeuvre.</p>
+<pre>$params["uid"] = get_the_id(); // L'identifiant de l'article WordPress
+$params["isbn"] = get_post_meta(get_the_id(), "isbn", true); // Le champ personnalisé "isbn"
+$params["reviewer] = get_the_author(); // L'auteur de l'article WordPress
+$params["excerpt] = get_post_meta(get_the_id(), "extrait", true); // Le champ personnalisé "extrait"
+if(is_singular()) echo citriq($params);</pre>
+<h3>Résolution des problèmes</h3>
+<p>Si le code du widget ne s&rsquo;affiche pas correctement, vous pouvez utilisez le paramètre facultatif <em>debug</em> pour afficher un message d&rsquo;erreur. Si vous ne comprenez pas le message d&rsquo;erreur, n&rsquo;hésitez pas à poser la question dans les commentaires ci-dessous.</p>
+<p>Bonus : <a href="http://pastebin.com/a2guP2w3">l&rsquo;équivalent en Python</a> (merci Joachim)</p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">252</post-id>	</item>
+		<item>
+		<title>php-epub-cleaner</title>
+		<link>/2013/11/26/php-epub-cleaner/</link>
+					<comments>/2013/11/26/php-epub-cleaner/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Tue, 26 Nov 2013 14:38:03 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[ePub]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[python]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=218</guid>
+
+					<description><![CDATA[English readme available on GitHub Lorsque je convertis un document Word, inDesign ou XPress en HTML en vue de fabriquer un fichier ePub, j&#8217;ai souvent de nombreuses corrections à faire. Plutôt que de multiplier les rechercher/remplacer dans Sigil, j&#8217;ai préféré créer un script PHP qui s&#8217;en occupe pour moi. Les sources de ce script peuvent &#8230; <p class="link-more"><a href="/2013/11/26/php-epub-cleaner/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;php-epub-cleaner&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://nokto.net/wp-content/uploads/2013/11/php-epub-cleaner.png"><img fetchpriority="high" decoding="async" class="size-full wp-image-225 aligncenter" alt="php-epub-cleaner" src="https://nokto.net/wp-content/uploads/2013/11/php-epub-cleaner.png" width="1024" height="535" /></a></p>
+<p><a href="https://raw.github.com/iwazaru/php-epub-cleaner/master/README.md">English readme available on GitHub</a></p>
+<p>Lorsque je convertis un document Word, inDesign ou XPress en HTML en vue de fabriquer un fichier ePub, j&rsquo;ai souvent de nombreuses corrections à faire. Plutôt que de multiplier les rechercher/remplacer dans Sigil, j&rsquo;ai préféré créer un script PHP qui s&rsquo;en occupe pour moi.</p>
+<p>Les sources de ce script peuvent être récupérée sur Github :<br />
+<a href="https://github.com/iwazaru/php-epub-cleaner">https://github.com/iwazaru/php-epub-cleaner</a></p>
+<p>Ce script va :</p>
+<ol>
+<li>Uploader le fichier ePub vers le serveur</li>
+<li>Décompresser le fichier dans un dossier temporaire</li>
+<li>Ouvrir chaque fichier .html, .htm ou .xhtml et appliquer les corrections</li>
+<li>Recompresser le dossier au format ePub</li>
+<li>Proposer le téléchargement du nouvel ePub</li>
+</ol>
+<h3> Démo</h3>
+<p>Une démo se trouve ici : <a href="http://labs.nokto.net/php-epub-cleaner">http://labs.nokto.net/php-epub-cleaner</a></p>
+<p>Veuillez noter que tous les fichiers ePub uploadés pour nettoyage seront conservés en cache sur le serveur. Cette page ne devrait être utilisé qu&rsquo;à des fins de tests. Pour une utilisation en production avec des fichiers commerciaux, merci d&rsquo;installer votre propre version de l&rsquo;application à partir des sources sur <a href="https://github.com/iwazaru/php-epub-cleaner">Github</a>.</p>
+<h3>Installation</h3>
+<p>Copier le dossier php-epub-cleaner sur votre serveur supportant PHP5.</p>
+<h3>Personnalisation</h3>
+<p>J&rsquo;ai créé ce script pour nettoyer les erreurs générés par <a href="http://www.word2cleanhtml.com/">Word2CleanHTML</a> ne respectant pas les règles de la typographie française (ajouter les espaces insécables, retirer les espaces avant les points ou les virgules, etc.), mais vous pouvez tout à fait créer vos propres règles de remplacement en modifiant le tableau php $replacements.</p>
+<h3>Historique</h3>
+<h4>1.1 (26/02/2014)</h4>
+<ul>
+<li>Ajout d&rsquo;un journal de correction (« Correction log ») qui compte le nombre de remplacements et de suppressions</li>
+<li>Diverses corrections de bugs</li>
+</ul>
+<h4>1.0.1 (27/12/2013)</h4>
+<ul>
+<li>Amélioration de la prise en charge des caractères accentués majuscule (notamment ê)</li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2013/11/26/php-epub-cleaner/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">218</post-id>	</item>
+	</channel>
+</rss>

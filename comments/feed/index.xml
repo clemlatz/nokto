@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+
+	>
+<channel>
+	<title>
+	Commentaires pour nokto	</title>
+	<atom:link href="/comments/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Wed, 07 Apr 2021 06:32:18 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+	<item>
+		<title>
+		Commentaires sur Signé Furax, de Pierre Dac et Francis Blanche par Carole M		</title>
+		<link>/2005/07/11/2005071124-signe-furax/#comment-522</link>
+
+		<dc:creator><![CDATA[Carole M]]></dc:creator>
+		<pubDate>Tue, 06 Apr 2021 21:42:04 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=17#comment-522</guid>
+
+					<description><![CDATA[En réponse à &lt;a href=&quot;/2005/07/11/2005071124-signe-furax/#comment-48&quot;&gt;nicoue&lt;/a&gt;.
+
+Bonsoir
+Je découvre tout cela ce soir , grâce à la rediffusion de « ni vu, ni connu »
+Et cela me donne envie de découvrir les furax
+Dont j’avais vaguement entendu parler.
+Je cherchais des renseignements sur Jean Marie Amato, il y en a très peu.
+J aurais voulu savoir si il avait eu des enfants
+Si ceux-ci étaient dans le milieu artistique
+Et surtout, qu’elle était la raison de son suicide?
+Ni voyez aucune curiosité malsaine, mais j aurais aimé comprendre , si tant est que l on puisse comprendre !
+Merci d’avance.
+Carole]]></description>
+			<content:encoded><![CDATA[<p>En réponse à <a href="/2005/07/11/2005071124-signe-furax/#comment-48">nicoue</a>.</p>
+<p>Bonsoir<br />
+Je découvre tout cela ce soir , grâce à la rediffusion de « ni vu, ni connu »<br />
+Et cela me donne envie de découvrir les furax<br />
+Dont j’avais vaguement entendu parler.<br />
+Je cherchais des renseignements sur Jean Marie Amato, il y en a très peu.<br />
+J aurais voulu savoir si il avait eu des enfants<br />
+Si ceux-ci étaient dans le milieu artistique<br />
+Et surtout, qu’elle était la raison de son suicide?<br />
+Ni voyez aucune curiosité malsaine, mais j aurais aimé comprendre , si tant est que l on puisse comprendre !<br />
+Merci d’avance.<br />
+Carole</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Commentaires sur Signé Furax, de Pierre Dac et Francis Blanche par Arthur		</title>
+		<link>/2005/07/11/2005071124-signe-furax/#comment-61</link>
+
+		<dc:creator><![CDATA[Arthur]]></dc:creator>
+		<pubDate>Thu, 13 Oct 2016 23:24:05 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=17#comment-61</guid>
+
+					<description><![CDATA[il est possible d’écouter Signé Furax et les fabuleux mefaits de Furax sur raudiobook.com]]></description>
+			<content:encoded><![CDATA[<p>il est possible d’écouter Signé Furax et les fabuleux mefaits de Furax sur raudiobook.com</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Commentaires sur TextUID : Propositions pour un identifiant unique d’un livre, commun à ses différentes éditions, générable automatiquement par Clément Latzarus		</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/#comment-204</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 29 Jan 2015 09:25:30 +0000</pubDate>
+		<guid isPermaLink="false">http://nokto.net/?p=600#comment-204</guid>
+
+					<description><![CDATA[En réponse à &lt;a href=&quot;/2014/06/05/textuid-identifiant-unique-livre/#comment-203&quot;&gt;Elliot&lt;/a&gt;.
+
+Pas idiot du tout ! L&#039;un des intérêts de md5 par rapport à base64 est que la taille du hash est prévisible, mais la réversibilité est peut-être plus intéressante effectivement.]]></description>
+			<content:encoded><![CDATA[<p>En réponse à <a href="/2014/06/05/textuid-identifiant-unique-livre/#comment-203">Elliot</a>.</p>
+<p>Pas idiot du tout ! L&rsquo;un des intérêts de md5 par rapport à base64 est que la taille du hash est prévisible, mais la réversibilité est peut-être plus intéressante effectivement.</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Commentaires sur TextUID : Propositions pour un identifiant unique d’un livre, commun à ses différentes éditions, générable automatiquement par Elliot		</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/#comment-203</link>
+
+		<dc:creator><![CDATA[Elliot]]></dc:creator>
+		<pubDate>Thu, 29 Jan 2015 08:07:47 +0000</pubDate>
+		<guid isPermaLink="false">http://nokto.net/?p=600#comment-203</guid>
+
+					<description><![CDATA[Excellente recherche ! Je m&#039;interroge juste sur la non-reversibilité du md5 : est-ce que utiliser du base64 ne serait pas utile pour pouvoir retranscrire un TextUID en texte facilement ?]]></description>
+			<content:encoded><![CDATA[<p>Excellente recherche ! Je m&rsquo;interroge juste sur la non-reversibilité du md5 : est-ce que utiliser du base64 ne serait pas utile pour pouvoir retranscrire un TextUID en texte facilement ?</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Commentaires sur TextUID : Propositions pour un identifiant unique d’un livre, commun à ses différentes éditions, générable automatiquement par rmd		</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/#comment-202</link>
+
+		<dc:creator><![CDATA[rmd]]></dc:creator>
+		<pubDate>Thu, 05 Jun 2014 11:41:26 +0000</pubDate>
+		<guid isPermaLink="false">http://nokto.net/?p=600#comment-202</guid>
+
+					<description><![CDATA[Ceux là si. C&#039;est le premier tome : &quot;rupture dans le réel&quot; qui a été découpé en 2 chez A&#038;D et en 3 chez pocket. Le découpage n&#039;est pas le même en grand format et en poche; expansion est le tome 2 en GD et le 3 en poche.
+
+En fait tu vas galérer pour toutes les traductions découpées : à 1 titre original du trone de fer peut correspondre 3 ou 4 livres différents chez j&#039;ai lu, donc avec ton système tu vas avoir 3 ou 4 livres différents avec le même identifiant.]]></description>
+			<content:encoded><![CDATA[<p>Ceux là si. C&rsquo;est le premier tome : « rupture dans le réel » qui a été découpé en 2 chez A&amp;D et en 3 chez pocket. Le découpage n&rsquo;est pas le même en grand format et en poche; expansion est le tome 2 en GD et le 3 en poche.</p>
+<p>En fait tu vas galérer pour toutes les traductions découpées : à 1 titre original du trone de fer peut correspondre 3 ou 4 livres différents chez j&rsquo;ai lu, donc avec ton système tu vas avoir 3 ou 4 livres différents avec le même identifiant.</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Commentaires sur TextUID : Propositions pour un identifiant unique d’un livre, commun à ses différentes éditions, générable automatiquement par Clément Latzarus		</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/#comment-201</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 05 Jun 2014 10:21:24 +0000</pubDate>
+		<guid isPermaLink="false">http://nokto.net/?p=600#comment-201</guid>
+
+					<description><![CDATA[En réponse à &lt;a href=&quot;/2014/06/05/textuid-identifiant-unique-livre/#comment-200&quot;&gt;rmd&lt;/a&gt;.
+
+Je connais pas la série donc pour prendre un exemple précis et être sûr de bien comprendre, par exemple &quot;Le Dieu nu - 1/2 : Résistance&quot; chez Laffont (2-221-09197-3) et &quot;Le Dieu nu - 1/2 : Résistance&quot; chez Pocket (2-266-13357-8) sont deux livres différents ?]]></description>
+			<content:encoded><![CDATA[<p>En réponse à <a href="/2014/06/05/textuid-identifiant-unique-livre/#comment-200">rmd</a>.</p>
+<p>Je connais pas la série donc pour prendre un exemple précis et être sûr de bien comprendre, par exemple « Le Dieu nu &#8211; 1/2 : Résistance » chez Laffont (2-221-09197-3) et « Le Dieu nu &#8211; 1/2 : Résistance » chez Pocket (2-266-13357-8) sont deux livres différents ?</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Commentaires sur TextUID : Propositions pour un identifiant unique d’un livre, commun à ses différentes éditions, générable automatiquement par rmd		</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/#comment-200</link>
+
+		<dc:creator><![CDATA[rmd]]></dc:creator>
+		<pubDate>Thu, 05 Jun 2014 10:03:55 +0000</pubDate>
+		<guid isPermaLink="false">http://nokto.net/?p=600#comment-200</guid>
+
+					<description><![CDATA[Allez, un premier cas particulier : édition de poche avec le même titre mais un découpage différent, donc contenu différent :
+http://www.noosfere.org/icarus/livres/serie.asp?numserie=2190]]></description>
+			<content:encoded><![CDATA[<p>Allez, un premier cas particulier : édition de poche avec le même titre mais un découpage différent, donc contenu différent :<br />
+<a href="http://www.noosfere.org/icarus/livres/serie.asp?numserie=2190" rel="nofollow ugc">http://www.noosfere.org/icarus/livres/serie.asp?numserie=2190</a></p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Commentaires sur Signé Furax, de Pierre Dac et Francis Blanche par Clément Latzarus		</title>
+		<link>/2005/07/11/2005071124-signe-furax/#comment-60</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 08 May 2014 11:08:55 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=17#comment-60</guid>
+
+					<description><![CDATA[En réponse à &lt;a href=&quot;/2005/07/11/2005071124-signe-furax/#comment-59&quot;&gt;Cédric&lt;/a&gt;.
+
+Il existe des novelisations éditées dans les années 50 chez Martel puis dans les années 70 chez Lattès. Ceci dit, à mon avis, l&#039;intérêt réside surtout dans la performance des acteurs, sous forme écrite c&#039;est probablement moins jubilatoire.]]></description>
+			<content:encoded><![CDATA[<p>En réponse à <a href="/2005/07/11/2005071124-signe-furax/#comment-59">Cédric</a>.</p>
+<p>Il existe des novelisations éditées dans les années 50 chez Martel puis dans les années 70 chez Lattès. Ceci dit, à mon avis, l&rsquo;intérêt réside surtout dans la performance des acteurs, sous forme écrite c&rsquo;est probablement moins jubilatoire.</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Commentaires sur Signé Furax, de Pierre Dac et Francis Blanche par Cédric		</title>
+		<link>/2005/07/11/2005071124-signe-furax/#comment-59</link>
+
+		<dc:creator><![CDATA[Cédric]]></dc:creator>
+		<pubDate>Sat, 03 May 2014 11:07:39 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=17#comment-59</guid>
+
+					<description><![CDATA[Il semble que j&#039;adore déjà cette série radiophonique même si je ne l&#039;ai pas encore entendue. Le résumé de l&#039;histoire me plaît beaucoup. J&#039;aurai bien aimé que Signé Furax soit édité en version roman.]]></description>
+			<content:encoded><![CDATA[<p>Il semble que j&rsquo;adore déjà cette série radiophonique même si je ne l&rsquo;ai pas encore entendue. Le résumé de l&rsquo;histoire me plaît beaucoup. J&rsquo;aurai bien aimé que Signé Furax soit édité en version roman.</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Commentaires sur Neuromancien, de William Gibson par Sylvain		</title>
+		<link>/2006/01/08/2006010833-neuromancien/#comment-62</link>
+
+		<dc:creator><![CDATA[Sylvain]]></dc:creator>
+		<pubDate>Wed, 09 Apr 2014 23:32:27 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=18#comment-62</guid>
+
+					<description><![CDATA[C&#039;est bizarre que les auteurs de cyberpunk soient un peu technophobes. Qu&#039;est-ce qui les inspirent alors, si ce n&#039;est pas les nouvelles technologies? En ce qui concerne le roman, avec des termes incompréhensibles comme ceux du passage dans l&#039;article, je pense que j&#039;aurais abandonné la lecture avant la fin du livre. Finalement peut-être que le cyberpunk n&#039;est pas fait pour moi non plus.]]></description>
+			<content:encoded><![CDATA[<p>C&rsquo;est bizarre que les auteurs de cyberpunk soient un peu technophobes. Qu&rsquo;est-ce qui les inspirent alors, si ce n&rsquo;est pas les nouvelles technologies? En ce qui concerne le roman, avec des termes incompréhensibles comme ceux du passage dans l&rsquo;article, je pense que j&rsquo;aurais abandonné la lecture avant la fin du livre. Finalement peut-être que le cyberpunk n&rsquo;est pas fait pour moi non plus.</p>
+]]></content:encoded>
+
+			</item>
+	</channel>
+</rss>

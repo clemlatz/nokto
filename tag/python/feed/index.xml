@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>python &#8211; nokto</title>
+	<atom:link href="/tag/python/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Tue, 26 Nov 2013 14:38:03 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+<site xmlns="com-wordpress:feed-additions:1">165226571</site>	<item>
+		<title>php-epub-cleaner</title>
+		<link>/2013/11/26/php-epub-cleaner/</link>
+					<comments>/2013/11/26/php-epub-cleaner/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Tue, 26 Nov 2013 14:38:03 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[ePub]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[python]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=218</guid>
+
+					<description><![CDATA[English readme available on GitHub Lorsque je convertis un document Word, inDesign ou XPress en HTML en vue de fabriquer un fichier ePub, j&#8217;ai souvent de nombreuses corrections à faire. Plutôt que de multiplier les rechercher/remplacer dans Sigil, j&#8217;ai préféré créer un script PHP qui s&#8217;en occupe pour moi. Les sources de ce script peuvent &#8230; <p class="link-more"><a href="/2013/11/26/php-epub-cleaner/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;php-epub-cleaner&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://nokto.net/wp-content/uploads/2013/11/php-epub-cleaner.png"><img fetchpriority="high" decoding="async" class="size-full wp-image-225 aligncenter" alt="php-epub-cleaner" src="https://nokto.net/wp-content/uploads/2013/11/php-epub-cleaner.png" width="1024" height="535" /></a></p>
+<p><a href="https://raw.github.com/iwazaru/php-epub-cleaner/master/README.md">English readme available on GitHub</a></p>
+<p>Lorsque je convertis un document Word, inDesign ou XPress en HTML en vue de fabriquer un fichier ePub, j&rsquo;ai souvent de nombreuses corrections à faire. Plutôt que de multiplier les rechercher/remplacer dans Sigil, j&rsquo;ai préféré créer un script PHP qui s&rsquo;en occupe pour moi.</p>
+<p>Les sources de ce script peuvent être récupérée sur Github :<br />
+<a href="https://github.com/iwazaru/php-epub-cleaner">https://github.com/iwazaru/php-epub-cleaner</a></p>
+<p>Ce script va :</p>
+<ol>
+<li>Uploader le fichier ePub vers le serveur</li>
+<li>Décompresser le fichier dans un dossier temporaire</li>
+<li>Ouvrir chaque fichier .html, .htm ou .xhtml et appliquer les corrections</li>
+<li>Recompresser le dossier au format ePub</li>
+<li>Proposer le téléchargement du nouvel ePub</li>
+</ol>
+<h3> Démo</h3>
+<p>Une démo se trouve ici : <a href="http://labs.nokto.net/php-epub-cleaner">http://labs.nokto.net/php-epub-cleaner</a></p>
+<p>Veuillez noter que tous les fichiers ePub uploadés pour nettoyage seront conservés en cache sur le serveur. Cette page ne devrait être utilisé qu&rsquo;à des fins de tests. Pour une utilisation en production avec des fichiers commerciaux, merci d&rsquo;installer votre propre version de l&rsquo;application à partir des sources sur <a href="https://github.com/iwazaru/php-epub-cleaner">Github</a>.</p>
+<h3>Installation</h3>
+<p>Copier le dossier php-epub-cleaner sur votre serveur supportant PHP5.</p>
+<h3>Personnalisation</h3>
+<p>J&rsquo;ai créé ce script pour nettoyer les erreurs générés par <a href="http://www.word2cleanhtml.com/">Word2CleanHTML</a> ne respectant pas les règles de la typographie française (ajouter les espaces insécables, retirer les espaces avant les points ou les virgules, etc.), mais vous pouvez tout à fait créer vos propres règles de remplacement en modifiant le tableau php $replacements.</p>
+<h3>Historique</h3>
+<h4>1.1 (26/02/2014)</h4>
+<ul>
+<li>Ajout d&rsquo;un journal de correction (« Correction log ») qui compte le nombre de remplacements et de suppressions</li>
+<li>Diverses corrections de bugs</li>
+</ul>
+<h4>1.0.1 (27/12/2013)</h4>
+<ul>
+<li>Amélioration de la prise en charge des caractères accentués majuscule (notamment ê)</li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2013/11/26/php-epub-cleaner/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">218</post-id>	</item>
+	</channel>
+</rss>

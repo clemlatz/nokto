@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+
+	>
+<channel>
+	<title>
+	Commentaires sur : TextUID : Propositions pour un identifiant unique d’un livre, commun à ses différentes éditions, générable automatiquement	</title>
+	<atom:link href="/2014/06/05/textuid-identifiant-unique-livre/feed/" rel="self" type="application/rss+xml" />
+	<link>/2014/06/05/textuid-identifiant-unique-livre/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Thu, 29 Jan 2015 09:25:30 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+	<item>
+		<title>
+		Par : Clément Latzarus		</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/#comment-204</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 29 Jan 2015 09:25:30 +0000</pubDate>
+		<guid isPermaLink="false">http://nokto.net/?p=600#comment-204</guid>
+
+					<description><![CDATA[En réponse à &lt;a href=&quot;/2014/06/05/textuid-identifiant-unique-livre/#comment-203&quot;&gt;Elliot&lt;/a&gt;.
+
+Pas idiot du tout ! L&#039;un des intérêts de md5 par rapport à base64 est que la taille du hash est prévisible, mais la réversibilité est peut-être plus intéressante effectivement.]]></description>
+			<content:encoded><![CDATA[<p>En réponse à <a href="/2014/06/05/textuid-identifiant-unique-livre/#comment-203">Elliot</a>.</p>
+<p>Pas idiot du tout ! L&rsquo;un des intérêts de md5 par rapport à base64 est que la taille du hash est prévisible, mais la réversibilité est peut-être plus intéressante effectivement.</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : Elliot		</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/#comment-203</link>
+
+		<dc:creator><![CDATA[Elliot]]></dc:creator>
+		<pubDate>Thu, 29 Jan 2015 08:07:47 +0000</pubDate>
+		<guid isPermaLink="false">http://nokto.net/?p=600#comment-203</guid>
+
+					<description><![CDATA[Excellente recherche ! Je m&#039;interroge juste sur la non-reversibilité du md5 : est-ce que utiliser du base64 ne serait pas utile pour pouvoir retranscrire un TextUID en texte facilement ?]]></description>
+			<content:encoded><![CDATA[<p>Excellente recherche ! Je m&rsquo;interroge juste sur la non-reversibilité du md5 : est-ce que utiliser du base64 ne serait pas utile pour pouvoir retranscrire un TextUID en texte facilement ?</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : rmd		</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/#comment-202</link>
+
+		<dc:creator><![CDATA[rmd]]></dc:creator>
+		<pubDate>Thu, 05 Jun 2014 11:41:26 +0000</pubDate>
+		<guid isPermaLink="false">http://nokto.net/?p=600#comment-202</guid>
+
+					<description><![CDATA[Ceux là si. C&#039;est le premier tome : &quot;rupture dans le réel&quot; qui a été découpé en 2 chez A&#038;D et en 3 chez pocket. Le découpage n&#039;est pas le même en grand format et en poche; expansion est le tome 2 en GD et le 3 en poche.
+
+En fait tu vas galérer pour toutes les traductions découpées : à 1 titre original du trone de fer peut correspondre 3 ou 4 livres différents chez j&#039;ai lu, donc avec ton système tu vas avoir 3 ou 4 livres différents avec le même identifiant.]]></description>
+			<content:encoded><![CDATA[<p>Ceux là si. C&rsquo;est le premier tome : « rupture dans le réel » qui a été découpé en 2 chez A&amp;D et en 3 chez pocket. Le découpage n&rsquo;est pas le même en grand format et en poche; expansion est le tome 2 en GD et le 3 en poche.</p>
+<p>En fait tu vas galérer pour toutes les traductions découpées : à 1 titre original du trone de fer peut correspondre 3 ou 4 livres différents chez j&rsquo;ai lu, donc avec ton système tu vas avoir 3 ou 4 livres différents avec le même identifiant.</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : Clément Latzarus		</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/#comment-201</link>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 05 Jun 2014 10:21:24 +0000</pubDate>
+		<guid isPermaLink="false">http://nokto.net/?p=600#comment-201</guid>
+
+					<description><![CDATA[En réponse à &lt;a href=&quot;/2014/06/05/textuid-identifiant-unique-livre/#comment-200&quot;&gt;rmd&lt;/a&gt;.
+
+Je connais pas la série donc pour prendre un exemple précis et être sûr de bien comprendre, par exemple &quot;Le Dieu nu - 1/2 : Résistance&quot; chez Laffont (2-221-09197-3) et &quot;Le Dieu nu - 1/2 : Résistance&quot; chez Pocket (2-266-13357-8) sont deux livres différents ?]]></description>
+			<content:encoded><![CDATA[<p>En réponse à <a href="/2014/06/05/textuid-identifiant-unique-livre/#comment-200">rmd</a>.</p>
+<p>Je connais pas la série donc pour prendre un exemple précis et être sûr de bien comprendre, par exemple « Le Dieu nu &#8211; 1/2 : Résistance » chez Laffont (2-221-09197-3) et « Le Dieu nu &#8211; 1/2 : Résistance » chez Pocket (2-266-13357-8) sont deux livres différents ?</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : rmd		</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/#comment-200</link>
+
+		<dc:creator><![CDATA[rmd]]></dc:creator>
+		<pubDate>Thu, 05 Jun 2014 10:03:55 +0000</pubDate>
+		<guid isPermaLink="false">http://nokto.net/?p=600#comment-200</guid>
+
+					<description><![CDATA[Allez, un premier cas particulier : édition de poche avec le même titre mais un découpage différent, donc contenu différent :
+http://www.noosfere.org/icarus/livres/serie.asp?numserie=2190]]></description>
+			<content:encoded><![CDATA[<p>Allez, un premier cas particulier : édition de poche avec le même titre mais un découpage différent, donc contenu différent :<br />
+<a href="http://www.noosfere.org/icarus/livres/serie.asp?numserie=2190" rel="nofollow ugc">http://www.noosfere.org/icarus/livres/serie.asp?numserie=2190</a></p>
+]]></content:encoded>
+
+			</item>
+	</channel>
+</rss>

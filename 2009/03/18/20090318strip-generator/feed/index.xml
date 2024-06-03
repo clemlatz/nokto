@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+
+	>
+<channel>
+	<title>
+	Commentaires sur : Strip Generator !	</title>
+	<atom:link href="/2009/03/18/20090318strip-generator/feed/" rel="self" type="application/rss+xml" />
+	<link>/2009/03/18/20090318strip-generator/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Wed, 18 Mar 2009 17:26:55 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+	<item>
+		<title>
+		Par : Le cactus		</title>
+		<link>/2009/03/18/20090318strip-generator/#comment-101</link>
+
+		<dc:creator><![CDATA[Le cactus]]></dc:creator>
+		<pubDate>Wed, 18 Mar 2009 17:26:55 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=110#comment-101</guid>
+
+					<description><![CDATA[&lt;p&gt;&#062;_&#060;&lt;/p&gt; &lt;p&gt;Pour ta culture générale :&lt;br /&gt;
+&lt;a href=&quot;http://fr.wikipedia.org/wiki/Epiphyllum_oxypetalum&quot; title=&quot;http://fr.wikipedia.org/wiki/Epiphyllum_oxypetalum&quot; rel=&quot;nofollow&quot;&gt;http://fr.wikipedia.org/wiki/Epiphy...&lt;/a&gt;&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>&gt;_&lt;</p>
+<p>Pour ta culture générale :<br />
+<a href="http://fr.wikipedia.org/wiki/Epiphyllum_oxypetalum" title="http://fr.wikipedia.org/wiki/Epiphyllum_oxypetalum" rel="nofollow"></a><a href="http://fr.wikipedia.org/wiki/Epiphy" rel="nofollow ugc">http://fr.wikipedia.org/wiki/Epiphy</a>&#8230;</p>
+]]></content:encoded>
+
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>html &#8211; nokto</title>
+	<atom:link href="/tag/html/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Thu, 23 Jan 2014 11:14:49 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+<site xmlns="com-wordpress:feed-additions:1">165226571</site>	<item>
+		<title>La Baleine à bulle et autres librairies imaginaires</title>
+		<link>/2014/01/23/la-baleine-a-bulle-et-autres-librairies-imaginaires/</link>
+					<comments>/2014/01/23/la-baleine-a-bulle-et-autres-librairies-imaginaires/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 23 Jan 2014 11:14:49 +0000</pubDate>
+				<category><![CDATA[Cours]]></category>
+		<category><![CDATA[biblys]]></category>
+		<category><![CDATA[css]]></category>
+		<category><![CDATA[html]]></category>
+		<category><![CDATA[saint-cloud]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=282</guid>
+
+					<description><![CDATA[Comme en 2012 et 2011, j&#8217;ai donné de septembre à décembre un cours de 14h sur la communication sur internet au Pôle Métiers du Livre de Saint-Cloud. Cette année, le cours s&#8217;adressait aux étudiantes de l&#8217;option librairie du Master 1, mais n&#8217;était pas lié à un projet tutoré de création de librairie. Elles ont donc &#8230; <p class="link-more"><a href="/2014/01/23/la-baleine-a-bulle-et-autres-librairies-imaginaires/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;La Baleine à bulle et autres librairies imaginaires&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://nokto.net/wp-content/uploads/2014/01/baleine-a-bulle.png"><img fetchpriority="high" decoding="async" class="aligncenter size-large wp-image-289" alt="baleine-a-bulle" src="https://nokto.net/wp-content/uploads/2014/01/baleine-a-bulle-1024x986.png" width="604" height="581" /></a></p>
+<p>Comme en <a href="https://nokto.net/20130119site-internet-et-librairie-2012-cours-metiers-du-livre/">2012</a> et <a href="https://nokto.net/20120208la-librairie-heros-de-papier-n-existe-pas/">2011</a>, j&rsquo;ai donné de septembre à décembre un cours de 14h sur la communication sur internet au Pôle Métiers du Livre de Saint-Cloud. Cette année, le cours s&rsquo;adressait aux étudiantes de l&rsquo;option librairie du Master 1, mais n&rsquo;était pas lié à un projet tutoré de création de librairie. Elles ont donc dû, dans le cadre de ce cours, inventer chacune une librairie imaginaire dont nous avons ensemble conçu le site web.</p>
+<p>Le cours portait sur :</p>
+<ul>
+<li>mon expérience de libraire en ligne (à l&rsquo;époque de la <a href="http://www.biblys.fr/blog/la-librairie-ys-c-est-fini-mais-l-aventure-continue">Librairie Ys</a>) et plus récemment mon travail avec d&rsquo;autres librairies <a href="http://www.biblys.fr/pages/biblys-pour-les-libraires">dont j&rsquo;ai conçu les sites</a> et que j&rsquo;accompagne au quotidien ;</li>
+<li>une initiation aux langages HTML5 et CSS3, mais aussi au design graphique avec Photoshop ;</li>
+<li>un travail préalable à la conception du site sur le cahier des charges, la maquette et  l&rsquo;arborescence du site ;</li>
+<li>la création pratique du site en lui-même, étape par étape, accompagné d&rsquo;une réflexion sur l&rsquo;ergonomie des pages web, l&rsquo;optimisation pour le référencement, la communication sur les réseaux sociaux et l&rsquo;utilisation d&rsquo;un outil de statistiques.</li>
+</ul>
+<p>Pour la création du site, les étudiantes ont pu utiliser le moteur <a href="http://www.biblys.fr/">Biblys</a> et son éditeur HTML intégré. Elles ont ainsi pu profiter d&rsquo;un véritable site d&rsquo;e-commerce avec un moteur de recherche, un panier, un système de commande et une base bibliographique très fournie, pour lequel elles ont eu à créer le squelette HTML et les feuilles de styles CSS.</p>
+<p>L&rsquo;enjeu n&rsquo;était évidemment pas de leur enseigner la création d&rsquo;un site de A à Z, ce qui demanderait plus de 14h, mais de les initiera aux langages de base du web et de leur donner les notions et la culture générale nécessaire pour dialoguer efficacement avec un prestataire technique, ainsi qu&rsquo;un aperçu des bonnes pratiques de création de site web spécifiques aux domaines du livre.</p>
+<p>Quatre sites de librairies imaginaires ont été créés dans le cadre du cours :</p>
+<ul>
+<li><a href="http://bubulle.biblys.fr/">La Baleine à bulle</a></li>
+<li><a href="http://phalene.biblys.fr/">La Phalène</a></li>
+<li><a href="http://englit.biblys.fr/">Englit Bookseller</a></li>
+<li><a href="http://songe.biblys.fr/">Le Songe des livres</a></li>
+</ul>
+<p>(On regrettera au passage que l&rsquo;intérêt des aspirants libraires pour les littératures de l&rsquo;imaginaire — ici deux librairies sur quatre — ne soit pas du tout représentatif de l&rsquo;intérêt du public pour le genre).</p>
+<p>Plusieurs documents utilisés pour ce cours sont téléchargeables en PDF :</p>
+<ul>
+<li><a href="http://mdl.nokto.net/initiation-html5-css3.pdf">Initiation HTML5 / CSS3</a></li>
+<li><a href="http://mdl.nokto.net/memo-html5.pdf">Mémo HTML 5</a></li>
+<li><a href="http://mdl.nokto.net/memo-css3.pdf">Mémo CSS 3</a></li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/01/23/la-baleine-a-bulle-et-autres-librairies-imaginaires/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">282</post-id>	</item>
+	</channel>
+</rss>

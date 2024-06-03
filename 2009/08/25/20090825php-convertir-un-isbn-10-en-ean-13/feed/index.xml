@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+
+	>
+<channel>
+	<title>
+	Commentaires sur : PHP : Convertir un ISBN-10 en EAN-13 (et vice-versa)	</title>
+	<atom:link href="/2009/08/25/20090825php-convertir-un-isbn-10-en-ean-13/feed/" rel="self" type="application/rss+xml" />
+	<link>/2009/08/25/20090825php-convertir-un-isbn-10-en-ean-13/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Tue, 15 Sep 2009 10:45:49 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+	<item>
+		<title>
+		Par : Christophe		</title>
+		<link>/2009/08/25/20090825php-convertir-un-isbn-10-en-ean-13/#comment-135</link>
+
+		<dc:creator><![CDATA[Christophe]]></dc:creator>
+		<pubDate>Tue, 15 Sep 2009 10:45:49 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=150#comment-135</guid>
+
+					<description><![CDATA[&lt;p&gt;Merci beaucoup pour votre réponse et votre aide, j&#039;ai donc adapté votre script et cela fonctionne bien :&lt;/p&gt; &lt;p&gt;function ean2isbn($x)&lt;br /&gt;
+{&lt;/p&gt; &lt;pre&gt; $x = str_replace(&quot;-&quot;,&quot;&quot;,$x);  $x = str_replace(&quot; &quot;,&quot;&quot;,$x);  if(strlen($x) == 13)  {    $x = substr($x,-10,9);    $k = str_split($x);    $m = 10;    foreach($k as $K)    {      $K = $K*$m;      $t += $K;      $m--;    }    $k = 11 - ($t % 11);    if ($k == 10) { $k = &quot;X&quot;; }    if ($k == 11) { $k = &quot;0&quot;; }    $x = $x.$k;  }  return $x;&lt;/pre&gt; &lt;p&gt;}&lt;/p&gt; &lt;p&gt;Bonne continuation :)&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Merci beaucoup pour votre réponse et votre aide, j&rsquo;ai donc adapté votre script et cela fonctionne bien :</p>
+<p>function ean2isbn($x)<br />
+{</p>
+<pre> $x = str_replace("-","",$x);  $x = str_replace(" ","",$x);  if(strlen($x) == 13)  {    $x = substr($x,-10,9);    $k = str_split($x);    $m = 10;    foreach($k as $K)    {      $K = $K*$m;      $t += $K;      $m--;    }    $k = 11 - ($t % 11);    if ($k == 10) { $k = "X"; }    if ($k == 11) { $k = "0"; }    $x = $x.$k;  }  return $x;</pre>
+<p>}</p>
+<p>Bonne continuation 🙂</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : jfrey		</title>
+		<link>/2009/08/25/20090825php-convertir-un-isbn-10-en-ean-13/#comment-134</link>
+
+		<dc:creator><![CDATA[jfrey]]></dc:creator>
+		<pubDate>Mon, 14 Sep 2009 20:18:08 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=150#comment-134</guid>
+
+					<description><![CDATA[&lt;p&gt;Bonjour,&lt;br /&gt;
+Pour le script, vous parlez du code source de Tellico ? Quand on entre un ISBN dans ce logiciel, il s&#039;occupe tout seul de calculer le dernier chiffre. Et avec 281260033 il trouve bien 0.&lt;/p&gt; &lt;p&gt;J&#039;ai regardé le code, pour passer d&#039;un ISBN 13 à un ISBN 10 le programme enlève les tirets, enlève 978 et recalcule le dernier chiffre avec l&#039;algo  présent dans la fonction checkSum10 du fichier &lt;a href=&quot;http://websvn.kde.org/trunk/extragear/office/tellico/src/utils/isbnvalidator.cpp?view=markup&quot; title=&quot;http://websvn.kde.org/trunk/extragear/office/tellico/src/utils/isbnvalidator.cpp?view=markup&quot; rel=&quot;nofollow&quot;&gt;http://websvn.kde.org/trunk/extrage...&lt;/a&gt;&lt;br /&gt;
+Il met pour finir le résultat en forme.&lt;/p&gt; &lt;p&gt;Avez-vous bien implémenté la fonction en php ? Celle de Tellico est tirée de celle-ci, en javascript et plus lisible à mon sens :&lt;/p&gt; &lt;pre&gt;if (indexisbn.indexOf(&quot;978&quot;) == 0) {     isbn = isbn.substr(3,9);     var xsum = 0;     var add = 0;     var i = 0;     for (i = 0; i &#060; 9; i++) {         add = isbn.substr(i,1);         xsum += (10 - i) * add;    }    xsum %= 11;    xsum = 11 - xsum;    if (xsum == 10) { xsum = &quot;X&quot;; }    if (xsum == 11) { xsum = &quot;0&quot;; }    isbn += xsum; }&lt;/pre&gt; &lt;p&gt;Cf la page suivante : &lt;a href=&quot;http://www.eblong.com/zarf/bookscan/&quot; title=&quot;http://www.eblong.com/zarf/bookscan/&quot; rel=&quot;nofollow&quot;&gt;http://www.eblong.com/zarf/bookscan...&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Je l&#039;ai testée avec votre ISBN (ok j&#039;ai triché, j&#039;ai juste fait tourné la boucle sur 281260033), là encore &quot;0&quot; est trouvé. Si le mauvais comportement persiste, je peux jeter un œil neuf à votre code si vous le souhaitez.&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Bonjour,<br />
+Pour le script, vous parlez du code source de Tellico ? Quand on entre un ISBN dans ce logiciel, il s&rsquo;occupe tout seul de calculer le dernier chiffre. Et avec 281260033 il trouve bien 0.</p>
+<p>J&rsquo;ai regardé le code, pour passer d&rsquo;un ISBN 13 à un ISBN 10 le programme enlève les tirets, enlève 978 et recalcule le dernier chiffre avec l&rsquo;algo  présent dans la fonction checkSum10 du fichier <a href="http://websvn.kde.org/trunk/extragear/office/tellico/src/utils/isbnvalidator.cpp?view=markup" title="http://websvn.kde.org/trunk/extragear/office/tellico/src/utils/isbnvalidator.cpp?view=markup" rel="nofollow"></a><a href="http://websvn.kde.org/trunk/extrage" rel="nofollow ugc">http://websvn.kde.org/trunk/extrage</a>&#8230;<br />
+Il met pour finir le résultat en forme.</p>
+<p>Avez-vous bien implémenté la fonction en php ? Celle de Tellico est tirée de celle-ci, en javascript et plus lisible à mon sens :</p>
+<pre>if (indexisbn.indexOf("978") == 0) {     isbn = isbn.substr(3,9);     var xsum = 0;     var add = 0;     var i = 0;     for (i = 0; i &lt; 9; i++) {         add = isbn.substr(i,1);         xsum += (10 - i) * add;    }    xsum %= 11;    xsum = 11 - xsum;    if (xsum == 10) { xsum = "X"; }    if (xsum == 11) { xsum = "0"; }    isbn += xsum; }</pre>
+<p>Cf la page suivante : <a href="http://www.eblong.com/zarf/bookscan/" title="http://www.eblong.com/zarf/bookscan/" rel="nofollow"></a><a href="http://www.eblong.com/zarf/bookscan" rel="nofollow ugc">http://www.eblong.com/zarf/bookscan</a>&#8230;</p>
+<p>Je l&rsquo;ai testée avec votre ISBN (ok j&rsquo;ai triché, j&rsquo;ai juste fait tourné la boucle sur 281260033), là encore « 0 » est trouvé. Si le mauvais comportement persiste, je peux jeter un œil neuf à votre code si vous le souhaitez.</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : Christophe		</title>
+		<link>/2009/08/25/20090825php-convertir-un-isbn-10-en-ean-13/#comment-133</link>
+
+		<dc:creator><![CDATA[Christophe]]></dc:creator>
+		<pubDate>Mon, 14 Sep 2009 17:43:40 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=150#comment-133</guid>
+
+					<description><![CDATA[&lt;p&gt;Bonjour, merci pour ce script que je comptais utiliser mais je n&#039;obtiens pas l&#039;ISBN 10 souhaité à partir d&#039;un EAN 13.&lt;br /&gt;
+J&#039;ai utilisé un convertisseur en ligne : &lt;a href=&quot;http://www.isbn.org/converterpub.asp&quot; title=&quot;http://www.isbn.org/converterpub.asp&quot; rel=&quot;nofollow&quot;&gt;http://www.isbn.org/converterpub.as...&lt;/a&gt; qui lui me donne le bon ISBN 10 (sans prendre en compte les tirets)&lt;/p&gt; &lt;p&gt;Ex à partir de l&#039;EAN 13 suivant : 978-2812600333&lt;br /&gt;
+votre script =&#062; 281260033X&lt;br /&gt;
+autre script (cf lien donné) =&#062; 2-8126-0033-0&lt;br /&gt;
+ce que je souhaitais =&#062; 2812600330&lt;/p&gt; &lt;p&gt;Auriez vous des idées sur cette différence ? Merci d&#039;avance&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Bonjour, merci pour ce script que je comptais utiliser mais je n&rsquo;obtiens pas l&rsquo;ISBN 10 souhaité à partir d&rsquo;un EAN 13.<br />
+J&rsquo;ai utilisé un convertisseur en ligne : <a href="http://www.isbn.org/converterpub.asp" title="http://www.isbn.org/converterpub.asp" rel="nofollow"></a><a href="http://www.isbn.org/converterpub.as" rel="nofollow ugc">http://www.isbn.org/converterpub.as</a>&#8230; qui lui me donne le bon ISBN 10 (sans prendre en compte les tirets)</p>
+<p>Ex à partir de l&rsquo;EAN 13 suivant : 978-2812600333<br />
+votre script =&gt; 281260033X<br />
+autre script (cf lien donné) =&gt; 2-8126-0033-0<br />
+ce que je souhaitais =&gt; 2812600330</p>
+<p>Auriez vous des idées sur cette différence ? Merci d&rsquo;avance</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : jfrey		</title>
+		<link>/2009/08/25/20090825php-convertir-un-isbn-10-en-ean-13/#comment-132</link>
+
+		<dc:creator><![CDATA[jfrey]]></dc:creator>
+		<pubDate>Fri, 04 Sep 2009 11:50:08 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=150#comment-132</guid>
+
+					<description><![CDATA[&lt;p&gt;Content  d&#039;avoir été utile. Ce n&#039;est que justice après avoir eu l&#039;occasion de dégoter plein de beaux livres sur Librys.&lt;/p&gt; &lt;p&gt;Je n&#039;ai rien trouvé non plus pour différencier ISBN 10 et 13 mais est-ce bien utile ? Tant que l&#039;EAN commence par 978 les deux sont équivalents non ? Sur amazon on peut rechercher indifféremment avec l&#039;un ou l&#039;autre, que les livres datent d&#039;avant ou d&#039;après 2007. Autant rendre hommage à de vieux livres de SF en les convertissant en ISBN 13 dans une BDD.&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Content  d&rsquo;avoir été utile. Ce n&rsquo;est que justice après avoir eu l&rsquo;occasion de dégoter plein de beaux livres sur Librys.</p>
+<p>Je n&rsquo;ai rien trouvé non plus pour différencier ISBN 10 et 13 mais est-ce bien utile ? Tant que l&rsquo;EAN commence par 978 les deux sont équivalents non ? Sur amazon on peut rechercher indifféremment avec l&rsquo;un ou l&rsquo;autre, que les livres datent d&rsquo;avant ou d&rsquo;après 2007. Autant rendre hommage à de vieux livres de SF en les convertissant en ISBN 13 dans une BDD.</p>
+]]></content:encoded>
+
+			</item>
+		<item>
+		<title>
+		Par : Clément		</title>
+		<link>/2009/08/25/20090825php-convertir-un-isbn-10-en-ean-13/#comment-131</link>
+
+		<dc:creator><![CDATA[Clément]]></dc:creator>
+		<pubDate>Fri, 04 Sep 2009 10:38:05 +0000</pubDate>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=150#comment-131</guid>
+
+					<description><![CDATA[&lt;p&gt;Wow, merci ! Ca a bien l&#039;air d&#039;être exactement ce que je cherche. En fait j&#039;étais tombé sur quelque chose comme ça mais je n&#039;avais pas compris que c&#039;était la solution que je cherchais. Par contre, si ça peut m&#039;aider à calculer le bloc éditeur, reste le problème de savoir si l&#039;ISBN était à 10 ou 13 chiffres... enfin c&#039;est déjà ça ! Je reviens vers vous avec une nouvelle fonction dès que j&#039;ai le temps de regarder ça en détail.&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p>Wow, merci ! Ca a bien l&rsquo;air d&rsquo;être exactement ce que je cherche. En fait j&rsquo;étais tombé sur quelque chose comme ça mais je n&rsquo;avais pas compris que c&rsquo;était la solution que je cherchais. Par contre, si ça peut m&rsquo;aider à calculer le bloc éditeur, reste le problème de savoir si l&rsquo;ISBN était à 10 ou 13 chiffres&#8230; enfin c&rsquo;est déjà ça ! Je reviens vers vous avec une nouvelle fonction dès que j&rsquo;ai le temps de regarder ça en détail.</p>
+]]></content:encoded>
+
+			</item>
+	</channel>
+</rss>

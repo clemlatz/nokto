@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Clément Latzarus &#8211; nokto</title>
+	<atom:link href="/author/cbnokto-net/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Tue, 06 Aug 2019 08:09:32 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+<site xmlns="com-wordpress:feed-additions:1">165226571</site>	<item>
+		<title>TextUID : Propositions pour un identifiant unique d’un livre, commun à ses différentes éditions, générable automatiquement</title>
+		<link>/2014/06/05/textuid-identifiant-unique-livre/</link>
+					<comments>/2014/06/05/textuid-identifiant-unique-livre/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 05 Jun 2014 09:37:27 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[base de données]]></category>
+		<category><![CDATA[bibliographie]]></category>
+		<category><![CDATA[interopérabilité]]></category>
+		<category><![CDATA[isbn]]></category>
+		<category><![CDATA[istc]]></category>
+		<category><![CDATA[textuid]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=600</guid>
+
+					<description><![CDATA[Dans cet article, je propose des pistes pour une méthode facilement reproductible permettant de générer automatiquement un identifiant de texte. Ce n&#8217;est pas une méthode parfaite, mais plutôt la « moins mauvaise » méthode, aussi je suis ouvert à toute suggestion permettant de l&#8217;améliorer. MAJ 08/06/2014 : ajout des règles 6 et 7 et de deux nouveaux exemples. Merci à &#8230; <p class="link-more"><a href="/2014/06/05/textuid-identifiant-unique-livre/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;TextUID : Propositions pour un identifiant unique d’un livre, commun à ses différentes éditions, générable automatiquement&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p>Dans cet article, je propose des pistes pour une méthode facilement reproductible permettant de générer automatiquement un identifiant de texte. Ce n&rsquo;est pas une méthode parfaite, mais plutôt la « moins mauvaise » méthode, aussi je suis ouvert à toute suggestion permettant de l&rsquo;améliorer.</p>
+<p>MAJ 08/06/2014 : ajout des règles 6 et 7 et de deux nouveaux exemples. Merci à <a href="https://twitter.com/edasfr">@edasfr</a> pour ces remarques.</p>
+<h2>Pourquoi ?</h2>
+<p>Lorsque je développe un site ou un outil pour les libraires, un besoin récurent celui est de pouvoir identifier les différents livres correspondant à un même texte (nouvelle édition, réédition en poche, version numérique ou audio, etc.).</p>
+<p>Par exemple, le site de la librairie <a href="http://www.scylla.fr/">Scylla</a>, sur chaque fiche livre, propose le même livre dans d&rsquo;autres formats ou d&rsquo;anciennes éditions épuisés disponibles d&rsquo;occasion. Autre exemple, la librairie <a href="http://www.charybde.fr/">Charybde</a>, pour le calcul de ses meilleures ventes, souhaite que les ventes d&rsquo;un même texte chez différents éditeurs soient additionnés et pas considérés comme des livres différents.</p>
+<p>Aujourd&rsquo;hui, ce recoupement demande que les librairies (ou autres utilisateurs de Biblys) créent manuellement ces relations, opération fastidieuse qui peut être source d&rsquo;erreur.</p>
+<h2>Cahiers des charges</h2>
+<p>La méthode de génération de l&rsquo;identifiant doit :</p>
+<ul>
+<li>être facilement à mettre en œuvre afin que n&rsquo;importe qui puisse générer un identifiant sans passer par une autorité centrale ;</li>
+<li>être suffisamment détaillée et prévoir tous les pièges possibles : deux acteurs générant un identifiant pour le même texte doivent parvenir systématiquement au même résultat.</li>
+</ul>
+<h2>D’autres (mauvaises) solutions</h2>
+<ul>
+<li>Le<strong> titre du livre</strong>, de toute évidence, ne peut convenir puisque que, si deux editions d&rsquo;un livre ont a priori le même titre, il n&rsquo;est pas rare que deux livres sans aucun rapport ait également le même titre. Par exemple, dans la base Biblys (qui est loin d&rsquo;être exhaustive), il y a pas moins de cinq titres d&rsquo;auteurs différents intitulé « <a href="http://www.biblys.fr/pages/search?q=titre:Les+Insoumis">Les Insoumis</a>« &#8230;</li>
+<li>Les <a href="http://fr.wikipedia.org/wiki/International_Standard_Book_Number"><strong>ISBN</strong></a> sont propres à chaque édition d&rsquo;un livre, il arrive parfois qu&rsquo;un même livre chez un même éditeur puisse obtenir des ISBN différents au fil des réimpressions, ils ne peuvent donc convenir à cet usage.</li>
+<li>La norme <a href="http://www.istc-international.org/html/"><strong>ISTC</strong></a> (pour International Standard Text Code) se rapproche de nos besoins, mais elle a deux désavantages. D&rsquo;abord, elle ne nécessite de passer par une autorité centrale, une agence (en France, Électre) qui ne peut créer de nouveaux codes qu&rsquo;à la demande d&rsquo;un éditeur ou d&rsquo;un ayant droit. De plus, elle semble peu utilisée aujourd&rsquo;hui.</li>
+</ul>
+<h2>Description de la norme TextUID</h2>
+<p>Elle se présente sous la forme un ensemble de règles, dont le but est de décrire la méthode de génération de l&rsquo;identifiant en tentant de prévoir un maximum de cas particuliers pour indiquer la marche à suivre le cas échéant. De nouvelles règles pourront donc être ajoutées si de nouveaux cas particuliers problématique sont découverts.</p>
+<h3>Règle 1</h3>
+<p>Le TextUID est une <a href="http://fr.wikipedia.org/wiki/MD5">empreinte MD5</a> généré d’après une chaîne de caractères précises, encodé en UTF-8, en majuscules, contenant :<br />
+TITRE ORIGINAL du livre<br />
+barre oblique entouré d’espaces : ‘ / ‘<br />
+NOM PRÉNOM de l’auteur (ou NOM uniquement le cas échéant)</p>
+<p>Soit : <strong>TITRE ORIGINAL / NOM PRÉNOM</strong></p>
+<h3>Règle 2</h3>
+<p>Le titre du livre doit être dans la langue de publication originale, afin que les différentes traductions d’une oeuvre possèdent bien le même identifiant que l&rsquo;original.</p>
+<h3>Règle 3</h3>
+<p>Si le livre a plusieurs auteurs, on les ajoute dans l&rsquo;ordre alphabétique, l&rsquo;un après l&rsquo;autre, séparés par une virgule et une espace : NOM PRÉNOM, NOM PRÉNOM (ou NOM uniquement le cas échéant)</p>
+<p>Soit : <strong>TITRE ORIGINAL / NOM PRÉNOM, NOM, NOM PRÉNOM</strong></p>
+<h4>Règle 4</h4>
+<p>S&rsquo;il existe plusieurs graphies pour un titre de livre, on utilise celui mentionné sur la couverture de la première édition.</p>
+<h4>Règle 5</h4>
+<p>S&rsquo;il existe plusieurs graphies pour un nom d&rsquo;auteur, on utilise celui mentionné sur la couverture de la première édition de son premier livre publié.</p>
+<h4>Règle 6</h4>
+<p>Si le livre fait partie d&rsquo;une série, on utilise le titre du tome uniquement. Si le tome n&rsquo;a pas de titre, on utilise le nom de la série, suivi d&rsquo;un tiret et du numéro du tome.</p>
+<h4>Règle 7</h4>
+<p>Si le livre est un ouvrage collectif et qu&rsquo;un ou plusieurs directeurs d&rsquo;ouvrage sont mentionnés (« Sous la direction de&#8230; »), ce sont ces noms qui seront utilisés au lieu du nom des auteurs.</p>
+<h2>Quelques exemples :</h2>
+<h3>Le Petit Prince</h3>
+<p>Chaîne : <span style="color: #000000;">LE PETIT PRINCE / DE SAINT-EXUPÉRY ANTOINE</span><br />
+Empreinte MD5 : <span style="color: #000000;">31943e821c39ccd479441a2b0bdcf2b7</span></p>
+<h3>L’Attrape-coeurs</h3>
+<p>Chaîne : <span style="color: #000000;">THE CATCHER IN THE RYE / SALINGER J. D.</span><br />
+Empreinte MD5 : <span style="color: #000000;">9c93c0d32ee994bddf65bb6f3bcfa421</span></p>
+<h3>Les Soldats de la mer</h3>
+<p>Chaîne : <span style="color: #000000;">LES SOLDATS DE LA MER / RÉMY ADA, RÉMY YVES</span><br />
+Empreinte MD5 : <span style="color: #000000;">d44c3bf585ee56cf1ae02f043492de81</span></p>
+<h3>À la recherche du temps perdu, tome 2</h3>
+<p>Chaîne : À L&rsquo;OMBRE DES JEUNES FILLES EN FLEURS / PROUST MARCEL<br />
+Empreinte MD5 : <span style="color: #000000;">736ac35cc4ce8b67dfbaaa901c03f398</span></p>
+<h3><a href="http://www.cnrseditions.fr/Biologie/6710-l-energie-a-decouvert-sous-la-direction-de-remy-mosseri-et-catherine-jandel.html">L&rsquo;énergie à découvert</a>, sous la direction de&#8230;</h3>
+<p>Chaîne : L&rsquo;ÉNERGIE À DÉCOUVERT / JEANDEL CATHERINE, MOSSERI REMY<br />
+Empreinte MD5 : <span style="color: #000000;">97ff30f497e277265045e3cbdf08a37c</span></p>
+<h2>Exemples de code</h2>
+<h3>PHP</h3>
+<pre>&lt;?php
+
+function textuid($title, $authors)
+{
+    foreach ($authors as $author)
+    {
+        if (!isset($authors_string)) $authors_string = NULL;
+        else $authors_string .= ', ';
+        $authors_string .= trim($author['last_name'].' '.$author['first_name']);
+    }
+    $string = mb_strtoupper($title.' / '.$authors_string, 'UTF-8');
+    $hash = md5($string);
+    return array('string' =&gt; $string, 'hash' =&gt; $hash);
+}
+
+$book_title = "Les Soldats de la mer";
+$book_authors = array(
+    array('first_name' =&gt; 'Ada', 'last_name' =&gt; 'Rémy'),
+    array('first_name' =&gt; 'Yves', 'last_name' =&gt; 'Rémy')
+);
+
+var_dump(textuid($book_title, $book_authors));
+</pre>
+<p><a href="http://codepad.viper-7.com/TfRsCv">Voir aussi ici le code en action.</a></p>
+<h2>Conclusion</h2>
+<p>J&rsquo;utilise déjà cette méthode, à des fins de test, pour la base Biblys. Je la partage ici car je pense qu&rsquo;elle pourrait être utile à d&rsquo;autres en interne, mais aussi parce qu&rsquo;elle prendrait un tout autre intérêt dans le cadre d&rsquo;un échange de données entre des bases différentes.</p>
+<p>Je suis conscient que cette méthode ne pourra jamais fonctionner à 100%, mais je pense que la première règle doit pouvoir couvrir 99% des cas et que les suivantes doivent pouvoir permettre de se rapprocher au maximum de la perfection&#8230; tout en sachant qu&rsquo;on ne pourra jamais l&rsquo;atteindre ! Mais c&rsquo;est sans doute le prix à payer pour une génération automatique, sans vérification humaine.</p>
+<p>Je suis donc bien entendu ouvert à toute question, remarque ou proposition de règles qui pourrait permettrait d&rsquo;améliorer la méthode !</p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/06/05/textuid-identifiant-unique-livre/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">600</post-id>	</item>
+		<item>
+		<title>PHP : Conversion ISBN/EAN, la classe !</title>
+		<link>/2014/04/20/php-isbn-class/</link>
+					<comments>/2014/04/20/php-isbn-class/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Sun, 20 Apr 2014 17:00:12 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[isbn]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=583</guid>
+
+					<description><![CDATA[J&#8217;ai proposé ici-même, ces dernières années, plusieurs fonctions PHP permettant la manipulation, la conversion et la validation de codes ISBN, que j&#8217;utilise notamment dans le cadre de Biblys ou Citriq.  Entre temps, j&#8217;ai découvert la programmation orienté objet : voici donc une classe pour réunir toutes ses fonctions. Télécharger php-isbn-class sur Github Un autre intérêt de cette classe &#8230; <p class="link-more"><a href="/2014/04/20/php-isbn-class/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;PHP : Conversion ISBN/EAN, la classe !&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p>J&rsquo;ai proposé ici-même, ces dernières années, <a href="https://nokto.net/tag/isbn/">plusieurs fonctions PHP</a> permettant la manipulation, la conversion et la validation de codes ISBN, que j&rsquo;utilise notamment dans le cadre de <a href="http://www.biblys.fr/">Biblys</a> ou <a href="http://citriq.net/">Citriq</a>.  Entre temps, j&rsquo;ai découvert la programmation orienté objet : voici donc une classe pour réunir toutes ses fonctions.</p>
+<p><a href="https://github.com/iwazaru/php-isbn-class">Télécharger php-isbn-class sur Github</a></p>
+<p>Un autre intérêt de cette classe par rapport à mes précédentes fonctions est qu&rsquo;elle ne se limite pas aux ISBN francophones (978-2 et 979-10) mais qu&rsquo;elle fonctionne avec n&rsquo;importe quel code, grâce au fichier range.xml qui l&rsquo;accompagne.</p>
+<p>Cette classe peut être utilisée pour :</p>
+<ul>
+<li>Valider un code ISBN</li>
+<li>Convertir des codes entre les formats ISBN-10, ISBN-13 et EAN (sans tirets)</li>
+<li>Calculer le caractère de contrôle</li>
+<li>Afficher l&rsquo;agence d&rsquo;enregistrement du code (pays ou langage)</li>
+</ul>
+<h3>Démo</h3>
+<p>Une démo est disponible à l&rsquo;adresse : http://labs.nokto.net/php-isbn-class/</p>
+<h3>Installation</h3>
+<ul>
+<li>Incluez ISBN.class.php dans votre script PHP</li>
+<li>Procurez-vous une version récente du fichier range.xml auprès de l&rsquo;<a href="https://www.isbn-international.org/range_file_generation">ISBN International Agency</a> (ou utilisez celle fournie)</li>
+<li>Définissez la constante ISBN_RANGES_FILE avec le chemin du fichier range.xml</li>
+<li>Utilisez les autres constantes pour définir vos messages d&rsquo;erreurs (en anglais par défaut).</li>
+</ul>
+<h3>Utilisation</h3>
+<pre> &lt;?php
+     require_once('ISBN.class.php');
+     $isbn = new ISBN('9791091146098'); // créer un objet ISBN
+     if ($isbn-&gt;isValid()) // vérifie si le code est un ISBN valide
+     {
+         echo $isbn-&gt;format('ISBN-13'); // affiche le code au format ISBN-13
+         echo $isbn-&gt;format('ISBN-10'); // affiche le code au format ISBN-10
+         echo $isbn-&gt;getChecksum(); // calcule et affiche le caractère de contrôle
+         echo $isbn-&gt;getAgency(); // affiche l'agence d'enregistrement
+     }
+     else
+     {
+         echo $isbn-&gt;getErrors(); // show validation errors
+     }
+ ?&gt;</pre>
+<p>Image de une : <a href="https://www.flickr.com/photos/marfis75/6786201460/in/photolist-bkF4gs-B9D5d-7f7wnh-f4CQRe-jk8KYo-cDUUH5-emMkr-ebuL6A-as7j98-jaM3Sk-ffTcmb-b7xbK6-9r85KN-bxHsod-ffTceb-4eVh8T-7TkzUT-5s9JzK-822aTi-fi1iHp-5CoVQm-cp9pJu-8pcu1i-3AufNc-7uDzsa-9uj8BY-po8Zu-po8Zv-8DgWRM-9u2nd3-5qFoLs-75zg7i-4F1gky-8t4Cdk-5AxaQw-9VMiYi-4X1jGW-2vVaH-9mKBP5-8xndsS-8MAnY-c9YQRy-dHDC8-deEo9D-7uHr2j-fifxhj-7z9eta-2MmXzD-7uHrm7-5xjeTy/">Barcode</a> CC <a href="http://creativecommons.org/licenses/by-sa/2.0/deed.en">BY-SA</a>  <a href="https://www.flickr.com/photos/marfis75/">Martin Fisch</a></p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/04/20/php-isbn-class/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">583</post-id>	</item>
+		<item>
+		<title>Citriq : une extension pour WordPress</title>
+		<link>/2014/02/08/citriq-wordpress-plugin/</link>
+					<comments>/2014/02/08/citriq-wordpress-plugin/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Sat, 08 Feb 2014 18:16:24 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[citriq]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=371</guid>
+
+					<description><![CDATA[Vous utilisez WordPress pour votre blog littéraire ? L&#8217;extension Citriq pour WordPress peut vous aider à mieux référencer vos articles en créant automatiquement des liens entre vos critiques et d&#8217;autres critiques du même livre sur d&#8217;autres sites littéraires ! Citriq.net est aussi un moteur de recherche qui recensent des dizaines milliers de critiques littéraires issues &#8230; <p class="link-more"><a href="/2014/02/08/citriq-wordpress-plugin/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Citriq : une extension pour WordPress&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-plugin.png"><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-385" alt="citriq-wordpress-plugin" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-plugin.png" width="711" height="237" /></a></p>
+<p>Vous utilisez <a href="http://www.wordpress.org/">WordPress</a> pour votre blog littéraire ? L&rsquo;extension Citriq pour WordPress peut vous aider à mieux référencer vos articles en créant automatiquement des liens entre vos critiques et d&rsquo;autres critiques du même livre sur d&rsquo;autres sites littéraires ! <a href="http://citriq.net/">Citriq.net</a> est aussi un moteur de recherche qui recensent des dizaines milliers de critiques littéraires issues de centaines de sites et blogs.</p>
+<h3>Installation</h3>
+<p>La première chose à faire est d&rsquo;inscrire votre blog sur <a href="http://citriq.net/">Citriq.net</a> (si ce n&rsquo;est pas déjà fait).</p>
+<p>Citriq pour WordPress est disponible dans <a href="http://wordpress.org/plugins/citriqnet/">l&rsquo;annuaire des extensions</a> de WordPress, ce qui vous permettra de l&rsquo;installer facilement et de bénéficier des mises à jour automatique à chaque nouvelle version. Rendez-vous dans l&rsquo;onglet <strong>Extensions</strong> de WordPress, cliquer sur <strong>Rechercher</strong> et entrez <em>Citriq</em> comme mot-clé. Repérez l&rsquo;extension, cliquez sur <strong>Installer maintenant</strong> puis sur <strong>Activez l&rsquo;extension</strong>, et c&rsquo;est tout !</p>
+<p>Si vous préférez installer l&rsquo;extension manuellement, voici la marche à suivre :</p>
+<ol>
+<li>Téléchargez le fichier zip de <a href="http://wordpress.org/plugins/citriqnet/">la dernière version de l&rsquo;extension</a>.</li>
+<li>Sur la page des extensions de WordPress, en haut à droite, cliquez sur <strong>Ajouter</strong>.</li>
+<li>Dans les onglets sous <strong>Installer des extensions</strong>, cliquez sur <strong>Envoyer</strong>.</li>
+<li>Sélectionnez sur votre ordinateur le fichier zip téléchargé plus tôt, puis cliquez sur <strong>Installez maintenant.</strong></li>
+<li>Une fois l&rsquo;installation terminée, cliquez sur <strong>Activer l&rsquo;extension</strong>.</li>
+<li>L&rsquo;extension est activée et prête à être utilisée !</li>
+</ol>
+<h3>Utilisation</h3>
+<p>Une fois l&rsquo;extension installée et activée sur votre blog, il vous faudra utiliser les <strong>champs personnalisés</strong> de WordPress pour que l&rsquo;extension sache lesquels de vos articles doivent être référencés sur Citriq, et à quel livre correspond la critique.</p>
+<p>Il faudra donc, dans un premier temps, activer les champs personnalisés (si ce n&rsquo;est pas déjà fait) en cliquant, sur la page d&rsquo;écriture des articles, sur <strong>Options de l&rsquo;écran</strong> (en haut à droite) puis en cochant la case <strong>Champs personnalisés</strong>.</p>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-1.jpg"><img decoding="async" class="aligncenter size-large wp-image-376" alt="citriq-wordpress-1" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-1-1024x442.jpg" width="604" height="260" /></a></p>
+<p>Pour signaler à l&rsquo;extension qu&rsquo;un article est une critique à référencer, il vous faudra renseigner l&rsquo;ISBN du livre en créant un champ personnalisé <em>isbn<strong></strong></em>. Repérez la zone la zone <strong>Ajouter un champ personnalisé</strong> puis entrez <em>isbn </em>(en minuscule, c&rsquo;est important) dans le champ <b>Nom</b> et l&rsquo;ISBN du livre critique dans le champ <strong>Valeur</strong>. Cliquez enfin sur <strong>Mettre à jour </strong>pour enregistrer les modifications de votre article.</p>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-2.jpg"><img decoding="async" class="aligncenter size-full wp-image-378" alt="citriq-wordpress-2" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-2.jpg" width="817" height="312" /></a></p>
+<p>NB : L’ISBN est un numéro unique attribué à chaque livre publié, long de 13 chiffres et commençant toujours par 978 ou 979. On le trouve dans les premières pages du livre ou au dos, généralement près du code barre. Il peut être entré avec ou sans tiret.</p>
+<p>Répétez ensuite cette opération pour chaque article à référencer dans Citriq.</p>
+<h3> Résolution des problèmes</h3>
+<p>Pour vérifiez que l&rsquo;extension fonctionne correctement, ajoutez <strong>?debug=1</strong> ou <strong>&amp;debug=1</strong> à l’adresse de la page de l’article dans la barre de votre navigateur. Le widget Citriq affichera un message d’erreur détaillant le problème s’il y a lieu.</p>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-debug.jpg"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-381" alt="citriq-wordpress-debug" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-debug.jpg" width="961" height="513" /></a></p>
+<p>Si vous parvenez pas à résoudre le problème, n&rsquo;hésitez pas poster le message d&rsquo;erreur en commentaire à cet article (avec l&rsquo;adresse de l&rsquo;article posant problème), je tâcherai de vous aider.</p>
+<h3>Pour aller plus loin</h3>
+<p>Pour envoyer plus d&rsquo;information à Citriq, il est possible d&rsquo;utiliser d&rsquo;autres champs personnalisés. Le champ <em>isbn</em><em> est </em>le seul obligatoire, mais voici d&rsquo;autres champs que vous pouvez utiliser :</p>
+<ul>
+<li><em>excerpt</em> : un extrait de la critique (jusqu’à 500 caractères) ;</li>
+<li><em>reviewer</em> : l’auteur de la critique (s’il y en a plusieurs sur le site) ;</li>
+<li><em>source</em> : support dont est issue la critique (si différent du site) ;</li>
+<li><em>rating</em> : permet d’indiquer une note (un entier, sur 100) ;</li>
+</ul>
+<p><a href="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-custom-params.png"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-383" alt="citriq-wordpress-custom-params" src="https://nokto.net/wp-content/uploads/2014/02/citriq-wordpress-custom-params.png" width="791" height="334" /></a></p>
+<h3>Historique des modifications</h3>
+<h5>1.0.3 (13/02/2014)</h5>
+<ul>
+<li>Les liens s&rsquo;affichent désormais aussi si la critique est affiché sur une page avec d&rsquo;autres articles (accueil, catégorie, tag) mais l&rsquo;adresse de la critique n&rsquo;est pas enregistrée dans ce cas (paramètre ‘ignore’)</li>
+<li>Ajout d&rsquo;un paramètre ‘plugin’ pour détecter les blogs utilisateurs de l&rsquo;extension à des fins statistiques</li>
+<li>La date de publication de l&rsquo;article est désormais transmise avec le paramètre ‘date’</li>
+</ul>
+<h5>1.0.2 (11/02/2014)</h5>
+<ul>
+<li>Suppression du fichier inutile wp_auto_update.class.php</li>
+</ul>
+<h5>1.0.1 (10/02/2014)</h5>
+<ul>
+<li>Suppression de la mise à jour automatique</li>
+</ul>
+<h5>1.0 (08/02/2014)</h5>
+<ul>
+<li>Première version de l&rsquo;extension</li>
+</ul>
+<h3>Les blogs qui utilisent l&rsquo;extension WordPress</h3>
+<p>N&rsquo;hésitez pas à me signaler toute utilisation de cette extension (en précisant la version de WordPress utilisée). Outre le fait que ça me fera plaisir, je pourrais vérifier que tout fonctionne correctement et lister sur cette page les blogs utilisants l&rsquo;extension.</p>
+<ul>
+<li><a href="https://nokto.net/">nokto.net</a></li>
+<li><a href="http://mesimaginaires.net/">Mes imaginaires</a></li>
+<li><a href="http://www.valunivers.fr/">Valunivers</a></li>
+<li><a href="http://www.vagabondsdureve.fr/">Les Vagabonds du rêve</a></li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/02/08/citriq-wordpress-plugin/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">371</post-id>	</item>
+		<item>
+		<title>Un logique nommé Joe, de Murray Leinster</title>
+		<link>/2014/02/03/un-logique-nomme-joe-de-murray-leinster/</link>
+					<comments>/2014/02/03/un-logique-nomme-joe-de-murray-leinster/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Mon, 03 Feb 2014 09:39:49 +0000</pubDate>
+				<category><![CDATA[Lectures]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=351</guid>
+
+					<description><![CDATA[&#160; «&#160;Au XIXème siècle, l&#8217;homme était obligé de se servir d&#8217;une machine à écrire, de la radio, du téléphone, du téléscripteur, des journaux, des bibliothèques publiques, des encyclopédies, des fichiers, des annuaires, plus les services de messageries, d&#8217;avocats-conseils, de chimistes, de médecins, de diététiciens, d&#8217;archivistes, de secrétaires&#8230; tout cela pour noter ce dont il voulait &#8230; <p class="link-more"><a href="/2014/02/03/un-logique-nomme-joe-de-murray-leinster/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Un logique nommé Joe, de Murray Leinster&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p>&nbsp;</p>
+<blockquote><p><a href="https://nokto.net/wp-content/uploads/2014/02/leinster_un-logique-nomme%CC%81-joe.jpg"><img loading="lazy" decoding="async" class="alignleft  wp-image-353" alt="leinster_un-logique-nommé-joe" src="https://nokto.net/wp-content/uploads/2014/02/leinster_un-logique-nomme%CC%81-joe.jpg" width="194" height="300"></a>«&nbsp;Au XIXème siècle, l&rsquo;homme était obligé de se servir d&rsquo;une machine à écrire, de la radio, du téléphone, du téléscripteur, des journaux, des bibliothèques publiques, des encyclopédies, des fichiers, des annuaires, plus les services de messageries, d&rsquo;avocats-conseils, de chimistes, de médecins, de diététiciens, d&rsquo;archivistes, de secrétaires&#8230; tout cela pour noter ce dont il voulait se souvenir et pour lui dire ce que d&rsquo;autres personnes avaient noté et qu&rsquo;il désirait savoir ; pour transmettre ce qu&rsquo;il disait à quelqu&rsquo;un d&rsquo;autre et pour lui transmettre ce qu&rsquo;ils répondaient. Tout ce qu&rsquo;il nous faut, à nous, ce sont les logiques. Lorsque nous voulons savoir, ou voir, ou entendre quelque chose, lorsque nous désirons parler à quelqu&rsquo;un, nous pianotons sur les touches d&rsquo;un logique. Coupez les logiques et tout va fiche le camp.&nbsp;»</p></blockquote>
+<p><strong>Un logique nommé Joe</strong>, premier né de la collection <a href="http://lepassagerclandestin.fr/catalogue/dyschroniques.html">Dyschroniques</a>,&nbsp;est un livre étonnant. Parce qu&rsquo;écrit en 1946, à l&rsquo;époque où le nombre d&rsquo;ordinateur dans le monde se comptait sur le doigt d&rsquo;une main, il fait preuve d&rsquo;une stupéfiante clairvoyance dans la description d&rsquo;un réseau informatique mondial qui ressemble fort à l&rsquo;Internet des années 2010, avec son accès libre aussi bien aux encyclopédies qu&rsquo;à la pornographie, et même ses étalages accidentels de vie privée. Il brosse avec une pertinence remarquable une société devenue dépendante dans chaque moment de sa &nbsp;vie des <em>logiques</em>, ordinateurs interconnectés au réseau mondial, autrement dit, ni plus ni moins que <em>notre</em> société.</p>
+<p>C&rsquo;est dans cette société idyllique que va naître Joe, un logique déficient, qui doté d&rsquo;une conscience propre, va considérablement améliorer le réseau en proposant de répondre le plus efficacement possible et sans discernement aux questions que se posent les utilisateurs du réseau, enseignant les règles du crime parfait aux maris jaloux, le B.A.BA du cambriolage aux nécessiteux ou la danse de fertilité des tribus cannibales à de jeunes enfants.</p>
+<p>Moins que les « dérives d&rsquo;un réseau informatique mondial » promis par l&rsquo;éditeur, c&rsquo;est donc plutôt ici le spectre de l&rsquo;avènement d&rsquo;une singularité bienveillante, intelligence artificielle trop efficace pour notre propre bien et surtout dépourvue de toute notion d&rsquo;éthique qu&rsquo;agite Murray Leinster. La liste de films proposés par l&rsquo;éditeur à la fin du livre, parmi lesquels on trouve <strong>2001, l&rsquo;odyssée de l&rsquo;espace</strong>&nbsp; et&nbsp;<strong>Terminator</strong>, va aussi dans ce sens.</p>
+<p><strong>Un logique&nbsp;nommé Joe</strong> peine à dire quoique ce soit de pertinent ou de nouveau sur le monde d&rsquo;aujourd&rsquo;hui, mais on peut difficilement en vouloir à l&rsquo;auteur, au regard de la date de rédaction de la nouvelle. On retiendra surtout l&rsquo;aspect visionnaire du livre dans description avec soixante-dix ans d&rsquo;avance de notre quotidien. Un intérêt donc plutôt patrimonial, qui fait de cette <em>Dyschronique</em> une petite curiosité délicieusement surannée.</p>
+<p>Murray LEINSTER, <em>Un logique nommé Joe,&nbsp;</em>Le Passager Clandestin (2013), 4,00 €, 978-2-916952-82-6</p>
+<p>Également disponible dans l&rsquo;anthologie <a href="http://www.scylla.fr/collectif/demain-les-puces">Demain les puces</a> en Présence du futur.</p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/02/03/un-logique-nomme-joe-de-murray-leinster/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">351</post-id>	</item>
+		<item>
+		<title>La Baleine à bulle et autres librairies imaginaires</title>
+		<link>/2014/01/23/la-baleine-a-bulle-et-autres-librairies-imaginaires/</link>
+					<comments>/2014/01/23/la-baleine-a-bulle-et-autres-librairies-imaginaires/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 23 Jan 2014 11:14:49 +0000</pubDate>
+				<category><![CDATA[Cours]]></category>
+		<category><![CDATA[biblys]]></category>
+		<category><![CDATA[css]]></category>
+		<category><![CDATA[html]]></category>
+		<category><![CDATA[saint-cloud]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=282</guid>
+
+					<description><![CDATA[Comme en 2012 et 2011, j&#8217;ai donné de septembre à décembre un cours de 14h sur la communication sur internet au Pôle Métiers du Livre de Saint-Cloud. Cette année, le cours s&#8217;adressait aux étudiantes de l&#8217;option librairie du Master 1, mais n&#8217;était pas lié à un projet tutoré de création de librairie. Elles ont donc &#8230; <p class="link-more"><a href="/2014/01/23/la-baleine-a-bulle-et-autres-librairies-imaginaires/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;La Baleine à bulle et autres librairies imaginaires&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://nokto.net/wp-content/uploads/2014/01/baleine-a-bulle.png"><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-289" alt="baleine-a-bulle" src="https://nokto.net/wp-content/uploads/2014/01/baleine-a-bulle-1024x986.png" width="604" height="581" /></a></p>
+<p>Comme en <a href="https://nokto.net/20130119site-internet-et-librairie-2012-cours-metiers-du-livre/">2012</a> et <a href="https://nokto.net/20120208la-librairie-heros-de-papier-n-existe-pas/">2011</a>, j&rsquo;ai donné de septembre à décembre un cours de 14h sur la communication sur internet au Pôle Métiers du Livre de Saint-Cloud. Cette année, le cours s&rsquo;adressait aux étudiantes de l&rsquo;option librairie du Master 1, mais n&rsquo;était pas lié à un projet tutoré de création de librairie. Elles ont donc dû, dans le cadre de ce cours, inventer chacune une librairie imaginaire dont nous avons ensemble conçu le site web.</p>
+<p>Le cours portait sur :</p>
+<ul>
+<li>mon expérience de libraire en ligne (à l&rsquo;époque de la <a href="http://www.biblys.fr/blog/la-librairie-ys-c-est-fini-mais-l-aventure-continue">Librairie Ys</a>) et plus récemment mon travail avec d&rsquo;autres librairies <a href="http://www.biblys.fr/pages/biblys-pour-les-libraires">dont j&rsquo;ai conçu les sites</a> et que j&rsquo;accompagne au quotidien ;</li>
+<li>une initiation aux langages HTML5 et CSS3, mais aussi au design graphique avec Photoshop ;</li>
+<li>un travail préalable à la conception du site sur le cahier des charges, la maquette et  l&rsquo;arborescence du site ;</li>
+<li>la création pratique du site en lui-même, étape par étape, accompagné d&rsquo;une réflexion sur l&rsquo;ergonomie des pages web, l&rsquo;optimisation pour le référencement, la communication sur les réseaux sociaux et l&rsquo;utilisation d&rsquo;un outil de statistiques.</li>
+</ul>
+<p>Pour la création du site, les étudiantes ont pu utiliser le moteur <a href="http://www.biblys.fr/">Biblys</a> et son éditeur HTML intégré. Elles ont ainsi pu profiter d&rsquo;un véritable site d&rsquo;e-commerce avec un moteur de recherche, un panier, un système de commande et une base bibliographique très fournie, pour lequel elles ont eu à créer le squelette HTML et les feuilles de styles CSS.</p>
+<p>L&rsquo;enjeu n&rsquo;était évidemment pas de leur enseigner la création d&rsquo;un site de A à Z, ce qui demanderait plus de 14h, mais de les initiera aux langages de base du web et de leur donner les notions et la culture générale nécessaire pour dialoguer efficacement avec un prestataire technique, ainsi qu&rsquo;un aperçu des bonnes pratiques de création de site web spécifiques aux domaines du livre.</p>
+<p>Quatre sites de librairies imaginaires ont été créés dans le cadre du cours :</p>
+<ul>
+<li><a href="http://bubulle.biblys.fr/">La Baleine à bulle</a></li>
+<li><a href="http://phalene.biblys.fr/">La Phalène</a></li>
+<li><a href="http://englit.biblys.fr/">Englit Bookseller</a></li>
+<li><a href="http://songe.biblys.fr/">Le Songe des livres</a></li>
+</ul>
+<p>(On regrettera au passage que l&rsquo;intérêt des aspirants libraires pour les littératures de l&rsquo;imaginaire — ici deux librairies sur quatre — ne soit pas du tout représentatif de l&rsquo;intérêt du public pour le genre).</p>
+<p>Plusieurs documents utilisés pour ce cours sont téléchargeables en PDF :</p>
+<ul>
+<li><a href="http://mdl.nokto.net/initiation-html5-css3.pdf">Initiation HTML5 / CSS3</a></li>
+<li><a href="http://mdl.nokto.net/memo-html5.pdf">Mémo HTML 5</a></li>
+<li><a href="http://mdl.nokto.net/memo-css3.pdf">Mémo CSS 3</a></li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/01/23/la-baleine-a-bulle-et-autres-librairies-imaginaires/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">282</post-id>	</item>
+		<item>
+		<title>Citriq : automatiser le référencement de vos critiques littéraires avec PHP</title>
+		<link>/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/</link>
+					<comments>/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Thu, 02 Jan 2014 18:15:00 +0000</pubDate>
+				<category><![CDATA[Projets Web]]></category>
+		<category><![CDATA[Technique]]></category>
+		<category><![CDATA[citriq]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=252</guid>
+
+					<description><![CDATA[Si votre site ou blog utilise php, il est facile de lui faire écrire le petit code JavaScript permettant de référencer automatiquement vos critiques dans Citriq. Cela vous évitera d’avoir à les entrer une par une. Voici une fonction qui permet de faire écrire automatiquement le code widget à PHP en fonction des paramètres reçus. &#8230; <p class="link-more"><a href="/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Citriq : automatiser le référencement de vos critiques littéraires avec PHP&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><span style="line-height: 1.5;">Si votre site ou blog utilise php, il est facile de lui faire écrire le petit code JavaScript permettant de référencer automatiquement vos critiques dans </span><a style="line-height: 1.5;" href="http://citriq.net/">Citriq</a><span style="line-height: 1.5;">. Cela vous évitera d’avoir à les entrer une par une.</span></p>
+<p>Voici une fonction qui permet de faire écrire automatiquement le code widget à PHP en fonction des paramètres reçus. Elle nécessite PHP 5.</p>
+<p>Cette fonction permet notamment via deux nouveaux paramètres <strong>excerpt</strong> et <strong>rating </strong>d&rsquo;envoyer à Citriq un extrait (jusqu&rsquo;à 500 caractères) de la critique et une note (sur 100). Ces paramètres étaient jusqu&rsquo;à présent réservés aux critiques entrées manuellement.  La fonction se charge en outre de l&rsquo;encodage du texte dans les paramètres du widget de manière à ce que les caractères soient correctement pris en charge par Citriq.</p>
+<h3>La fonction</h3>
+<pre>function citriq($params) {
+  if(empty($params["uid"])) $error = "Le paramètre uid est obligatoire";
+  elseif(empty($params["isbn"])) $error = "Le paramètre isbn est obligatoire";
+  else return '&lt;script type="text/javascript" src="http://citriq.net/w/crawl?'.http_build_query($params).'"&gt;&lt;script&gt;';
+  if($params["debug"] == 1 &amp;&amp; isset($error)) die("Erreur Citriq : ".$error);
+}</pre>
+<h3>Utilisation</h3>
+<p>Cette fonction prend comme seule valeur un tableau php (array) dont les clés sont les différents paramètres du widget Citriq. Sauf mention contraire, ils sont tous facultatifs. Notez que les noms des paramètres sont toujours en minuscules.</p>
+<ul>
+<li><em>uid</em> (obligatoire) : l’identifiant unique de la critique dans votre base ;</li>
+<li><em>isbn</em> (obligatoire) : le code IBSN du livre critiqué ;</li>
+<li><em>excerpt</em> : un extrait de la critique (jusqu’à 500 caractères) ;</li>
+<li><em>reviewer</em> : l’auteur de la critique (s’il y en a plusieurs sur le site) ;</li>
+<li><em>source</em> : support dont est issue la critique (si différent du site) ;</li>
+<li><em>rating</em> : permet d&rsquo;indiquer une note (un entier, sur 100) ;</li>
+<li><em>date</em> : la date de publication de la critique ;</li>
+<li><em>ignore</em> : permet d&rsquo;afficher le widget sans enregistrer la page en cours ;</li>
+<li><em>debug</em> : si ce paramètre facultatif est égal à 1, Citriq affichera des informations statistiques et un éventuel message d&rsquo;erreur sur votre site.</li>
+</ul>
+<p>La fonction retourne le code javascript du widget préparé qu&rsquo;on peut récupérer dans une variable ou afficher immédiatement avec l&rsquo;instruction <strong>echo</strong>.</p>
+<h3>Exemple</h3>
+<p>Ci-dessous, un exemple de code (fictif) qui permettrait de référencer la critique publiée <a href="http://www.belial.fr/blog/les-soldats-de-la-mer_3601">sur cette page</a>, pour le résultat sur cette page.</p>
+<pre>$params["uid"] = 3601;
+$params["isbn"] = 9782277492830;
+$params["excerpt"] = "Quand, voici quelques mois, les jeunes éditions Dystopia Workshop publièrent Le Prophète et le vizir, la surprise fut de taille. On ne s’attendait pas le moins du monde à voir le couple Rémy revenir à l’écriture et publier de l’inédit. Il avait eu une assez belle carrière dans les années 70, dont plus d’un se serait satisfait, mais il semblait qu’elle fût désormais de...";
+$params["reviewer"] = "Jean-Pierre Lion";
+$params["source"] = "Bifrost 71";
+$params["rating"] = "80"; // Equivaut à 4 étoiles sur 5
+echo citriq($params);</pre>
+<h3>Exemple avec WordPress</h3>
+<p>Il est possible d&rsquo;utiliser les champs personnalisés de WordPress pour faire générer automatiquement le code du widget Citriq par WordPress. On trouvera plus d&rsquo;information à ce sujet dans l&rsquo;article <a title="Citriq : automatiser le référencement des critiques avec WordPress" href="https://nokto.net/20130826citriq-automatiser-le-referencement-des-critiques-avec-wordpress/">Automatiser le référencement de vos critiques avec WordPress</a>.</p>
+<p>MAJ du 08/02/2014 : il existe aussi une <a href="https://nokto.net/citriq-wordpress-plugin/">extension WordPress pour Citriq</a>, qui utilise cette fonction php mais est beaucoup plus simple à mettre en oeuvre.</p>
+<pre>$params["uid"] = get_the_id(); // L'identifiant de l'article WordPress
+$params["isbn"] = get_post_meta(get_the_id(), "isbn", true); // Le champ personnalisé "isbn"
+$params["reviewer] = get_the_author(); // L'auteur de l'article WordPress
+$params["excerpt] = get_post_meta(get_the_id(), "extrait", true); // Le champ personnalisé "extrait"
+if(is_singular()) echo citriq($params);</pre>
+<h3>Résolution des problèmes</h3>
+<p>Si le code du widget ne s&rsquo;affiche pas correctement, vous pouvez utilisez le paramètre facultatif <em>debug</em> pour afficher un message d&rsquo;erreur. Si vous ne comprenez pas le message d&rsquo;erreur, n&rsquo;hésitez pas à poser la question dans les commentaires ci-dessous.</p>
+<p>Bonus : <a href="http://pastebin.com/a2guP2w3">l&rsquo;équivalent en Python</a> (merci Joachim)</p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2014/01/02/citriq-automatiser-le-referencement-de-vos-critiques-litteraires-avec-php/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">252</post-id>	</item>
+		<item>
+		<title>php-epub-cleaner</title>
+		<link>/2013/11/26/php-epub-cleaner/</link>
+					<comments>/2013/11/26/php-epub-cleaner/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Tue, 26 Nov 2013 14:38:03 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[ePub]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[python]]></category>
+		<guid isPermaLink="false">http://nokto.net/?p=218</guid>
+
+					<description><![CDATA[English readme available on GitHub Lorsque je convertis un document Word, inDesign ou XPress en HTML en vue de fabriquer un fichier ePub, j&#8217;ai souvent de nombreuses corrections à faire. Plutôt que de multiplier les rechercher/remplacer dans Sigil, j&#8217;ai préféré créer un script PHP qui s&#8217;en occupe pour moi. Les sources de ce script peuvent &#8230; <p class="link-more"><a href="/2013/11/26/php-epub-cleaner/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;php-epub-cleaner&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://nokto.net/wp-content/uploads/2013/11/php-epub-cleaner.png"><img loading="lazy" decoding="async" class="size-full wp-image-225 aligncenter" alt="php-epub-cleaner" src="https://nokto.net/wp-content/uploads/2013/11/php-epub-cleaner.png" width="1024" height="535" /></a></p>
+<p><a href="https://raw.github.com/iwazaru/php-epub-cleaner/master/README.md">English readme available on GitHub</a></p>
+<p>Lorsque je convertis un document Word, inDesign ou XPress en HTML en vue de fabriquer un fichier ePub, j&rsquo;ai souvent de nombreuses corrections à faire. Plutôt que de multiplier les rechercher/remplacer dans Sigil, j&rsquo;ai préféré créer un script PHP qui s&rsquo;en occupe pour moi.</p>
+<p>Les sources de ce script peuvent être récupérée sur Github :<br />
+<a href="https://github.com/iwazaru/php-epub-cleaner">https://github.com/iwazaru/php-epub-cleaner</a></p>
+<p>Ce script va :</p>
+<ol>
+<li>Uploader le fichier ePub vers le serveur</li>
+<li>Décompresser le fichier dans un dossier temporaire</li>
+<li>Ouvrir chaque fichier .html, .htm ou .xhtml et appliquer les corrections</li>
+<li>Recompresser le dossier au format ePub</li>
+<li>Proposer le téléchargement du nouvel ePub</li>
+</ol>
+<h3> Démo</h3>
+<p>Une démo se trouve ici : <a href="http://labs.nokto.net/php-epub-cleaner">http://labs.nokto.net/php-epub-cleaner</a></p>
+<p>Veuillez noter que tous les fichiers ePub uploadés pour nettoyage seront conservés en cache sur le serveur. Cette page ne devrait être utilisé qu&rsquo;à des fins de tests. Pour une utilisation en production avec des fichiers commerciaux, merci d&rsquo;installer votre propre version de l&rsquo;application à partir des sources sur <a href="https://github.com/iwazaru/php-epub-cleaner">Github</a>.</p>
+<h3>Installation</h3>
+<p>Copier le dossier php-epub-cleaner sur votre serveur supportant PHP5.</p>
+<h3>Personnalisation</h3>
+<p>J&rsquo;ai créé ce script pour nettoyer les erreurs générés par <a href="http://www.word2cleanhtml.com/">Word2CleanHTML</a> ne respectant pas les règles de la typographie française (ajouter les espaces insécables, retirer les espaces avant les points ou les virgules, etc.), mais vous pouvez tout à fait créer vos propres règles de remplacement en modifiant le tableau php $replacements.</p>
+<h3>Historique</h3>
+<h4>1.1 (26/02/2014)</h4>
+<ul>
+<li>Ajout d&rsquo;un journal de correction (« Correction log ») qui compte le nombre de remplacements et de suppressions</li>
+<li>Diverses corrections de bugs</li>
+</ul>
+<h4>1.0.1 (27/12/2013)</h4>
+<ul>
+<li>Amélioration de la prise en charge des caractères accentués majuscule (notamment ê)</li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2013/11/26/php-epub-cleaner/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">218</post-id>	</item>
+		<item>
+		<title>Pourquoi il faut faire passer l’amendement sur la TVA des livres numériques</title>
+		<link>/2013/11/19/amendement-tva-livre-numerique/</link>
+					<comments>/2013/11/19/amendement-tva-livre-numerique/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Tue, 19 Nov 2013 09:00:15 +0000</pubDate>
+				<category><![CDATA[Demain les livres]]></category>
+		<category><![CDATA[DRM]]></category>
+		<category><![CDATA[ePub]]></category>
+		<category><![CDATA[interopérabilité]]></category>
+		<category><![CDATA[Loi Lang]]></category>
+		<category><![CDATA[TVA]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=176</guid>
+
+					<description><![CDATA[Un amendement au projet de Loi de finances 2014 sur le prix du livre a été déposé la semaine dernière par la députée Isabelle Attard et adopté à l’assemblée nationale, avant d’être immédiatement retiré à la demande du gouvernement. Cet amendement stipule que le taux de TVA réduit à 5,5% doit être appliqué au livre &#8230; <p class="link-more"><a href="/2013/11/19/amendement-tva-livre-numerique/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Pourquoi il faut faire passer l’amendement sur la TVA des livres numériques&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p style="text-align: center;"><a href="https://nokto.net/wp-content/uploads/2013/11/lecteurs_contre_les_drm.png"><img decoding="async" class=" wp-image-198 aligncenter" alt="Lecteurs contre les DRM" src="https://nokto.net/wp-content/uploads/sites/2/2013/11/lecteurs_contre_les_drm-275x300.png" /></a></p>
+<p><a href="http://www.assemblee-nationale.fr/14/amendements/1395C/AN/22.asp">Un amendement</a> au projet de Loi de finances 2014 sur le prix du livre a été déposé la semaine dernière par <a href="http://isabelleattard.eelv.fr/amendement-tva-sur-les-livres-numeriques-pour-une-sortie-vers-le-haut-du-conflit-avec-la-commission-europeenne/">la députée Isabelle Attard</a> et adopté à l’assemblée nationale, avant d’être immédiatement retiré à la demande du gouvernement. Cet amendement stipule que le taux de TVA réduit à 5,5% doit être appliqué au livre numérique (comme c’est déjà le cas), sauf si « le ou les fichiers comportent des mesures techniques de protection (…) ou s&rsquo;il ne sont pas dans un format de données ouvert (…) ». Autrement dit, que les livres commercialisés dans des formats propriétaires et/ou avec des Mesures Techniques de Protection (DRM) doivent être considérés comme des licences d’utilisation (plutôt que des livres) et doivent donc être taxés à 19,6%.</p>
+<p>L’amendement vise clairement à réserver l’avantage fiscal que représente le taux de TVA réduit aux seuls livres numériques proposés dans un format ouvert, interopérable, et sans Mesure Technique de Protection (DRM), de manière à décourager des pratiques qui à long terme ne peuvent que nuire à l’économie du livre et à la bibliodiversité.</p>
+<p>Voici quelques éléments pour comprendre les enjeux derrière cet amendement.</p>
+<h3>Qu’est-ce qu’un format propriétaire et un format interopérable ?</h3>
+<p>Fut un temps où chaque constructeur créait son propre support pour vendre une œuvre (VHS/Betamax, Blu-Ray/HD-DVD, etc.) : un cauchemar pour le consommateur qui devait prendre garde à choisir un format compatible avec son matériel, qui pouvait se voir interdire l’accès à une partie des œuvres disponibles sur le marché et qui risquait de perdre toute sa collection si le format disparaissait.</p>
+<p>Pour éviter les drames de ce genre avec le livre numérique, un certain nombre d’acteurs, réunis au sein de l’organisation <a href="http://idpf.org/">IDPF</a>, se sont mis d’accord pour créer un format ouvert et interopérable : l’ePub. Parce que c’est un format ouvert, il est facile pour n’importe qui de concevoir des livres numériques et des appareils ou applications de lectures sans payer de royalties à qui que ce soit. Et si ce format devait un jour disparaître au profit d’un autre, il sera facile de convertir les fichiers dans un nouveau format.</p>
+<p>Malgré cela, certains s’obstinent à créer et utiliser des formats propriétaires pour des raisons commerciales et politiques. Un format propriétaire est un format conçu par une société commerciale dans le but d’enfermer ses clients dans un écosystème fermé. Ainsi, un livre numérique acheté chez Amazon, ne pourra être lu que sur une liseuse ou une application Amazon. De même, sur la liseuse Kindle d’Amazon, on ne pourra pas lire un livre numérique acheté ailleurs au format ePub pourtant standard, car la liseuse est verrouillée pour ne lire que les fichiers commercialisés par Amazon.</p>
+<h3>Que sont les Mesures Techniques de Protection (DRM) ?</h3>
+<p>Les Mesures Techniques de Protection (en anglais DRM pour Digital Rights Managements), permettent à un éditeur ou à une plateforme de contrôler les fichiers après téléchargement en empêchant la copie, le prêt, la diffusion, la conversion dans un autre format (non-propriétaire, par exemple). Dans certains cas, ils permettent même <a href="http://www.ecrans.fr/Big-Brother-Amazon-la-surprise,7766.html">l’effacement à distance d’un livre</a> sur l’appareil du client.</p>
+<p>Les fichiers numériques vendus avec DRM s’apparentent donc moins à un livre papier (que l’on peut prêter, revendre, donner) qu’à une licence d’utilisation avec contrainte (comme l’emprunt à une bibliothèque), bien qu’ils ne soient que rarement présentés clairement comme tels.</p>
+<p>Aujourd’hui, l’inefficacité des DRM est largement démontrée et leur utilisation n’est plus que le fait :</p>
+<ul>
+<li>d’éditeurs peu au fait de la technologie et des usages du livre numérique, qui les imposent par peur du piratage ignorant qu’en réalité, ils l’encouragent ;</li>
+<li>de grands groupes éditoriaux qui les imposent aux éditeurs dans leur giron contre leurs avis ;</li>
+<li>de plateformes de vente qui espèrent ainsi enfermer leurs clients dans un écosystème fermé et s’assurer leur fidélité par la contrainte.</li>
+</ul>
+<h3>Pourquoi les DRM sont-ils inefficaces, voire contre-productifs ?</h3>
+<p>Conçus pour prévenir le piratage d’un livre numérique, les DRM sont aujourd’hui largement considérés comme inefficaces.</p>
+<p>La raison en est simple : pour un utilisateur un tant soit peu alerte mais sans connaissance technique, il suffit d’une recherche Google et d’un téléchargement <a href="https://nokto.net/post/2010/11/15/Comment-retirer-facilement-les-DRM-d-un-livre-num%C3%A9rique-au-format-ePub">pour retirer en un clic les DRM d’un livre numérique</a>. L’histoire a montré que les différentes mesures de protection technique prennent beaucoup plus de temps (et d’argent) à concevoir pour les entreprises commerciales qu’à contourner pour les pirates. Si l’industrie musicale y a presque totalement renoncé aujourd’hui, ce n’est pas par bonté de coeur.</p>
+<p>Plus grave encore que leur inefficacité contre le piratage, les DRM posent problème parce qu’ils rendent complexe l’usage des livres numériques pour l’utilisateur lambda qui les a acquis honnêtement, en compliquant considérablement le transfert d’un livre numérique sur une liseuse. Jusqu’à les pousser à se tourner plutôt du côté des plateformes pirates… beaucoup plus simples d’emploi.</p>
+<p>Il y aurait beaucoup de choses à dire sur le sujet, mais le mieux est de vous renvoyer à la lecture de l’excellent mémoire « <a href="http://fr.scribd.com/doc/174416078/Les-DRM-passe-ou-avenir-du-livre-numerique">Les DRM, passé ou avenir du livre numérique ?</a> » d’Alice Donet qui fait le tour de la question des DRM d’un point de vue commercial, technique et juridique et dont la conclusion est sans appel. À mettre entre les mains de tous les éditeurs qui, par ignorance, y ont encore recours.</p>
+<h3>Vais-je payer les livres numériques plus cher ?</h3>
+<p>Non. En France, la loi Lang impose que tous les vendeurs d’un livre le commercialise à un prix situé entre 95 et 100 % du prix fixé par l’éditeur. Une plateforme imposant des DRM paiera sur ses ventes une TVA plus importante mais ne pourra pas reporter cette hausse sur le prix de vente public. Cette hausse vise donc à exercer une pression sur ceux qui imposent les DRM sans pénaliser le consommateur. Les grandes multinationales échappent aujourd’hui à la TVA française en étant implantées en Irlande ou au Luxembourg, mais ce ne sera plus le cas en 2015, date à laquelle c’est la TVA du pays où se trouve l’acheteur qui sera prise en compte, et non plus la TVA du pays où se trouve le vendeur.</p>
+<h3>En quoi les DRM et les formats propriétaires sont-ils dangereux ?</h3>
+<p>J’ai assisté la semaine dernière, dans le cadre du salon de l’édition indépendante <a href="http://www.lautrelivre.fr/">L’Autre Livre</a>, à un débat sur le thème “Face aux nouvelles technologies”, débat qui a rapidement tourné à la diatribe contre le livre numérique. Les arguments des anti sont toujours les mêmes : par opposition au livre papier, le livre numérique ne pourrait pas être prêté, ne serait pas durable, etc. Il est intéressant de noter que tous ces arguments s’appliquent non au livre numérique lui­-même, mais uniquement aux livres commercialisés dans un format propriétaire et/ou avec DRM, ce que semblait ignorer l’intervenant du débat. C’est la marque inquiétante d’une grande confusion dans l’esprit du grand public (et, visiblement, dans celui de certains professionnels).</p>
+<p>Le risque est donc d’ancrer durablement dans l’esprit des lecteurs l’idée que les livres numériques achetés légalement présentent de nombreux désavantages (complexité d’utilisation, copie et prêt restreint, etc.), là où les livres piratés leurs permettent de conserver les usages auxquels le livre papier les a habitués. C’est commettre la même erreur que l’industrie musicale et les diriger avec un coup de pied aux fesses vers les plateformes pirates et les réseaux peer-to-peer.</p>
+<h3>Pourquoi l&rsquo;amendement a-t-il été retiré ?</h3>
+<p>Le gouvernement français est actuellement en procès avec l&rsquo;Union Européenne pour défendre l&rsquo;idée que les livres numériques sont bien des livres, et doivent bénéficier d&rsquo;un taux de TVA réduit, comme les livres papiers. La crainte du gouvernement est que cet amendement ne complique cette négociation, mais nombreux sont ceux qui pensent qu&rsquo;au contraire, la TVA réduite serait d&rsquo;autant plus légitime si elle distingue les livres en format interopérable et en format ouvert des licences d&rsquo;utilisation qui sont de fait des services.</p>
+<h3>Tout espoir est-il perdu ?</h3>
+<p>En l&rsquo;état, cet amendement n&rsquo;est pas parfait et pose encore beaucoup de questions. Si le livre numérique avec DRM est considéré comme un service plutôt qu&rsquo;un livre, la Loi lang est-elle encore applicable ? Les éditeurs qui voient des DRM apposés sur leurs livres contre leur avis seront-elles également pénalisés par la TVA ? Mais il a au moins le mérite de porter le problème sur la place publique.</p>
+<p><a href="https://secure.avaaz.org/fr/petition/Le_livre_un_amendement_quil_faut_sauver_Liberte_dexpression_diversite_culturelle_et_respect_des_lecteurs/">Une pétition</a> a été lancée peu de temps après le retrait de cet amendement pour demander son retour. Personnellement, je ne crois pas trop au pouvoir des pétitions &#8212; mais il faut bien dire que ça ne coûte pas grand-chose de les signer. Pétition ou pas, il est peu probable que l&rsquo;amendement passe en l&rsquo;état. Comme dit <a href="http://www.actualitte.com/legislation/ebook-et-systeme-proprietaire-vote-face-du-gouvernement-sur-la-tva-46350.htm">Actualitté</a>, les éditeurs pro-DRM n&rsquo;ont « pas même eu à décrocher leurs téléphones pour que l&rsquo;amendement soit remis au vote, l&rsquo;initiative émanerait du gouvernement seul ». Il est probable qu&rsquo;il s&rsquo;y préparent sérieusement pour le deuxième examen de l&rsquo;amendement.</p>
+<p>Néanmoins, il faut espérer que l’affaire permettra au moins de sensibiliser lecteurs et éditeurs aux problèmes que posent DRM et formats propriétaires et à quoi ils s’engagent souvent sans le savoir. À cette fin, n’hésitez pas à évoquer la question avec les lecteurs numériques qui vous entourent et à réclamez aux éditeurs que vous aimez des fichiers numériques interopérables et sans protection technique !</p>
+<p><em>Il va sans dire que les avis exprimés dans ce billet n’engagent que moi et pas les professionnels du livre qui sont mes clients et les maisons d’édition auxquelles je participe.</em></p>
+<p>À lire :</p>
+<ul>
+<li><a href="http://www.assemblee-nationale.fr/14/amendements/1395C/AN/22.asp">L&rsquo;amendement n° II-22 du 11 octobre 2013</a></li>
+<li><a href="http://www.assemblee-nationale.fr/14/cri/2013-2014/20140064.asp#P97083">Les débats à l&rsquo;assemblée nationale</a></li>
+<li><a href="http://www.actualitte.com/usages/livre-numerique-sanction-fiscale-contre-amazon-et-apple-46330.htm">Livre numérique : sanction fiscale contre Amazon et Apple</a></li>
+<li><a href="http://www.actualitte.com/legislation/ebook-et-systeme-proprietaire-vote-face-du-gouvernement-sur-la-tva-46350.htm">Ebook et système propriétaire : Volte-face du gouvernement sur la TVA</a></li>
+<li><a href="https://secure.avaaz.org/fr/petition/Le_livre_un_amendement_quil_faut_sauver_Liberte_dexpression_diversite_culturelle_et_respect_des_lecteurs/">Le livre : un amendement qu&rsquo;il faut sauver. Liberté d&rsquo;expression, diversité culturelle et respect des lecteurs</a> (la pétition)</li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2013/11/19/amendement-tva-livre-numerique/feed/</wfw:commentRss>
+			<slash:comments>10</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">176</post-id>	</item>
+		<item>
+		<title>Citriq : automatiser le référencement des critiques avec WordPress</title>
+		<link>/2013/08/26/20130826citriq-automatiser-le-referencement-des-critiques-avec-wordpress/</link>
+					<comments>/2013/08/26/20130826citriq-automatiser-le-referencement-des-critiques-avec-wordpress/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Mon, 26 Aug 2013 18:40:00 +0000</pubDate>
+				<category><![CDATA[Technique]]></category>
+		<category><![CDATA[citriq]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=156</guid>
+
+					<description><![CDATA[Si vous avez un blog de critiques littéraires sous WordPress, il est possible d&#8217;automatiser simplement le référencement de vos critiques dans Citriq. La manipulation consiste à utiliser les champs personnalisés de WordPress pour associer à chaque critique l&#8217;ISBN du livre critiqué, puis de modifier votre thème pour qu&#8217;il génére automatiquement le code du widget Citriq en utilisant &#8230; <p class="link-more"><a href="/2013/08/26/20130826citriq-automatiser-le-referencement-des-critiques-avec-wordpress/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Citriq : automatiser le référencement des critiques avec WordPress&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p>Si vous avez un blog de critiques littéraires sous WordPress, il est possible d&rsquo;automatiser simplement le référencement de vos critiques dans <a href="http://citriq.net/">Citriq</a>. La manipulation consiste à utiliser les <a href="http://codex.wordpress.org/fr:Utiliser_les_champs_personnalis%C3%A9s">champs personnalisés</a> de WordPress pour associer à chaque critique l&rsquo;ISBN du livre critiqué, puis de modifier votre thème pour qu&rsquo;il génére automatiquement le code du widget <a href="http://citriq.net/">Citriq</a> en utilisant cet ISBN.</p>
+<p>MAJ du 08/02/2014 : Il existe désormais une <a href="https://nokto.net/citriq-wordpress-plugin/">extension WordPress pour Citriq</a>, bien plus facile à mettre en oeuvre, et qui vous évitera d&rsquo;avoir à modifier votre thème.</p>
+<p>Avant toute chose, il faut bien entendu, si ce n&rsquo;est pas déjà fait, que votre blog soit <a href="http://citriq.net/">inscrit à Citriq</a>.</p>
+<h3>Marche à suivre</h3>
+<p>1. Choisissez une critique de votre blog déjà en ligne mais encore non référencée sur Citriq. Cliquez sur <strong>Modifier </strong>pour accéder à la page d&rsquo;édition de l&rsquo;article.</p>
+<p>2. Cliquez en haut à droite de la fenêtre d&rsquo;édition sur <strong>Options de l&rsquo;écran</strong>, puis cochez la case <strong>Champs personnalisés</strong> pour faire apparaître la section correspondante sur la page d&rsquo;édition, sous la zone de texte.</p>
+<p><a title="citriq-wordpress-1.jpg" href="/media/citriq-wordpress-1.jpg"><img decoding="async" style="margin: 0 auto;" alt="citriq-wordpress-1.jpg" src="/media/.citriq-wordpress-1_m.jpg" /></a></p>
+<p>3. Repérez la zone <strong>Ajouter un champ personnalisé</strong> et entrez <em>isbn</em> (en minuscules, c&rsquo;est important) dans le champ <strong>Nom</strong> et entrez l&rsquo;ISBN du livre critiqué dans le champ <strong>Valeur</strong>. Cliquez sur <strong>Mettre à jour</strong> pour enregistrer votre article.</p>
+<p><a title="citriq-wordpress-2.jpg" href="/media/citriq-wordpress-2.jpg"><img decoding="async" style="margin: 0 auto;" alt="citriq-wordpress-2.jpg" src="/media/.citriq-wordpress-2_m.jpg" /></a></p>
+<p>NB : L&rsquo;ISBN est un numéro unique attribué à chaque livre publié, long de 13 chiffres et commençant toujours par 978 ou 979. On le trouve dans les premières pages du livre ou au dos, généralement près du code barre. Il peut être entré avec ou sans tiret.</p>
+<p>Il va falloir ensuite modifier votre thème pour permettre à WordPress de générer automatiquement le code du widget Citriq. La manipulation peut varier selon le thème utilisé, dans les exemples ci-dessous, j&rsquo;utilise le thème par défaut <em>Twenty Twelve</em>.</p>
+<p>4. Rendez-vous dans le menu <strong>Apparence</strong> puis dans le sous-menu <strong>Éditeur</strong> pour modifier le thème actuellement utilisé. Dans la liste des fichiers à droite, ouvrez celui qui gère l&rsquo;affichage des articles (ici <strong>content.php</strong>, parfois <strong>content-single.php</strong>).</p>
+<p><a title="citriq-wordpress-3.jpg" href="/media/citriq-wordpress-3.jpg"><img decoding="async" style="margin: 0 auto;" alt="citriq-wordpress-3.jpg" src="/media/.citriq-wordpress-3_m.jpg" /></a></p>
+<p>5. Repérez l&rsquo;endroit où vous voulez faire apparaître le widget Citriq, probablement après le contenu du billet (affiché par la fonction <strong>the_content()</strong>). Copiez-collez-y le code php ci-dessous.</p>
+<pre>&lt;?php
+    $isbn = get_post_meta(get_the_id(), "isbn", true);
+    if(is_singular() &amp;&amp; $isbn != '') echo '&lt;script type="text/javascript" src="http://citriq.net/w/crawl?uid='.get_the_id().'&amp;isbn='.get_post_meta(get_the_id(),'isbn',true).'"&gt;&lt;/script&gt;';
+    ?&gt;</pre>
+<p>6. Cliquez sur <strong>Mettre à jour le fichier</strong> pour enregistrer vos modifications.</p>
+<p>7. Vous pouvez à présent afficher le code source de l&rsquo;article pour vérifier que le code Citriq est bien généré. Pensez à vider votre cache et celui de WordPress si le code ne s&rsquo;affiche pas.</p>
+<p><a title="citriq-wordpress-4.jpg" href="/media/citriq-wordpress-4.jpg"><img decoding="async" style="margin: 0 auto;" alt="citriq-wordpress-4.jpg" src="/media/.citriq-wordpress-4_m.jpg" /></a></p>
+<p>8. Afin que le référencement automatique fonctionne, il faut que j&rsquo;active l&rsquo;option de mon côté dans Citriq pour votre blog. Une fois que vous avez ajouté le widget à votre thème et associé au moins un ISBN à une critique, <a href="/contact">contactez-moi</a> pour que je vérifie que tout est en ordre et que j&rsquo;active le référencement automatique.</p>
+<p>9. Vous pourrez ensuite ajouter facilement d&rsquo;autres critiques à Citriq. Il suffira à chaque fois d&rsquo;indiquer l&rsquo;ISBN du livre concerné dans le champ personnalisé <em>isbn</em> de chaque critique.</p>
+<h3>Si le code du widget n&rsquo;apparaît pas dans le code source</h3>
+<ul>
+<li>Vérifiez que vous avez bien le nom du champ personnalisé <em>isbn</em> en minuscule et non en majuscule.</li>
+<li>Vérifiez que le fichier que vous avez modifié (<strong>content.php </strong>dans l&rsquo;exemple) est bien celui qui gère l&rsquo;affichage d&rsquo;un article seul, par exemple en effectuant d&rsquo;autres modifications pour voir si elles apparaissent.</li>
+<li>Si vous utilisez une extension pour gérer le cache, pensez à le vider.</li>
+<li>Effectuez les vérifications décrites <a href="http://codex.wordpress.org/I_Make_Changes_and_Nothing_Happens">sur cette page</a> (en anglais).</li>
+</ul>
+<h3>Résolution des problèmes</h3>
+<p>Si le code du widget est correctement généré mais que le référencement ne fonctionne pas, ajoutez <strong>?debug=1</strong> ou <strong>&amp;debug=1</strong> à l&rsquo;adresse de la page de l&rsquo;article dans la barre de votre navigateur. Le widget Citriq affichera un message d&rsquo;erreur détaillant le problème s&rsquo;il y a lieu.</p>
+<p><a title="citriq-wordpress-5.jpg" href="/media/citriq-wordpress-5.jpg"><img decoding="async" style="margin: 0 auto;" alt="citriq-wordpress-5.jpg" src="/media/.citriq-wordpress-5_m.jpg" /></a></p>
+<h3><strong>Pour aller plus loin</strong></h3>
+<p>Nous avons vu ci-dessus un cas simple d&rsquo;utilisation du widget, mais il est également possible d&rsquo;utiliser d&rsquo;autres champs personnalisés pour communiquer à Citriq d&rsquo;autres informations lors du référencement de la critique. Il faut pour cela modifier le code du widget pour ajouter d&rsquo;autres paires clés/valeurs et créer les nouveaux champs personnalisés équivalents. Par défaut, le code du widget se présente ainsi :</p>
+<pre>&lt;script type="text/javascript" src="http://citriq.net/w/crawl?uid=9&amp;isbn=978-2-207-11266-3"&gt;&lt;/script&gt;</pre>
+<p>Avec deux variables obligatoires : <em>uid </em>qui est un identifiant unique (ici on utilise l&rsquo;identifiant de l&rsquo;article dans la base WordPress affiché grâce à la fonction <strong>get_the_id()</strong>) et <em>isbn</em> qui correspond à l&rsquo;ISBN du livre concerné (notre champ personnalisé, affiché grâce à la fonction <strong>get_post_meta()</strong>).</p>
+<p>Il existe trois autres variables facultatives :</p>
+<ul>
+<li><em>reviewer</em> : le nom de l&rsquo;auteur de la critique (utile si plusieurs chroniqueurs interviennent sur le même blog)</li>
+<li><em>source</em> : la source originelle de la critique (par exemple, nooSFere référence, en plus de ses propres critiques, des critiques issues de Bifrost, Galaxies, etc.)</li>
+<li><em>note</em> : la note donnée au livre, qui doit être sur 100 (3/5 = 60, 18/20 = 90, etc.)</li>
+<li><em>excerpt</em> : un extrait de la critique (500 caractères maximum). Pour un résultat optimal, il vaut mieux encoder le texte, par exemple avec la fonction php <a href="http://php.net/manual/fr/function.urlencode.php">urlencode()</a>.</li>
+</ul>
+<p>Pour utiliser une variable, il suffit de d&rsquo;ajouter les variables <a href="http://fr.openclassrooms.com/informatique/cours/concevez-votre-site-web-avec-php-et-mysql/envoyer-des-parametres-dans-l-url">sous la forme &amp;clé=valeur</a> au code du widget, par exemple :</p>
+<div>
+<pre>&lt;script type="text/javascript" src="http://citriq.net/w/crawl?uid=9&amp;isbn=978-2-207-11266-3&amp;reviewer=Clément&amp;note=75"&gt;&lt;/script&gt;</pre>
+</div>
+<p>Il faudra pour cela ajouter un premier champ personnalisé <strong>reviewer</strong> et un deuxième <strong>note</strong> à chaque article, puis utiliser la fonction get_post_meta() pour générer le code du widget en utilisant ces champs. Voici le code php à insérer dans ce cas :</p>
+<div>
+<pre>&lt;?php
+
+    $isbn = get_post_meta(get_the_id(), "isbn", true);
+    if(is_singular() &amp;&amp; $isbn != '') echo '&lt;script type="text/javascript" src="http://citriq.net/w/crawl?uid='.get_the_id().'&amp;isbn='.get_post_meta(get_the_id(),'isbn',true).'&amp;reviewer='.get_post_meta(get_the_id(),'reviewer',true).'&amp;note='.get_post_meta(get_the_id(),'note',true).'&amp;excerpt='.urlencode(get_post_meta(get_the_id(),'excerpt',true)).'"&gt;&lt;/script&gt;';
+
+?&gt;</pre>
+<p>Bien sûr, il n&rsquo;est pas toujours pertinent d&rsquo;utiliser les champs personnalisés. Pour l&rsquo;auteur de la critique (<strong>reviewer</strong>), on utilisera plus probablement l&rsquo;auteur de l&rsquo;article dans WordPress, en utilisant la fonction <strong>the_author()</strong> plutôt que la fonction <strong>get_post_meta().</strong></p>
+<p>Voici un exemple de code qui ne transmettra à Citriq que l&rsquo;ISBN (d&rsquo;après le champ personnalisé <em>isbn</em>) et le nom de l&rsquo;auteur du billet :</p>
+</div>
+<pre>&lt;?php
+
+    $isbn = get_post_meta(get_the_id(), "isbn", true);
+    if(is_singular() &amp;&amp; $isbn != '') echo '&lt;script type="text/javascript" src="http://citriq.net/w/crawl?uid='.get_the_id().'&amp;isbn='.get_post_meta(get_the_id(),'isbn',true).'&amp;reviewer='.the_author().'"&gt;&lt;/script&gt;';
+
+?&gt;</pre>
+<h3>Quelques blogs sous WordPress qui utilisent le référencement automatique</h3>
+<ul>
+<li><a href="http://www.lorhkan.com/">Mes imaginaires</a></li>
+<li><a href="http://www.les-lectures-de-cachou.com/">Les lectures de Cachou</a></li>
+<li><a href="http://casentlebook.fr/">Ça sent le book</a></li>
+<li><a href="http://blog.cyrille.free.fr/">Le Journal Extime de Cyrille</a></li>
+<li><a href="http://www.lorhkan.com/">Lorkhan et les mauvais genres</a></li>
+<li><a href="http://www.vagabondsdureve.fr/">Les Vagabonds du Rêve</a></li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2013/08/26/20130826citriq-automatiser-le-referencement-des-critiques-avec-wordpress/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">156</post-id>	</item>
+		<item>
+		<title>La littérature de genre en numérique (table ronde)</title>
+		<link>/2013/04/30/20130430litterature-genre-numerique-table-ronde-salon-livre-paris-2013/</link>
+					<comments>/2013/04/30/20130430litterature-genre-numerique-table-ronde-salon-livre-paris-2013/#respond</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Tue, 30 Apr 2013 14:53:00 +0000</pubDate>
+				<category><![CDATA[Demain les livres]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=155</guid>
+
+					<description><![CDATA[Lors du dernier salon du livre, dans le cadre des assises du livre numérique, j&#8217;ai représenté Le Bélial&#8217; à l&#8217;occasion d&#8217;une table ronde ayant pour thème la « La littérature de genre en numérique », face à Stéphane Marsan de Bragelonne et Stéphane Aznar de Harlequin. La table ronde peut-être intégralement visionnée ci-dessous, il existe également une &#8230; <p class="link-more"><a href="/2013/04/30/20130430litterature-genre-numerique-table-ronde-salon-livre-paris-2013/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;La littérature de genre en numérique (table ronde)&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" src="/media/table-ronde-assises-genre.png" alt="table-ronde-assises-genre.png" style="margin: 0 auto" /></p>
+<p>Lors du dernier salon du livre, dans le cadre des assises du livre numérique, j&rsquo;ai représenté <a href="http://www.belial.fr/">Le Bélial&rsquo;</a> à l&rsquo;occasion d&rsquo;une table ronde ayant pour thème la « La littérature de genre en numérique », face à Stéphane Marsan de Bragelonne et Stéphane Aznar de Harlequin. La table ronde peut-être intégralement visionnée ci-dessous, il existe également une synthèse <a href="http://www.sne.fr/img/pdf/Evenements/Assises/Assises-22mars2013/synthese-litterature-de-genre.pdf">à télécharger en PDF</a>.</p>
+<p>On peut également retrouver en vidéo, <a href="http://www.sne.fr/evenements/assises-professionnelles-du-livre.html">sur le site du SNE</a>, l&rsquo;ensemble des tables rondes données ce jour-là dans le cadre des Assises.</p>
+<p>Ci-dessous, en bonus, les quelques notes que j&rsquo;avais préparées pour la table ronde, qui ne correspondent pas forcément à ce que j&rsquo;ai pu dire concrètement pendant la table ronde, faute de temps ou, parfois, de clarté :</p>
+<h4> Vos expériences respectives confirment-elles ce constat ? Pouvez-vous nous donner des exemples de titres phares en numérique ? Avez-vous eu des surprises par rapport aux titres phares parus en papier ? </h4>
+<p dir="ltr"> Globalement, nos best-sellers en papier sont aussi nos best-sellers en numérique. Par exemple, le roman Tau Zéro de Poul Anderson, paru en juin dernier, qu’on a réimprimé plusieurs fois, et qui en numérique (266 ventes) est loin devant tous nos autres titres (85 titres pour le second). </p>
+<p dir="ltr"> Il y a toutefois des spécificités : la revue trimestrielle Bifrost se vend très bien en numérique, ce que l’on peut imputer à son contenu (textes courts : nouvelles, articles, dossiers, critiques) et au fait qu’il s’agit d’un périodique. Autre bonne surprise : l’intégrale Féerie pour les ténèbres qui rassemble trois romans et cinq nouvelles en un seul livre numérique à 20 €, preuve que les lecteurs sont prêt à payer cher en numérique si le contenu suit (50 € pour l’équivalent en en papier).</p>
+<h4> Quels sont d’après vous les raisons qui expliquent cette appétence des lecteurs de genre pour le numérique ? </h4>
+<p dir="ltr"> Le lecteur de SF est technophile, il aime les gadgets et n’a pas peur des nouvelles technologies. Plus encore, il est déjà habitué à l’idée que l’information peut-être dématérialisée, que ce qui importe, c’est l’oeuvre elle-même, quelque soit le support de lecture. </p>
+<p dir="ltr"> Paradoxal parce que dans la littérature de genre, l’objet compte beaucoup, notamment les illustrations de couverture et au Bélial’ on attache beaucoup d’importance à la fabrication de l’objet (livre cousu, rabat, etc.)</p>
+<h4> Est-ce votre lectorat habituel qui se tourne vers le numérique ou recrutez-vous de nouveaux lecteurs ? </h4>
+<p dir="ltr"> Ventes papier/numérique sur le site : 21% du CA (20% de prog. depuis 2010) </p>
+<p dir="ltr"> Ventes numériques sur le site : 42% des ventes numérique totales </p>
+<p dir="ltr"> Part du numérique dans les ventes du site : 6% en 2010, 13% en 2012</p>
+<h4> Et si on parlait promotion ? Chacune de vos maisons manie les réseaux sociaux et fédère de véritables communautés de lecteurs par ce biais. Là encore, est-ce lié aux genres de vos ouvrages ? Pouvez-vous nous donner des exemples d’actions en la matière ? </h4>
+<p dir="ltr"> Outre les réseaux sociaux, on a aussi un forum très actif, où on discute avec nos lecteurs de l’actualité du Bélial’ mais aussi plus généralement du monde de l’édition en général et des mutations liées au numérique en particulier. On les a impliqué dès le lancement de notre plateforme en proposant deux livres numériques dont ils pouvaient fixer le prix eux-mêmes, c’est-à-dire à “voter avec leur porte-monnaie” pour exprimer ce qu’ils pensaient être le bon prix en numérique. Résultat : de 1,00 € à 15,00 € avec un prix moyen de 4,72 €.</p>
+<h4> La créativité éditoriale est-elle plus facile en numérique ? </h4>
+<p dir="ltr"> On reçoit parfois des manuscrits qui nous paraissent intéressant mais trop risqué pour un tirage papier et que nous refusons donc à regret. Le numérique nous permet de contourner le problème. En février 2011, on a publié Genèse 2.0 : loin des étoiles, un premier roman arrivé par La Poste qui nous a beaucoup plu mais qui nous semblait peu viable commercialement. On a donc proposé à l’auteur de le publier en numérique tout en lui permettant de conserver les droits papiers. </p>
+<p dir="ltr"> J’ai également fondé Dystopia, une petite maison d’édition associative avec deux autres libraires, pour pouvoir rééditer des livres épuisés qu’on aimait et qu’on avait envie de pouvoir conseiller, ou pour travailler sur de nouveaux livres d’auteurs publiés. Ici, le numérique nous permet de nous faire plaisir, d’expérimenter, de prendre la température, de satisfaire une demande restreinte, sans avoir à nous soucier du point mort.</p>
+<h4> On entend beaucoup parler d’auto-édition, notamment chez les auteurs de SF. </h4>
+<p dir="ltr"> Au moment du lancement de notre plateforme, alors que la plupart des gens s’accordaient à dire qu’on allait plutôt dans le bon sens, un auteur de SF nous est tombé dessus en disant que c’était pas du tout ce qu’il fallait faire, que le numérique était une chance pour les auteurs de s’émanciper des éditeurs et qu’il allait fabriquer ses fichiers lui-même pour les vendre à 2,00 €. Trois ans après, son nouveau roman sort chez son éditeur habituel, en papier et à 7 € pour la version numérique. </p>
+<p dir="ltr"> Je pense que personne, et surtout pas les auteurs, n’a intérêt à véhiculer l’idée que, grâce au numérique, on peut publier n’importe quoi n’importe comment sans intermédiaire, au risque d’être noyé dans une masse de livres globalement médiocre. Outre le travail éditorial, je pense qu’on aura toujours besoin de prescripteurs pour séparer le bon grain de l’ivraie et mettre en lumière les livres intéressants. </p>
+<p> Au Bélial’, on compte beaucoup sur la librairie indépendante et sur le conseil du libraire pour faire exister nos livres, qui peuvent être parfois un peu pointu et s’adresser à un public précis. Se pose véritablement aujourd’hui la question de savoir comment reproduire cette expérience du conseil en librairie, essentielle pour nous, dans le domaine du numérique. </p>
+]]></content:encoded>
+
+					<wfw:commentRss>/2013/04/30/20130430litterature-genre-numerique-table-ronde-salon-livre-paris-2013/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">155</post-id>	</item>
+	</channel>
+</rss>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>DRM &#8211; nokto</title>
+	<atom:link href="/tag/drm/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Le blog de Clément Latzarus</description>
+	<lastBuildDate>Tue, 19 Nov 2013 09:00:15 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.3</generator>
+<site xmlns="com-wordpress:feed-additions:1">165226571</site>	<item>
+		<title>Pourquoi il faut faire passer l’amendement sur la TVA des livres numériques</title>
+		<link>/2013/11/19/amendement-tva-livre-numerique/</link>
+					<comments>/2013/11/19/amendement-tva-livre-numerique/#comments</comments>
+
+		<dc:creator><![CDATA[Clément Latzarus]]></dc:creator>
+		<pubDate>Tue, 19 Nov 2013 09:00:15 +0000</pubDate>
+				<category><![CDATA[Demain les livres]]></category>
+		<category><![CDATA[DRM]]></category>
+		<category><![CDATA[ePub]]></category>
+		<category><![CDATA[interopérabilité]]></category>
+		<category><![CDATA[Loi Lang]]></category>
+		<category><![CDATA[TVA]]></category>
+		<guid isPermaLink="false">http://wp.nokto.net/?p=176</guid>
+
+					<description><![CDATA[Un amendement au projet de Loi de finances 2014 sur le prix du livre a été déposé la semaine dernière par la députée Isabelle Attard et adopté à l’assemblée nationale, avant d’être immédiatement retiré à la demande du gouvernement. Cet amendement stipule que le taux de TVA réduit à 5,5% doit être appliqué au livre &#8230; <p class="link-more"><a href="/2013/11/19/amendement-tva-livre-numerique/" class="more-link">Continuer la lecture<span class="screen-reader-text"> de &#171;&#160;Pourquoi il faut faire passer l’amendement sur la TVA des livres numériques&#160;&#187;</span></a></p>]]></description>
+										<content:encoded><![CDATA[<p style="text-align: center;"><a href="https://nokto.net/wp-content/uploads/2013/11/lecteurs_contre_les_drm.png"><img decoding="async" class=" wp-image-198 aligncenter" alt="Lecteurs contre les DRM" src="https://nokto.net/wp-content/uploads/sites/2/2013/11/lecteurs_contre_les_drm-275x300.png" /></a></p>
+<p><a href="http://www.assemblee-nationale.fr/14/amendements/1395C/AN/22.asp">Un amendement</a> au projet de Loi de finances 2014 sur le prix du livre a été déposé la semaine dernière par <a href="http://isabelleattard.eelv.fr/amendement-tva-sur-les-livres-numeriques-pour-une-sortie-vers-le-haut-du-conflit-avec-la-commission-europeenne/">la députée Isabelle Attard</a> et adopté à l’assemblée nationale, avant d’être immédiatement retiré à la demande du gouvernement. Cet amendement stipule que le taux de TVA réduit à 5,5% doit être appliqué au livre numérique (comme c’est déjà le cas), sauf si « le ou les fichiers comportent des mesures techniques de protection (…) ou s&rsquo;il ne sont pas dans un format de données ouvert (…) ». Autrement dit, que les livres commercialisés dans des formats propriétaires et/ou avec des Mesures Techniques de Protection (DRM) doivent être considérés comme des licences d’utilisation (plutôt que des livres) et doivent donc être taxés à 19,6%.</p>
+<p>L’amendement vise clairement à réserver l’avantage fiscal que représente le taux de TVA réduit aux seuls livres numériques proposés dans un format ouvert, interopérable, et sans Mesure Technique de Protection (DRM), de manière à décourager des pratiques qui à long terme ne peuvent que nuire à l’économie du livre et à la bibliodiversité.</p>
+<p>Voici quelques éléments pour comprendre les enjeux derrière cet amendement.</p>
+<h3>Qu’est-ce qu’un format propriétaire et un format interopérable ?</h3>
+<p>Fut un temps où chaque constructeur créait son propre support pour vendre une œuvre (VHS/Betamax, Blu-Ray/HD-DVD, etc.) : un cauchemar pour le consommateur qui devait prendre garde à choisir un format compatible avec son matériel, qui pouvait se voir interdire l’accès à une partie des œuvres disponibles sur le marché et qui risquait de perdre toute sa collection si le format disparaissait.</p>
+<p>Pour éviter les drames de ce genre avec le livre numérique, un certain nombre d’acteurs, réunis au sein de l’organisation <a href="http://idpf.org/">IDPF</a>, se sont mis d’accord pour créer un format ouvert et interopérable : l’ePub. Parce que c’est un format ouvert, il est facile pour n’importe qui de concevoir des livres numériques et des appareils ou applications de lectures sans payer de royalties à qui que ce soit. Et si ce format devait un jour disparaître au profit d’un autre, il sera facile de convertir les fichiers dans un nouveau format.</p>
+<p>Malgré cela, certains s’obstinent à créer et utiliser des formats propriétaires pour des raisons commerciales et politiques. Un format propriétaire est un format conçu par une société commerciale dans le but d’enfermer ses clients dans un écosystème fermé. Ainsi, un livre numérique acheté chez Amazon, ne pourra être lu que sur une liseuse ou une application Amazon. De même, sur la liseuse Kindle d’Amazon, on ne pourra pas lire un livre numérique acheté ailleurs au format ePub pourtant standard, car la liseuse est verrouillée pour ne lire que les fichiers commercialisés par Amazon.</p>
+<h3>Que sont les Mesures Techniques de Protection (DRM) ?</h3>
+<p>Les Mesures Techniques de Protection (en anglais DRM pour Digital Rights Managements), permettent à un éditeur ou à une plateforme de contrôler les fichiers après téléchargement en empêchant la copie, le prêt, la diffusion, la conversion dans un autre format (non-propriétaire, par exemple). Dans certains cas, ils permettent même <a href="http://www.ecrans.fr/Big-Brother-Amazon-la-surprise,7766.html">l’effacement à distance d’un livre</a> sur l’appareil du client.</p>
+<p>Les fichiers numériques vendus avec DRM s’apparentent donc moins à un livre papier (que l’on peut prêter, revendre, donner) qu’à une licence d’utilisation avec contrainte (comme l’emprunt à une bibliothèque), bien qu’ils ne soient que rarement présentés clairement comme tels.</p>
+<p>Aujourd’hui, l’inefficacité des DRM est largement démontrée et leur utilisation n’est plus que le fait :</p>
+<ul>
+<li>d’éditeurs peu au fait de la technologie et des usages du livre numérique, qui les imposent par peur du piratage ignorant qu’en réalité, ils l’encouragent ;</li>
+<li>de grands groupes éditoriaux qui les imposent aux éditeurs dans leur giron contre leurs avis ;</li>
+<li>de plateformes de vente qui espèrent ainsi enfermer leurs clients dans un écosystème fermé et s’assurer leur fidélité par la contrainte.</li>
+</ul>
+<h3>Pourquoi les DRM sont-ils inefficaces, voire contre-productifs ?</h3>
+<p>Conçus pour prévenir le piratage d’un livre numérique, les DRM sont aujourd’hui largement considérés comme inefficaces.</p>
+<p>La raison en est simple : pour un utilisateur un tant soit peu alerte mais sans connaissance technique, il suffit d’une recherche Google et d’un téléchargement <a href="https://nokto.net/post/2010/11/15/Comment-retirer-facilement-les-DRM-d-un-livre-num%C3%A9rique-au-format-ePub">pour retirer en un clic les DRM d’un livre numérique</a>. L’histoire a montré que les différentes mesures de protection technique prennent beaucoup plus de temps (et d’argent) à concevoir pour les entreprises commerciales qu’à contourner pour les pirates. Si l’industrie musicale y a presque totalement renoncé aujourd’hui, ce n’est pas par bonté de coeur.</p>
+<p>Plus grave encore que leur inefficacité contre le piratage, les DRM posent problème parce qu’ils rendent complexe l’usage des livres numériques pour l’utilisateur lambda qui les a acquis honnêtement, en compliquant considérablement le transfert d’un livre numérique sur une liseuse. Jusqu’à les pousser à se tourner plutôt du côté des plateformes pirates… beaucoup plus simples d’emploi.</p>
+<p>Il y aurait beaucoup de choses à dire sur le sujet, mais le mieux est de vous renvoyer à la lecture de l’excellent mémoire « <a href="http://fr.scribd.com/doc/174416078/Les-DRM-passe-ou-avenir-du-livre-numerique">Les DRM, passé ou avenir du livre numérique ?</a> » d’Alice Donet qui fait le tour de la question des DRM d’un point de vue commercial, technique et juridique et dont la conclusion est sans appel. À mettre entre les mains de tous les éditeurs qui, par ignorance, y ont encore recours.</p>
+<h3>Vais-je payer les livres numériques plus cher ?</h3>
+<p>Non. En France, la loi Lang impose que tous les vendeurs d’un livre le commercialise à un prix situé entre 95 et 100 % du prix fixé par l’éditeur. Une plateforme imposant des DRM paiera sur ses ventes une TVA plus importante mais ne pourra pas reporter cette hausse sur le prix de vente public. Cette hausse vise donc à exercer une pression sur ceux qui imposent les DRM sans pénaliser le consommateur. Les grandes multinationales échappent aujourd’hui à la TVA française en étant implantées en Irlande ou au Luxembourg, mais ce ne sera plus le cas en 2015, date à laquelle c’est la TVA du pays où se trouve l’acheteur qui sera prise en compte, et non plus la TVA du pays où se trouve le vendeur.</p>
+<h3>En quoi les DRM et les formats propriétaires sont-ils dangereux ?</h3>
+<p>J’ai assisté la semaine dernière, dans le cadre du salon de l’édition indépendante <a href="http://www.lautrelivre.fr/">L’Autre Livre</a>, à un débat sur le thème “Face aux nouvelles technologies”, débat qui a rapidement tourné à la diatribe contre le livre numérique. Les arguments des anti sont toujours les mêmes : par opposition au livre papier, le livre numérique ne pourrait pas être prêté, ne serait pas durable, etc. Il est intéressant de noter que tous ces arguments s’appliquent non au livre numérique lui­-même, mais uniquement aux livres commercialisés dans un format propriétaire et/ou avec DRM, ce que semblait ignorer l’intervenant du débat. C’est la marque inquiétante d’une grande confusion dans l’esprit du grand public (et, visiblement, dans celui de certains professionnels).</p>
+<p>Le risque est donc d’ancrer durablement dans l’esprit des lecteurs l’idée que les livres numériques achetés légalement présentent de nombreux désavantages (complexité d’utilisation, copie et prêt restreint, etc.), là où les livres piratés leurs permettent de conserver les usages auxquels le livre papier les a habitués. C’est commettre la même erreur que l’industrie musicale et les diriger avec un coup de pied aux fesses vers les plateformes pirates et les réseaux peer-to-peer.</p>
+<h3>Pourquoi l&rsquo;amendement a-t-il été retiré ?</h3>
+<p>Le gouvernement français est actuellement en procès avec l&rsquo;Union Européenne pour défendre l&rsquo;idée que les livres numériques sont bien des livres, et doivent bénéficier d&rsquo;un taux de TVA réduit, comme les livres papiers. La crainte du gouvernement est que cet amendement ne complique cette négociation, mais nombreux sont ceux qui pensent qu&rsquo;au contraire, la TVA réduite serait d&rsquo;autant plus légitime si elle distingue les livres en format interopérable et en format ouvert des licences d&rsquo;utilisation qui sont de fait des services.</p>
+<h3>Tout espoir est-il perdu ?</h3>
+<p>En l&rsquo;état, cet amendement n&rsquo;est pas parfait et pose encore beaucoup de questions. Si le livre numérique avec DRM est considéré comme un service plutôt qu&rsquo;un livre, la Loi lang est-elle encore applicable ? Les éditeurs qui voient des DRM apposés sur leurs livres contre leur avis seront-elles également pénalisés par la TVA ? Mais il a au moins le mérite de porter le problème sur la place publique.</p>
+<p><a href="https://secure.avaaz.org/fr/petition/Le_livre_un_amendement_quil_faut_sauver_Liberte_dexpression_diversite_culturelle_et_respect_des_lecteurs/">Une pétition</a> a été lancée peu de temps après le retrait de cet amendement pour demander son retour. Personnellement, je ne crois pas trop au pouvoir des pétitions &#8212; mais il faut bien dire que ça ne coûte pas grand-chose de les signer. Pétition ou pas, il est peu probable que l&rsquo;amendement passe en l&rsquo;état. Comme dit <a href="http://www.actualitte.com/legislation/ebook-et-systeme-proprietaire-vote-face-du-gouvernement-sur-la-tva-46350.htm">Actualitté</a>, les éditeurs pro-DRM n&rsquo;ont « pas même eu à décrocher leurs téléphones pour que l&rsquo;amendement soit remis au vote, l&rsquo;initiative émanerait du gouvernement seul ». Il est probable qu&rsquo;il s&rsquo;y préparent sérieusement pour le deuxième examen de l&rsquo;amendement.</p>
+<p>Néanmoins, il faut espérer que l’affaire permettra au moins de sensibiliser lecteurs et éditeurs aux problèmes que posent DRM et formats propriétaires et à quoi ils s’engagent souvent sans le savoir. À cette fin, n’hésitez pas à évoquer la question avec les lecteurs numériques qui vous entourent et à réclamez aux éditeurs que vous aimez des fichiers numériques interopérables et sans protection technique !</p>
+<p><em>Il va sans dire que les avis exprimés dans ce billet n’engagent que moi et pas les professionnels du livre qui sont mes clients et les maisons d’édition auxquelles je participe.</em></p>
+<p>À lire :</p>
+<ul>
+<li><a href="http://www.assemblee-nationale.fr/14/amendements/1395C/AN/22.asp">L&rsquo;amendement n° II-22 du 11 octobre 2013</a></li>
+<li><a href="http://www.assemblee-nationale.fr/14/cri/2013-2014/20140064.asp#P97083">Les débats à l&rsquo;assemblée nationale</a></li>
+<li><a href="http://www.actualitte.com/usages/livre-numerique-sanction-fiscale-contre-amazon-et-apple-46330.htm">Livre numérique : sanction fiscale contre Amazon et Apple</a></li>
+<li><a href="http://www.actualitte.com/legislation/ebook-et-systeme-proprietaire-vote-face-du-gouvernement-sur-la-tva-46350.htm">Ebook et système propriétaire : Volte-face du gouvernement sur la TVA</a></li>
+<li><a href="https://secure.avaaz.org/fr/petition/Le_livre_un_amendement_quil_faut_sauver_Liberte_dexpression_diversite_culturelle_et_respect_des_lecteurs/">Le livre : un amendement qu&rsquo;il faut sauver. Liberté d&rsquo;expression, diversité culturelle et respect des lecteurs</a> (la pétition)</li>
+</ul>
+]]></content:encoded>
+
+					<wfw:commentRss>/2013/11/19/amendement-tva-livre-numerique/feed/</wfw:commentRss>
+			<slash:comments>10</slash:comments>
+
+
+		<post-id xmlns="com-wordpress:feed-additions:1">176</post-id>	</item>
+	</channel>
+</rss>
